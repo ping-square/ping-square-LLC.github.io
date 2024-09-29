@@ -1,0 +1,7 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'Welcome to Ping-Square.com'
+theme = 'hugo-theme-relearn'
+
+[params]
+  themeVariant = 'blue'
