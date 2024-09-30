@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Welcome to Ping-Square.com</title>
-    <link>https://ping-square.com/index.html</link>
-    <description>This is a new home page.</description>
+    <link>http://localhost:1313/index.html</link>
+    <description>Web Server is available at http://localhost:1313/ (bind address 127.0.0.1) Total in 34 ms Change detected, rebuilding site (#8).</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="https://ping-square.com/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

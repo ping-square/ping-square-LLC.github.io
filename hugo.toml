@@ -24,7 +24,7 @@ author.name = "Sören Weber"
 # This is used for generating social media meta information for the opengraph
 # protocol and twitter cards.
 # This can be overridden in the page's frontmatter.
-images = [ "images/hero.png" ]
+images = [ "images/The_network_engineer.png" ]
 
 # Admin options for social media.
 # Default: not set
