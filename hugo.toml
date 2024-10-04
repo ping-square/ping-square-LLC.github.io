@@ -1,6 +1,6 @@
 baseURL = 'https://ping-square.com/'
 languageCode = 'en-us'
-title = 'Welcome to Ping-Square.com'
+title = 'Ping-Square.com'
 theme = 'hugo-theme-relearn'
 
 ##############################################################################

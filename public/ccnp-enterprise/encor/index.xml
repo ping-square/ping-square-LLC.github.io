@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ENCOR :: Ping-Square.com</title>
+    <link>http://localhost:1313/ccnp-enterprise/encor/index.html</link>
+    <description></description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 02 Oct 2024 22:40:52 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/ccnp-enterprise/encor/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Chapter 1</title>
+      <link>http://localhost:1313/ccnp-enterprise/encor/chapter-1/index.html</link>
+      <pubDate>Wed, 02 Oct 2024 22:40:27 -0500</pubDate>
+      <guid>http://localhost:1313/ccnp-enterprise/encor/chapter-1/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Chapter 2</title>
+      <link>http://localhost:1313/ccnp-enterprise/encor/chapter-2/index.html</link>
+      <pubDate>Wed, 02 Oct 2024 22:40:36 -0500</pubDate>
+      <guid>http://localhost:1313/ccnp-enterprise/encor/chapter-2/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Chapter 3</title>
+      <link>http://localhost:1313/ccnp-enterprise/encor/chapter-3/index.html</link>
+      <pubDate>Wed, 02 Oct 2024 22:40:45 -0500</pubDate>
+      <guid>http://localhost:1313/ccnp-enterprise/encor/chapter-3/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Chapter 4</title>
+      <link>http://localhost:1313/ccnp-enterprise/encor/chapter-4/index.html</link>
+      <pubDate>Wed, 02 Oct 2024 22:40:52 -0500</pubDate>
+      <guid>http://localhost:1313/ccnp-enterprise/encor/chapter-4/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>chapter-5: VLAN Trunks and EtherChannel Bundles&#34;</title>
+      <link>http://localhost:1313/ccnp-enterprise/encor/chapter-5/index.html</link>
+      <pubDate>Wed, 02 Oct 2024 22:39:32 -0500</pubDate>
+      <guid>http://localhost:1313/ccnp-enterprise/encor/chapter-5/index.html</guid>
+      <description>Here are 20 sample comprehension questions based on Chapter 5 (“VLAN Trunks and EtherChannel Bundles”) from the book CCNP and CCIE Enterprise Core ENCOR 350-401 Official Cert Guide, 2nd Edition:&#xA;1. What is the primary function of VLAN Trunking Protocol (VTP)? Answer test&#xA;2. Explain the purpose of a VLAN trunk in a network. Answer test</description>
+    </item>
+  </channel>
+</rss>
