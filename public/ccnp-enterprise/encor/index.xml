@@ -6,7 +6,7 @@
     <description>Part I Forwarding&#xA;Chapter 1: Packet Forwarding Part II Layer&#xA;Chapter 2: Spanning Tree Protocol&#xA;Chapter 3: Advanced STP Tuning&#xA;Chapter 4: Multiple Spanning Tree Protocol&#xA;Chapter 5: VLAN Trunks and EtherChannel Bundles&#xA;Part III Routing&#xA;Chapter 6: IP Routing Essentials&#xA;Chapter 7: EIGRP&#xA;Chapter 8: OSPF&#xA;Chapter 9: Advanced OSPF&#xA;Chapter 10: OSPFv3&#xA;Chapter 11: BGP&#xA;Chapter 12: Advanced BGP&#xA;Chapter 13: Multicast</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 05 Oct 2024 09:03:50 -0500</lastBuildDate>
+    <lastBuildDate>Sat, 05 Oct 2024 15:18:51 -0500</lastBuildDate>
     <atom:link href="http://localhost:1313/ccnp-enterprise/encor/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Chapter 1</title>
@@ -49,6 +49,13 @@
       <pubDate>Sat, 05 Oct 2024 09:03:50 -0500</pubDate>
       <guid>http://localhost:1313/ccnp-enterprise/encor/chapter-6/index.html</guid>
       <description>IP routing Essentials 1) What is an AS? Answer An AS or Autonomous System (AS) is a connected group of IP networks managed by a single administrative entity, such as a university, government or a commercial organization.&#xA;2) What is an IGP? Answer An IGP or Interior Gateway Protocol is protocol that works best for the communication between IP networks within a single AS.</description>
+    </item>
+    <item>
+      <title>Chapter 7</title>
+      <link>http://localhost:1313/ccnp-enterprise/encor/chapter-7/index.html</link>
+      <pubDate>Sat, 05 Oct 2024 15:18:51 -0500</pubDate>
+      <guid>http://localhost:1313/ccnp-enterprise/encor/chapter-7/index.html</guid>
+      <description>EIGRP Here are 30 sample comprehension questions based on Chapter 7 (EIGRP) from the “CCNP and CCIE Enterprise Core ENCOR 350-401 Official Cert Guide, 2nd Edition”:&#xA;1. What does EIGRP stand for, and what type of routing protocol is it? Answer EIGRP stands for Enhanced Interior Gateway Routing Protocol. It is an advanced distance vector routing protocol that includes features of both distance vector and link-state protocols.</description>
     </item>
   </channel>
 </rss>
