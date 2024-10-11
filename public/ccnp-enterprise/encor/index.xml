@@ -55,7 +55,7 @@
       <link>http://localhost:1313/ccnp-enterprise/encor/chapter-7/index.html</link>
       <pubDate>Sat, 05 Oct 2024 15:18:51 -0500</pubDate>
       <guid>http://localhost:1313/ccnp-enterprise/encor/chapter-7/index.html</guid>
-      <description>EIGRP Here are 30 sample comprehension questions based on Chapter 7 (EIGRP) from the “CCNP and CCIE Enterprise Core ENCOR 350-401 Official Cert Guide, 2nd Edition”:&#xA;1. What does EIGRP stand for, and what type of routing protocol is it? Answer EIGRP stands for Enhanced Interior Gateway Routing Protocol. It is an advanced distance vector routing protocol that includes features of both distance vector and link-state protocols.</description>
+      <description>EIGRP 1. What does EIGRP stand for, and what type of routing protocol is it? Answer EIGRP stands for Enhanced Interior Gateway Routing Protocol. It is an advanced distance vector routing protocol that includes features of both distance vector and link-state protocols.&#xA;2. How does EIGRP differ from traditional distance vector protocols like RIP? Answer: Unlike RIP, EIGRP uses the Diffusing Update Algorithm (DUAL) to achieve faster convergence and supports variable-length subnet masks (VLSMs), classless inter-domain routing (CIDR), and unequal-cost load balancing.</description>
     </item>
   </channel>
 </rss>

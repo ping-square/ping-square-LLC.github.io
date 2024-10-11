@@ -6,7 +6,6 @@ weight = 7
 +++
 # **EIGRP**
 
-Here are 30 sample comprehension questions based on Chapter 7 (EIGRP) from the "CCNP and CCIE Enterprise Core ENCOR 350-401 Official Cert Guide, 2nd Edition":
 
 ###### 1. **What does EIGRP stand for, and what type of routing protocol is it?**
 {{% expand title="Answer" %}}
@@ -215,4 +214,3 @@ Here are detailed answers to the questions:
 
 In summary, the neighbor table keeps track of neighboring routers, the topology table stores all potential routes learned from these neighbors, and the routing table holds the most optimal routes that are actively used for packet forwarding.
 These answers cover a wide range of EIGRP topics that are critical for both technical interviews and certification exams.
-

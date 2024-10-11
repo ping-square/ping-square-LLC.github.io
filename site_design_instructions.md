@@ -82,6 +82,92 @@ I noticed that when you create multiple repos under the same organization with h
 
 # changing the Logo 
 
+# tracking Website visit with Google Analytics
+1- Go in googleAnalytics and generate a code that will be used for tracking
+```
+cd themes/hugo-theme-relearn/layouts/partials
+touch head.html
+```
+2- Paste the following inside `head.html`:
+```httml
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }}</title>
+    <!-- Other head content -->
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WFJ09HWNL4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-WFJ09HWNL4');
+    </script>
+</head>
+<body>
+
+```
+3- go to the `_default` folder and create a file.
+```
+cd ../_default 
+touch baseof.html
+```
+4- Update the `baseof.html` file with the following content:
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }}</title>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WFJ09HWNL4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-WFJ09HWNL4');
+    </script>
+</head>
+<body>
+    {{ block "main" . }}{{ end }}
+</body>
+</html>
+```
+Modify Your Layouts to Use baseof.html
+```
+{{ define "main" }}
+<article>
+  <header>
+    <h1>{{ .Title }}</h1> <!-- Displays the title of the content -->
+    <p><time>{{ .Date }}</time></p> <!-- Displays the date of the content -->
+  </header>
+
+  <div>
+    {{ .Content }} <!-- This pulls in the main content from your markdown files -->
+  </div>
+
+  <footer>
+    <p>Written by {{ .Params.author }}</p> <!-- Example of using front matter from your content -->
+  </footer>
+</article>
+{{ end }}
+``` 
+5- Modify Your Layouts to Use `baseof.html`:
+In other words, modify all the other files under `_default.html`, that is:
+- index.html
+- list.html
+- single.html
+- Taxonomy.html
+- term.html
+
+
 # Using "Arberia Theme" as the homepage of my blog
 
 # Using "Ed" theme for the different articles in my blog
