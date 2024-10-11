@@ -2,59 +2,59 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ENCOR :: Ping-Square.com</title>
-    <link>http://localhost:1313/ccnp-enterprise/encor/index.html</link>
+    <link>https://ping-square.com/ccnp-enterprise/encor/index.html</link>
     <description>Part I Forwarding&#xA;Chapter 1: Packet Forwarding Part II Layer&#xA;Chapter 2: Spanning Tree Protocol&#xA;Chapter 3: Advanced STP Tuning&#xA;Chapter 4: Multiple Spanning Tree Protocol&#xA;Chapter 5: VLAN Trunks and EtherChannel Bundles&#xA;Part III Routing&#xA;Chapter 6: IP Routing Essentials&#xA;Chapter 7: EIGRP&#xA;Chapter 8: OSPF&#xA;Chapter 9: Advanced OSPF&#xA;Chapter 10: OSPFv3&#xA;Chapter 11: BGP&#xA;Chapter 12: Advanced BGP&#xA;Chapter 13: Multicast</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 05 Oct 2024 15:18:51 -0500</lastBuildDate>
-    <atom:link href="http://localhost:1313/ccnp-enterprise/encor/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ping-square.com/ccnp-enterprise/encor/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Chapter 1</title>
-      <link>http://localhost:1313/ccnp-enterprise/encor/chapter-1/index.html</link>
+      <link>https://ping-square.com/ccnp-enterprise/encor/chapter-1/index.html</link>
       <pubDate>Wed, 02 Oct 2024 22:40:27 -0500</pubDate>
-      <guid>http://localhost:1313/ccnp-enterprise/encor/chapter-1/index.html</guid>
+      <guid>https://ping-square.com/ccnp-enterprise/encor/chapter-1/index.html</guid>
       <description>Packet Forwarding</description>
     </item>
     <item>
       <title>Chapter 2</title>
-      <link>http://localhost:1313/ccnp-enterprise/encor/chapter-2/index.html</link>
+      <link>https://ping-square.com/ccnp-enterprise/encor/chapter-2/index.html</link>
       <pubDate>Wed, 02 Oct 2024 22:40:36 -0500</pubDate>
-      <guid>http://localhost:1313/ccnp-enterprise/encor/chapter-2/index.html</guid>
+      <guid>https://ping-square.com/ccnp-enterprise/encor/chapter-2/index.html</guid>
       <description>Advanced STP Tuning</description>
     </item>
     <item>
       <title>Chapter 3</title>
-      <link>http://localhost:1313/ccnp-enterprise/encor/chapter-3/index.html</link>
+      <link>https://ping-square.com/ccnp-enterprise/encor/chapter-3/index.html</link>
       <pubDate>Wed, 02 Oct 2024 22:40:45 -0500</pubDate>
-      <guid>http://localhost:1313/ccnp-enterprise/encor/chapter-3/index.html</guid>
+      <guid>https://ping-square.com/ccnp-enterprise/encor/chapter-3/index.html</guid>
       <description>Advanced STP Tuning</description>
     </item>
     <item>
       <title>Chapter 4</title>
-      <link>http://localhost:1313/ccnp-enterprise/encor/chapter-4/index.html</link>
+      <link>https://ping-square.com/ccnp-enterprise/encor/chapter-4/index.html</link>
       <pubDate>Wed, 02 Oct 2024 22:40:52 -0500</pubDate>
-      <guid>http://localhost:1313/ccnp-enterprise/encor/chapter-4/index.html</guid>
+      <guid>https://ping-square.com/ccnp-enterprise/encor/chapter-4/index.html</guid>
       <description>Multiple Spanning Tree Protocol</description>
     </item>
     <item>
       <title>chapter 5</title>
-      <link>http://localhost:1313/ccnp-enterprise/encor/chapter-5/index.html</link>
+      <link>https://ping-square.com/ccnp-enterprise/encor/chapter-5/index.html</link>
       <pubDate>Wed, 02 Oct 2024 22:39:32 -0500</pubDate>
-      <guid>http://localhost:1313/ccnp-enterprise/encor/chapter-5/index.html</guid>
+      <guid>https://ping-square.com/ccnp-enterprise/encor/chapter-5/index.html</guid>
       <description>VLAN Trunks &amp; EtherChannel Bundles 1. What is the primary function of VLAN Trunking Protocol (VTP)? Answer test&#xA;2. Explain the purpose of a VLAN trunk in a network. Answer test&#xA;3. How does the Dynamic Trunking Protocol (DTP) facilitate switch-to-switch communication? Answer test&#xA;4. What is an EtherChannel bundle, and why is it used? Answer test</description>
     </item>
     <item>
       <title>Chapter 6</title>
-      <link>http://localhost:1313/ccnp-enterprise/encor/chapter-6/index.html</link>
+      <link>https://ping-square.com/ccnp-enterprise/encor/chapter-6/index.html</link>
       <pubDate>Sat, 05 Oct 2024 09:03:50 -0500</pubDate>
-      <guid>http://localhost:1313/ccnp-enterprise/encor/chapter-6/index.html</guid>
+      <guid>https://ping-square.com/ccnp-enterprise/encor/chapter-6/index.html</guid>
       <description>IP routing Essentials 1) What is an AS? Answer An AS or Autonomous System (AS) is a connected group of IP networks managed by a single administrative entity, such as a university, government or a commercial organization.&#xA;2) What is an IGP? Answer An IGP or Interior Gateway Protocol is protocol that works best for the communication between IP networks within a single AS.</description>
     </item>
     <item>
       <title>Chapter 7</title>
-      <link>http://localhost:1313/ccnp-enterprise/encor/chapter-7/index.html</link>
+      <link>https://ping-square.com/ccnp-enterprise/encor/chapter-7/index.html</link>
       <pubDate>Sat, 05 Oct 2024 15:18:51 -0500</pubDate>
-      <guid>http://localhost:1313/ccnp-enterprise/encor/chapter-7/index.html</guid>
+      <guid>https://ping-square.com/ccnp-enterprise/encor/chapter-7/index.html</guid>
       <description>EIGRP 1. What does EIGRP stand for, and what type of routing protocol is it? Answer EIGRP stands for Enhanced Interior Gateway Routing Protocol. It is an advanced distance vector routing protocol that includes features of both distance vector and link-state protocols.&#xA;2. How does EIGRP differ from traditional distance vector protocols like RIP? Answer: Unlike RIP, EIGRP uses the Diffusing Update Algorithm (DUAL) to achieve faster convergence and supports variable-length subnet masks (VLSMs), classless inter-domain routing (CIDR), and unequal-cost load balancing.</description>
     </item>
   </channel>

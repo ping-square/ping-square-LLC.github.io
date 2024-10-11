@@ -164,6 +164,23 @@ In other words, modify all the other files under `_default.html`, that is:
 - index.html
 - list.html
 - single.html
+        {{ define "main" }}
+        <article>
+          <header>
+            <h1>{{ .Title }}</h1> <!-- Displays the title of the content -->
+            <p><time>{{ .Date }}</time></p> <!-- Displays the date of the content -->
+          </header>
+
+          <div>
+            {{ .Content }} <!-- This pulls in the main content from your markdown files -->
+          </div>
+
+          <footer>
+            <p>Written by {{ .Params.author }}</p> <!-- Example of using front matter from your content -->
+          </footer>
+        </article>
+        {{ end }}
+
 - Taxonomy.html
 - term.html
 
