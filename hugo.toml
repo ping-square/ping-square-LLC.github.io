@@ -7,7 +7,7 @@ theme = 'hugo-theme-relearn'
 [params]
 # If an option value is said to be not set, you can achieve the same behavior
 # by giving it an empty string value.
-
+googleAnalytics = "G-WFJ09HWNL4"
 ###############################################################################
 # Hugo
 # These options usually apply to other themes as well.

@@ -189,7 +189,7 @@ In other words, modify all the other files under `_default.html`, that is:
 
 # Using "Ed" theme for the different articles in my blog
 
-# using "aafu" theme for my portfolio
+# using "Academic Theme" theme for my portfolio
 
 # sample frontmatter
     +++
