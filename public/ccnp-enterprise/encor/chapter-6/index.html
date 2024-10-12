@@ -1,3 +1,660 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.134.3">
+    <meta name="generator" content="Relearn 6.4.0+tip">
+    <meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
+    <meta name="description" content="IP routing Essentials 1) What is an AS? Answer An AS or Autonomous System (AS) is a connected group of IP networks managed by a single administrative entity, such as a university, government or a commercial organization.
+2) What is an IGP? Answer An IGP or Interior Gateway Protocol is protocol that works best for the communication between IP networks within a single AS.">
+    <meta name="author" content="Sören Weber">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="http://localhost:1313/images/The_network_engineer.png">
+    <meta name="twitter:title" content="Chapter 6 :: Ping-Square.com">
+    <meta name="twitter:description" content="IP routing Essentials 1) What is an AS? Answer An AS or Autonomous System (AS) is a connected group of IP networks managed by a single administrative entity, such as a university, government or a commercial organization.
+2) What is an IGP? Answer An IGP or Interior Gateway Protocol is protocol that works best for the communication between IP networks within a single AS.">
+    <meta property="og:url" content="http://localhost:1313/ccnp-enterprise/encor/chapter-6/index.html">
+    <meta property="og:site_name" content="Ping-Square.com">
+    <meta property="og:title" content="Chapter 6 :: Ping-Square.com">
+    <meta property="og:description" content="IP routing Essentials 1) What is an AS? Answer An AS or Autonomous System (AS) is a connected group of IP networks managed by a single administrative entity, such as a university, government or a commercial organization.
+2) What is an IGP? Answer An IGP or Interior Gateway Protocol is protocol that works best for the communication between IP networks within a single AS.">
+    <meta property="og:locale" content="en_us">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="CCNP Enterprise">
+    <meta property="article:published_time" content="2024-10-05T09:03:50-05:00">
+    <meta property="article:modified_time" content="2024-10-05T09:03:50-05:00">
+    <meta property="og:image" content="http://localhost:1313/images/The_network_engineer.png">
+    <meta itemprop="name" content="Chapter 6 :: Ping-Square.com">
+    <meta itemprop="description" content="IP routing Essentials 1) What is an AS? Answer An AS or Autonomous System (AS) is a connected group of IP networks managed by a single administrative entity, such as a university, government or a commercial organization.
+2) What is an IGP? Answer An IGP or Interior Gateway Protocol is protocol that works best for the communication between IP networks within a single AS.">
+    <meta itemprop="datePublished" content="2024-10-05T09:03:50-05:00">
+    <meta itemprop="dateModified" content="2024-10-05T09:03:50-05:00">
+    <meta itemprop="wordCount" content="1320">
+    <meta itemprop="image" content="http://localhost:1313/images/The_network_engineer.png">
+    <title>Chapter 6 :: Ping-Square.com</title>
+    <link href="/css/fontawesome-all.min.css?1728700674" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1728700674" rel="stylesheet"></noscript>
+    <link href="/css/nucleus.css?1728700674" rel="stylesheet">
+    <link href="/css/auto-complete.css?1728700674" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1728700674" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1728700674" rel="stylesheet">
+    <link href="/css/fonts.css?1728700674" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1728700674" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1728700674" rel="stylesheet">
+    <link href="/css/theme-relearn-auto.css?1728700674" rel="stylesheet" id="R-variant-style">
+    <link href="/css/chroma-relearn-auto.css?1728700674" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="/css/variant.css?1728700674" rel="stylesheet">
+    <link href="/css/print.css?1728700674" rel="stylesheet" media="print">
+    <script src="/js/variant.js?1728700674"></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.relBasePath='..\/..\/..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      // variant stuff
+      window.variants && variants.init( [ 'relearn-auto', 'relearn-light', 'relearn-dark', 'relearn-bright', 'zen-auto', 'zen-light', 'zen-dark', 'retro-auto', 'neon', 'learn', 'blue', 'green', 'red' ] );
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+    </script>
+  </head>
+  <body class="mobile-support html disableInlineCopyToClipboard" data-url="/ccnp-enterprise/encor/chapter-6/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper"> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/ccnp-enterprise/index.html"><span itemprop="name">CCNP Enterprise</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/ccnp-enterprise/encor/index.html"><span itemprop="name">ENCOR</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Chapter 6</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/ccnp-enterprise/encor/chapter-5/index.html" title="chapter 5 (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/ccnp-enterprise/encor/chapter-7/index.html" title="Chapter 7 (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <article class="default">
+            <header class="headline">
+            </header>
 
+<h1 id="chapter-6">Chapter 6</h1>
 
+<h1 id="ip-routing-essentials"><strong>IP routing Essentials</strong></h1>
+<h6 id="1-what-is-an-as">1) What is an AS?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-9dac6cb950d6a7b6f47ea90ac20b085c" aria-controls="R-expandcontent-9dac6cb950d6a7b6f47ea90ac20b085c">
+  <label class="expand-label" for="R-expand-9dac6cb950d6a7b6f47ea90ac20b085c">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-9dac6cb950d6a7b6f47ea90ac20b085c" class="expand-content">
+<p>An <strong>AS</strong> or <strong>Autonomous System</strong> (AS) is a connected group of IP networks managed by a single administrative entity, such as a university, government or a commercial organization.</p>
+  </div>
+</div>
+<h6 id="2-what-is-an-igp">2) What is an IGP?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-96a8eb3e6ce2b7bf69d56cfc75068ed8" aria-controls="R-expandcontent-96a8eb3e6ce2b7bf69d56cfc75068ed8">
+  <label class="expand-label" for="R-expand-96a8eb3e6ce2b7bf69d56cfc75068ed8">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-96a8eb3e6ce2b7bf69d56cfc75068ed8" class="expand-content">
+<p>An <strong>IGP</strong> or <strong>Interior Gateway Protocol</strong> is protocol that works best for the communication between IP networks within a single AS.</p>
+<p><em>E.g:</em> RIP, OSPF, EIFRP, ISIS</p>
+  </div>
+</div>
+<h6 id="3-what-is-an-egp">3) What is an EGP?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-6712527a2e639716323b7e77e97b31ac" aria-controls="R-expandcontent-6712527a2e639716323b7e77e97b31ac">
+  <label class="expand-label" for="R-expand-6712527a2e639716323b7e77e97b31ac">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-6712527a2e639716323b7e77e97b31ac" class="expand-content">
+<p>An <em>EGP</em> or <strong>Exterior Gateway Protocol</strong> is protocol that is suited for the communication between ASs.</p>
+  </div>
+</div>
+<h6 id="4-what-is-the-primary-function-of-an-ip-routing-protocol">4) What is the primary function of an IP routing protocol?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-800f76bddb2a2a750b0748a560b80cad" aria-controls="R-expandcontent-800f76bddb2a2a750b0748a560b80cad">
+  <label class="expand-label" for="R-expand-800f76bddb2a2a750b0748a560b80cad">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-800f76bddb2a2a750b0748a560b80cad" class="expand-content">
+<p>The primary function of an IP routing protocol is ensuring data packets can travel efficiently from source to destination.</p>
+  </div>
+</div>
+<h6 id="5-can-you-explain-the-difference-between-distance-vector-and-link-state-routing-protocols">5) Can you explain the difference between distance vector and link-state routing protocols?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-655323701ae68b22b870c8b84c0bde17" aria-controls="R-expandcontent-655323701ae68b22b870c8b84c0bde17">
+  <label class="expand-label" for="R-expand-655323701ae68b22b870c8b84c0bde17">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-655323701ae68b22b870c8b84c0bde17" class="expand-content">
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">#</th>
+          <th style="text-align: left">Categories</th>
+          <th style="text-align: left">Distance Vector</th>
+          <th style="text-align: left">Link-State</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">Algorithm Used</td>
+          <td style="text-align: left">Uses the <strong>Bellman-Ford algorithm</strong> to calculate the best path based on distance (usually hop count) from a router to the destination.</td>
+          <td style="text-align: left">Uses <strong>Dijkstra’s algorithm</strong> to compute the shortest path based on a complete map of the network.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left">Routing Information</td>
+          <td style="text-align: left">Routers only share information with directly connected neighbors, and routers do not have a full view of the network. Instead, they rely on cumulative information passed through the network.</td>
+          <td style="text-align: left">Each router has a complete view of the network by building and maintaining a full topology map of all routers within the network.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">3</td>
+          <td style="text-align: left">Updates</td>
+          <td style="text-align: left">Routers periodically send updates whether there is a change on the network or not. Each update always contains the entire routing table to their neighbors.</td>
+          <td style="text-align: left">Routers only send updates when there is a change in the network topology (link state updates), and they only send the changed information, not the entire routing table.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">4</td>
+          <td style="text-align: left">Convergence Time</td>
+          <td style="text-align: left">Generally slower to converge due to periodic updates and reliance on incremental changes from neighbors.</td>
+          <td style="text-align: left">Faster convergence as routers have a complete view of the network and can independently calculate the shortest paths when a change occurs.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">5</td>
+          <td style="text-align: left">Scalability</td>
+          <td style="text-align: left">Less scalable, especially in large networks, because it doesn’t have a full view of the topology and relies on periodic updates.</td>
+          <td style="text-align: left">More scalable in large networks due to faster convergence and efficient, event-driven updates.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">6</td>
+          <td style="text-align: left">Loop Prevention</td>
+          <td style="text-align: left">Requires mechanisms like <strong>split horizon</strong>, <strong>route poisoning</strong>, and <strong>hold-down timers</strong> to prevent routing loops.</td>
+          <td style="text-align: left">Since routers have a full network map, routing loops are naturally prevented.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">7</td>
+          <td style="text-align: left">Resource Usage</td>
+          <td style="text-align: left">Less CPU and memory intensive, as routers maintain only neighbor information and routing tables.</td>
+          <td style="text-align: left">More resource-intensive, requiring more memory and CPU to maintain and process the entire network topology.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">8</td>
+          <td style="text-align: left">Examples</td>
+          <td style="text-align: left"><strong>RIP</strong> (Routing Information Protocol). <strong>EIGRP</strong> (Enhanced Interior Gateway Routing Protocol) – Cisco proprietary but adds advanced</td>
+          <td style="text-align: left"><strong>OSPF</strong> (Open Shortest Path First), <strong>IS-IS</strong> (Intermediate System to Intermediate System)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">9</td>
+          <td style="text-align: left">Route Calculation</td>
+          <td style="text-align: left">Routers rely on neighbors to calculate routes. Each router trusts the information received from its neighbors without verifying the entire network topology.</td>
+          <td style="text-align: left">Each router calculates routes independently based on the complete network topology, resulting in a more accurate and reliable route selection.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">10</td>
+          <td style="text-align: left">Network Type Suitability</td>
+          <td style="text-align: left">Suitable for smaller or less complex networks where simplicity and minimal resource usage are prioritized.</td>
+          <td style="text-align: left">Better suited for large, complex networks where fast convergence and scalability are required.</td>
+      </tr>
+  </tbody>
+</table>
+  </div>
+</div>
+<h6 id="6-what-algorithm-is-used-by-distance-vector-routing-protocols-to-determine-the-best-path">6) What algorithm is used by distance vector routing protocols to determine the best path?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-67580ecf7a64361343e69aaf5b1840ca" aria-controls="R-expandcontent-67580ecf7a64361343e69aaf5b1840ca">
+  <label class="expand-label" for="R-expand-67580ecf7a64361343e69aaf5b1840ca">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-67580ecf7a64361343e69aaf5b1840ca" class="expand-content">
+<p>The Bellman-Ford algorithm.</p>
+  </div>
+</div>
+<h6 id="7-how-does-the-link-state-routing-algorithm-work-and-which-protocols-typically-use-it">7) How does the link-state routing algorithm work, and which protocols typically use it?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-ec93b6dde2d0ef5f1f54b7ba8a2113f4" aria-controls="R-expandcontent-ec93b6dde2d0ef5f1f54b7ba8a2113f4">
+  <label class="expand-label" for="R-expand-ec93b6dde2d0ef5f1f54b7ba8a2113f4">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-ec93b6dde2d0ef5f1f54b7ba8a2113f4" class="expand-content">
+<p>It uses Dijkstra&rsquo;s algorithm to calculate the shortest path by constructing a full map of the network.</p>
+  </div>
+</div>
+<h6 id="8-define-a-path-vector-algorithm-and-provide-an-example-of-a-protocol-that-uses-it">8) Define a path vector algorithm and provide an example of a protocol that uses it.</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-fb7ad6351e27945a57a5fa9ce04c8a8a" aria-controls="R-expandcontent-fb7ad6351e27945a57a5fa9ce04c8a8a">
+  <label class="expand-label" for="R-expand-fb7ad6351e27945a57a5fa9ce04c8a8a">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-fb7ad6351e27945a57a5fa9ce04c8a8a" class="expand-content">
+<p>The path vector algorithm is used to determine the best route to a destination by tracking the entire path that routing information has traversed from source to destination. BGP uses a path vector algorithm called <strong>AS_PATH</strong>.</p>
+  </div>
+</div>
+<h6 id="9-what-is-the-significance-of-prefix-length-in-routing">9) What is the significance of prefix length in routing?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-a5935b3ac6db9e4461c332650ad7fd68" aria-controls="R-expandcontent-a5935b3ac6db9e4461c332650ad7fd68">
+  <label class="expand-label" for="R-expand-a5935b3ac6db9e4461c332650ad7fd68">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-a5935b3ac6db9e4461c332650ad7fd68" class="expand-content">
+<p>It defines the size of the network portion of an IP address and helps in selecting the most specific route for packet forwarding.</p>
+  </div>
+</div>
+<h6 id="10-how-does-a-router-use-administrative-distance-ad-to-select-the-best-route">10) How does a router use administrative distance (AD) to select the best route?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-5315e3016f5059cac8f78123b97d97af" aria-controls="R-expandcontent-5315e3016f5059cac8f78123b97d97af">
+  <label class="expand-label" for="R-expand-5315e3016f5059cac8f78123b97d97af">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-5315e3016f5059cac8f78123b97d97af" class="expand-content">
+<p>Administrative distance is a value that indicates the trustworthiness of a route source. In other words, when you have multiple protocol running on the same router and each learning a path towards a specific destination, the RIB (Router Iformation Base) table will only accept the route from the protocol with the lowest AD as it is deemed the most trustworthy.</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Route Origin</th>
+          <th style="text-align: left">Default Administrative Distance</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Directly connected interface</td>
+          <td style="text-align: left">0</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Static route</td>
+          <td style="text-align: left">1</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">EIGRP Summary route</td>
+          <td style="text-align: left">5</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">External BGP (eBGP) route</td>
+          <td style="text-align: left">20</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">EIGRP Internal route</td>
+          <td style="text-align: left">90</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">OSPF route</td>
+          <td style="text-align: left">110</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">IS-IS route</td>
+          <td style="text-align: left">115</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">RIPv2 route</td>
+          <td style="text-align: left">120</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">EIGRP (External) route</td>
+          <td style="text-align: left">170</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Internal BGP (iBGP) route</td>
+          <td style="text-align: left">200</td>
+      </tr>
+  </tbody>
+</table>
+  </div>
+</div>
+<h6 id="11-what-factors-contribute-to-a-routes-metric-and-why-is-it-important-in-path-selection">11) What factors contribute to a route’s metric, and why is it important in path selection?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-4fe254f025692a8c6d2b891882f2856f" aria-controls="R-expandcontent-4fe254f025692a8c6d2b891882f2856f">
+  <label class="expand-label" for="R-expand-4fe254f025692a8c6d2b891882f2856f">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-4fe254f025692a8c6d2b891882f2856f" class="expand-content">
+<p>Factors include bandwidth, delay, load, and hop count; the metric determines the &ldquo;cost&rdquo; of a route, helping the router choose the most efficient path.</p>
+  </div>
+</div>
+<h6 id="12-describe-the-concept-of-static-routing-and-when-it-is-typically-used-in-a-network">12) Describe the concept of static routing and when it is typically used in a network.</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-89ea65912055d63d474e030c5f3e0066" aria-controls="R-expandcontent-89ea65912055d63d474e030c5f3e0066">
+  <label class="expand-label" for="R-expand-89ea65912055d63d474e030c5f3e0066">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-89ea65912055d63d474e030c5f3e0066" class="expand-content">
+<p>Static routing involves manually configuring routes; it’s used in small, simple networks, for backup routes in larger networks or on device with low ressouces.</p>
+  </div>
+</div>
+<h6 id="13-what-is-a-floating-static-route-and-how-does-it-differ-from-a-regular-static-route">13) What is a floating static route, and how does it differ from a regular static route?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-c878e99c415e0f39b5d650a2a9ca6b36" aria-controls="R-expandcontent-c878e99c415e0f39b5d650a2a9ca6b36">
+  <label class="expand-label" for="R-expand-c878e99c415e0f39b5d650a2a9ca6b36">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-c878e99c415e0f39b5d650a2a9ca6b36" class="expand-content">
+<p>A floating static route is a static route for which the default AD of 1 has been changed to a value higher than that of the primary route to serve as a backup route.</p>
+  </div>
+</div>
+<h6 id="14-how-is-a-static-route-configured-to-direct-traffic-to-a-null-interface">14) How is a static route configured to direct traffic to a null interface?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-d79d899f398886630b338d31bbbaaaa9" aria-controls="R-expandcontent-d79d899f398886630b338d31bbbaaaa9">
+  <label class="expand-label" for="R-expand-d79d899f398886630b338d31bbbaaaa9">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-d79d899f398886630b338d31bbbaaaa9" class="expand-content">
+<p>This command  which discards traffic, often for security or summarization purposes.</p>
+<div class="highlight wrap-code"><pre tabindex="0"><code>ip route &lt;destination&gt; &lt;mask&gt; null0</code></pre></div>
+  </div>
+</div>
+<h6 id="15-what-are-some-advantages-of-using-ipv6-static-routes-over-ipv4-static-routes">15) What are some advantages of using IPv6 static routes over IPv4 static routes?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-93e97dd38afcbb2a0bed964a5bbacb7c" aria-controls="R-expandcontent-93e97dd38afcbb2a0bed964a5bbacb7c">
+  <label class="expand-label" for="R-expand-93e97dd38afcbb2a0bed964a5bbacb7c">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-93e97dd38afcbb2a0bed964a5bbacb7c" class="expand-content">
+<p>IPv6 provides simplified routing with auto-configuration features, larger address space, and better hierarchical network design.</p>
+  </div>
+</div>
+<h6 id="16-explain-the-concept-of-policy-based-routing-pbr-and-provide-a-real-world-example-of-its-use">16) Explain the concept of policy-based routing (PBR) and provide a real-world example of its use.</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-120959aca982eb226a5e7577413945f6" aria-controls="R-expandcontent-120959aca982eb226a5e7577413945f6">
+  <label class="expand-label" for="R-expand-120959aca982eb226a5e7577413945f6">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-120959aca982eb226a5e7577413945f6" class="expand-content">
+<p>By default, the router makes forwarding decisions based on the destination IP address. But with PBR, the router can make forwarding decisions based on other factors such as:</p>
+<ul>
+<li>source IP address</li>
+<li>protocol type (ICMP, TCP, UDP, etc&hellip;)</li>
+<li>destination IP address</li>
+</ul>
+  </div>
+</div>
+<h6 id="17-what-role-does-virtual-routing-and-forwarding-vrf-play-in-modern-networks">17) What role does Virtual Routing and Forwarding (VRF) play in modern networks?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-3e3f621838cb950f9601fcdc747b99bb" aria-controls="R-expandcontent-3e3f621838cb950f9601fcdc747b99bb">
+  <label class="expand-label" for="R-expand-3e3f621838cb950f9601fcdc747b99bb">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-3e3f621838cb950f9601fcdc747b99bb" class="expand-content">
+<p>VRF  is a technology used in networking to create multiple, isolated instances of a routing table within the same router or Layer 3 device. Each VRF instance operates as a separate and independent logical router, allowing different networks or tenants to use the same IP address ranges without interfering with each other. VRF is commonly used in multi-tenant environments, service provider networks, and large enterprise networks.</p>
+  </div>
+</div>
+<h6 id="18-in-what-scenarios-would-you-implement-static-routes-to-null-interfaces">18) In what scenarios would you implement static routes to null interfaces?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-01d00cbf7c675e24d0c2f3790dec2e89" aria-controls="R-expandcontent-01d00cbf7c675e24d0c2f3790dec2e89">
+  <label class="expand-label" for="R-expand-01d00cbf7c675e24d0c2f3790dec2e89">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-01d00cbf7c675e24d0c2f3790dec2e89" class="expand-content">
+<p>To prevent routing loops or to discard unwanted traffic, typically in route summarization or security implementations.</p>
+  </div>
+</div>
+<h6 id="19-what-steps-are-involved-in-configuring-a-basic-static-route">19) What steps are involved in configuring a basic static route?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-9b1ea8e3e69965ce2690e41bea6dae0c" aria-controls="R-expandcontent-9b1ea8e3e69965ce2690e41bea6dae0c">
+  <label class="expand-label" for="R-expand-9b1ea8e3e69965ce2690e41bea6dae0c">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-9b1ea8e3e69965ce2690e41bea6dae0c" class="expand-content">
+<p>Identify the destination network, subnet mask, and next-hop address or exit interface, then configure with the <code>ip route</code> command.</p>
+  </div>
+</div>
+<h6 id="20-how-does-floating-static-routing-provide-redundancy">20) How does floating static routing provide redundancy?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-5f2521940c1304d2b154131a63905073" aria-controls="R-expandcontent-5f2521940c1304d2b154131a63905073">
+  <label class="expand-label" for="R-expand-5f2521940c1304d2b154131a63905073">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-5f2521940c1304d2b154131a63905073" class="expand-content">
+<p>It offers a backup route with a higher administrative distance that becomes active only when the primary route fails.</p>
+  </div>
+</div>
+<h6 id="21-why-is-the-administrative-distance-of-a-route-important-in-the-context-of-static-routing">21) Why is the administrative distance of a route important in the context of static routing?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-0602bedbb7b2cf083009ee88267e545a" aria-controls="R-expandcontent-0602bedbb7b2cf083009ee88267e545a">
+  <label class="expand-label" for="R-expand-0602bedbb7b2cf083009ee88267e545a">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-0602bedbb7b2cf083009ee88267e545a" class="expand-content">
+<p>It determines the preference of routes when multiple routes to the same destination exist, ensuring the most reliable one is used.</p>
+  </div>
+</div>
+<h6 id="22-what-are-some-common-issues-that-might-arise-when-implementing-policy-based-routing-and-how-can-they-be-resolved">22) What are some common issues that might arise when implementing policy-based routing, and how can they be resolved?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-1be4f42378a8d09777eef854ec025c87" aria-controls="R-expandcontent-1be4f42378a8d09777eef854ec025c87">
+  <label class="expand-label" for="R-expand-1be4f42378a8d09777eef854ec025c87">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-1be4f42378a8d09777eef854ec025c87" class="expand-content">
+<p>Misconfigurations leading to traffic being incorrectly routed; resolving requires careful review of access lists and route-maps.</p>
+  </div>
+</div>
+<h6 id="23-how-does-ip-routing-interact-with-vrf-to-enable-multiple-virtual-routing-tables-within-a-single-router">23) How does IP routing interact with VRF to enable multiple virtual routing tables within a single router?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-eb34d5de8280cd220416ab5ccd1114bf" aria-controls="R-expandcontent-eb34d5de8280cd220416ab5ccd1114bf">
+  <label class="expand-label" for="R-expand-eb34d5de8280cd220416ab5ccd1114bf">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-eb34d5de8280cd220416ab5ccd1114bf" class="expand-content">
+<p>Each VRF maintains a separate routing table, allowing the router to handle different routing domains without overlap.</p>
+  </div>
+</div>
 
+            <footer class="footline">
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation showVisitedLinks">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+<style>
+  #R-logo img {
+    color: #282828;
+    color: var(--MENU-SECTIONS-BG-color);
+    opacity: .945;
+  }
+
+  a#R-logo {
+    color: #282828;
+    color: var(--MENU-SECTIONS-BG-color);
+    font-family: 'Work Sans', 'Helvetica', 'Tahoma', 'Geneva', 'Arial', sans-serif;
+    font-size: 1.875rem;
+    font-weight: 300;
+    margin-top: -.8125rem;
+    max-width: 100%;
+    text-transform: uppercase;
+    width: 14.125rem;
+    white-space: nowrap;
+  }
+
+  a#R-logo:hover {
+    color: #282828;
+    color: var(--MENU-SECTIONS-BG-color);
+  }
+
+  #R-logo img {
+    margin-bottom: -1.25rem;
+    margin-inline-start: -1.47rem;
+    margin-inline-end: .5rem;
+    width: 100%;
+  }
+
+  @media only all and (max-width: 59.999rem) {
+    a#R-logo {
+      font-size: 1.5625rem;
+      margin-top: -.1875rem;
+    }
+    #R-logo img {
+      margin-bottom: -.75rem;
+      margin-inline-start: -1.47rem;
+      margin-inline-end: .5rem;
+    }
+  }
+</style>
+<a id="R-logo" href="/index.html">
+  <img src="/images/Ping-Square-logo.png" alt="Ping Square Logo" />
+</a>
+        </div>
+
+        <search>
+          <div class="searchbox default-animation">
+            <i class="fas fa-search" title="Search (CTRL+ALT+f)"></i>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </search>
+        <script>
+          var contentLangs=['en'];
+        </script>
+        <script src="/js/auto-complete.js?1728700674" defer></script>
+        <script src="/js/lunr/lunr.min.js?1728700674" defer></script>
+        <script src="/js/lunr/lunr.stemmer.support.min.js?1728700674" defer></script>
+        <script src="/js/lunr/lunr.multi.min.js?1728700674" defer></script>
+        <script src="/js/lunr/lunr.en.min.js?1728700674" defer></script>
+        <script src="/js/search.js?1728700674" defer></script>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <ul>
+          <li><a class="padding" href="/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+        </ul>
+        <hr class="padding">
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div id="R-topics">
+          <ul class="enlarge morespace collapsible-menu">
+          <li data-nav-id="/foundation/index.html" class=""><a class="padding" href="/foundation/index.html">Foundation<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ccnp-enterprise/index.html" class="parent "><input type="checkbox" id="R-section-2a6d77c010f03f87a7c51afbaa87cfab" aria-controls="R-subsections-2a6d77c010f03f87a7c51afbaa87cfab" checked><label for="R-section-2a6d77c010f03f87a7c51afbaa87cfab"><i class="fa-fw fas fa-chevron-down"></i><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu CCNP Enterprise</span></label><a class="padding" href="/ccnp-enterprise/index.html">CCNP Enterprise<i class="fa-fw fas fa-check read-icon"></i></a><ul id="R-subsections-2a6d77c010f03f87a7c51afbaa87cfab" class="morespace collapsible-menu">
+          <li data-nav-id="/ccnp-enterprise/encor/index.html" class="parent alwaysopen"><input type="checkbox" id="R-section-74735ddc671024f198d2388947242f5d" aria-controls="R-subsections-74735ddc671024f198d2388947242f5d" checked><label for="R-section-74735ddc671024f198d2388947242f5d"><i class="fa-fw fas fa-chevron-down"></i><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu ENCOR</span></label><a class="padding" href="/ccnp-enterprise/encor/index.html">ENCOR<i class="fa-fw fas fa-check read-icon"></i></a><ul id="R-subsections-74735ddc671024f198d2388947242f5d" class="morespace collapsible-menu">
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-1/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-1/index.html">Chapter 1<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-2/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-2/index.html">Chapter 2<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-3/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-3/index.html">Chapter 3<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-4/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-4/index.html">Chapter 4<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-5/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-5/index.html">chapter 5<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-6/index.html" class="active"><a class="padding" href="/ccnp-enterprise/encor/chapter-6/index.html">Chapter 6<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-7/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-7/index.html">Chapter 7<i class="fa-fw fas fa-check read-icon"></i></a></li></ul></li></ul></li>
+          </ul>
+        </div>
+        <div class="padding footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVariantSwitch showVisitedLinks showFooter"></div>
+        <div id="R-menu-footer">
+          <hr class="padding default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVariantSwitch showVisitedLinks showFooter">
+          <div id="R-prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks showVariantSwitch showVisitedLinks">
+            <ul>
+              <li id="R-select-language-container" class="footerLangSwitch">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-language"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-language">Language</label>
+                    <select id="R-select-language" onchange="location = this.querySelector( this.value ).dataset.url;">
+                      <option id="R-select-language-en" value="#R-select-language-en" data-url="/ccnp-enterprise/encor/chapter-6/index.html" lang="en-us" selected></option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+              <li id="R-select-variant-container" class="footerVariantSwitch showVariantSwitch">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-paint-brush"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-variant">Theme</label>
+                    <select id="R-select-variant" onchange="window.variants && variants.changeVariant( this.value );">
+                      <option id="R-select-variant-relearn-auto" value="relearn-auto" selected>Relearn Light/Dark</option>
+                      <option id="R-select-variant-relearn-light" value="relearn-light">Relearn Light</option>
+                      <option id="R-select-variant-relearn-dark" value="relearn-dark">Relearn Dark</option>
+                      <option id="R-select-variant-relearn-bright" value="relearn-bright">Relearn Bright</option>
+                      <option id="R-select-variant-zen-auto" value="zen-auto">Zen Light/Dark</option>
+                      <option id="R-select-variant-zen-light" value="zen-light">Zen Light</option>
+                      <option id="R-select-variant-zen-dark" value="zen-dark">Zen Dark</option>
+                      <option id="R-select-variant-retro-auto" value="retro-auto">Retro Learn/Neon</option>
+                      <option id="R-select-variant-neon" value="neon">Neon</option>
+                      <option id="R-select-variant-learn" value="learn">Learn</option>
+                      <option id="R-select-variant-blue" value="blue">Blue</option>
+                      <option id="R-select-variant-green" value="green">Green</option>
+                      <option id="R-select-variant-red" value="red">Red</option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+                <script>window.variants && variants.markSelectedVariant();</script>
+              </li>
+              <li class="footerVisitedLinks showVisitedLinks">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-history"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <button onclick="clearHistory();">Clear History</button>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div id="R-footer" class="footerFooter showFooter">
+	    <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <script src="/js/clipboard.min.js?1728700674" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1728700674" defer></script>
+    <script src="/js/theme.js?1728700674" defer></script>
+  </body>
+</html>
