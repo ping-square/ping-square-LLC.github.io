@@ -1,3 +1,507 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.134.3">
+    <meta name="generator" content="Relearn 6.4.0+tip">
+    <meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
+    <meta name="description" content="VLAN Trunks &amp; EtherChannel Bundles 1. What is the primary function of VLAN Trunking Protocol (VTP)? Answer test
+2. Explain the purpose of a VLAN trunk in a network. Answer test
+3. How does the Dynamic Trunking Protocol (DTP) facilitate switch-to-switch communication? Answer test
+4. What is an EtherChannel bundle, and why is it used? Answer test">
+    <meta name="author" content="Sören Weber">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="http://localhost:1313/images/The_network_engineer.png">
+    <meta name="twitter:title" content="chapter 5 :: Ping-Square.com">
+    <meta name="twitter:description" content="VLAN Trunks &amp; EtherChannel Bundles 1. What is the primary function of VLAN Trunking Protocol (VTP)? Answer test
+2. Explain the purpose of a VLAN trunk in a network. Answer test
+3. How does the Dynamic Trunking Protocol (DTP) facilitate switch-to-switch communication? Answer test
+4. What is an EtherChannel bundle, and why is it used? Answer test">
+    <meta property="og:url" content="http://localhost:1313/ccnp-enterprise/encor/chapter-5/index.html">
+    <meta property="og:site_name" content="Ping-Square.com">
+    <meta property="og:title" content="chapter 5 :: Ping-Square.com">
+    <meta property="og:description" content="VLAN Trunks &amp; EtherChannel Bundles 1. What is the primary function of VLAN Trunking Protocol (VTP)? Answer test
+2. Explain the purpose of a VLAN trunk in a network. Answer test
+3. How does the Dynamic Trunking Protocol (DTP) facilitate switch-to-switch communication? Answer test
+4. What is an EtherChannel bundle, and why is it used? Answer test">
+    <meta property="og:locale" content="en_us">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="CCNP Enterprise">
+    <meta property="article:published_time" content="2024-10-02T22:39:32-05:00">
+    <meta property="article:modified_time" content="2024-10-02T22:39:32-05:00">
+    <meta property="og:image" content="http://localhost:1313/images/The_network_engineer.png">
+    <meta itemprop="name" content="chapter 5 :: Ping-Square.com">
+    <meta itemprop="description" content="VLAN Trunks &amp; EtherChannel Bundles 1. What is the primary function of VLAN Trunking Protocol (VTP)? Answer test
+2. Explain the purpose of a VLAN trunk in a network. Answer test
+3. How does the Dynamic Trunking Protocol (DTP) facilitate switch-to-switch communication? Answer test
+4. What is an EtherChannel bundle, and why is it used? Answer test">
+    <meta itemprop="datePublished" content="2024-10-02T22:39:32-05:00">
+    <meta itemprop="dateModified" content="2024-10-02T22:39:32-05:00">
+    <meta itemprop="wordCount" content="279">
+    <meta itemprop="image" content="http://localhost:1313/images/The_network_engineer.png">
+    <title>chapter 5 :: Ping-Square.com</title>
+    <link href="/css/fontawesome-all.min.css?1728701640" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1728701640" rel="stylesheet"></noscript>
+    <link href="/css/nucleus.css?1728701640" rel="stylesheet">
+    <link href="/css/auto-complete.css?1728701640" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1728701640" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1728701640" rel="stylesheet">
+    <link href="/css/fonts.css?1728701640" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1728701640" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1728701640" rel="stylesheet">
+    <link href="/css/theme-relearn-auto.css?1728701640" rel="stylesheet" id="R-variant-style">
+    <link href="/css/chroma-relearn-auto.css?1728701640" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="/css/variant.css?1728701640" rel="stylesheet">
+    <link href="/css/print.css?1728701640" rel="stylesheet" media="print">
+    <script src="/js/variant.js?1728701640"></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.relBasePath='..\/..\/..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      // variant stuff
+      window.variants && variants.init( [ 'relearn-auto', 'relearn-light', 'relearn-dark', 'relearn-bright', 'zen-auto', 'zen-light', 'zen-dark', 'retro-auto', 'neon', 'learn', 'blue', 'green', 'red' ] );
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+    </script>
+  </head>
+  <body class="mobile-support html disableInlineCopyToClipboard" data-url="/ccnp-enterprise/encor/chapter-5/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper"> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/ccnp-enterprise/index.html"><span itemprop="name">CCNP Enterprise</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/ccnp-enterprise/encor/index.html"><span itemprop="name">ENCOR</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">chapter 5</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/ccnp-enterprise/encor/chapter-4/index.html" title="Chapter 4 (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/ccnp-enterprise/encor/chapter-6/index.html" title="Chapter 6 (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <article class="default">
+            <header class="headline">
+            </header>
 
+<h1 id="chapter-5">chapter 5</h1>
 
+<h1 id="vlan-trunks--etherchannel-bundles"><strong>VLAN Trunks &amp; EtherChannel Bundles</strong></h1>
+<h6 id="1-what-is-the-primary-function-of-vlan-trunking-protocol-vtp">1. What is the primary function of VLAN Trunking Protocol (VTP)?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-b13cf675a5d59d654c986c2ef17e3aac" aria-controls="R-expandcontent-b13cf675a5d59d654c986c2ef17e3aac">
+  <label class="expand-label" for="R-expand-b13cf675a5d59d654c986c2ef17e3aac">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-b13cf675a5d59d654c986c2ef17e3aac" class="expand-content">
+<p>test</p>
+  </div>
+</div>
+<h6 id="2-explain-the-purpose-of-a-vlan-trunk-in-a-network">2. Explain the purpose of a VLAN trunk in a network.</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-e90c7f9ec423ec040722b46d56484c7a" aria-controls="R-expandcontent-e90c7f9ec423ec040722b46d56484c7a">
+  <label class="expand-label" for="R-expand-e90c7f9ec423ec040722b46d56484c7a">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-e90c7f9ec423ec040722b46d56484c7a" class="expand-content">
+<p>test</p>
+  </div>
+</div>
+<h6 id="3-how-does-the-dynamic-trunking-protocol-dtp-facilitate-switch-to-switch-communication">3. How does the Dynamic Trunking Protocol (DTP) facilitate switch-to-switch communication?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-a078f917b9e234ac5a422589f35163f5" aria-controls="R-expandcontent-a078f917b9e234ac5a422589f35163f5">
+  <label class="expand-label" for="R-expand-a078f917b9e234ac5a422589f35163f5">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-a078f917b9e234ac5a422589f35163f5" class="expand-content">
+<p>test</p>
+  </div>
+</div>
+<h6 id="4-what-is-an-etherchannel-bundle-and-why-is-it-used">4. What is an EtherChannel bundle, and why is it used?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-bba68ba932f347cdaf8f0d6ce83df0b9" aria-controls="R-expandcontent-bba68ba932f347cdaf8f0d6ce83df0b9">
+  <label class="expand-label" for="R-expand-bba68ba932f347cdaf8f0d6ce83df0b9">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-bba68ba932f347cdaf8f0d6ce83df0b9" class="expand-content">
+<p>test</p>
+  </div>
+</div>
+<h6 id="5-describe-the-difference-between-an-access-link-and-a-trunk-link-in-vlans">5. Describe the difference between an access link and a trunk link in VLANs.</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-9c09f52355f3294eff4752015490c315" aria-controls="R-expandcontent-9c09f52355f3294eff4752015490c315">
+  <label class="expand-label" for="R-expand-9c09f52355f3294eff4752015490c315">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-9c09f52355f3294eff4752015490c315" class="expand-content">
+<p>test</p>
+  </div>
+</div>
+<h6 id="6-how-does-vtp-help-in-managing-vlans-across-multiple-switches">6. How does VTP help in managing VLANs across multiple switches?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-40850a813933d66e0ac260c778e66bbf" aria-controls="R-expandcontent-40850a813933d66e0ac260c778e66bbf">
+  <label class="expand-label" for="R-expand-40850a813933d66e0ac260c778e66bbf">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-40850a813933d66e0ac260c778e66bbf" class="expand-content">
+<p>test</p>
+  </div>
+</div>
+<h6 id="7-what-are-the-different-modes-that-a-dtp-port-can-be-configured-in">7. What are the different modes that a DTP port can be configured in?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-3654cdf68e5b3a3d391b4af4a3cd9b68" aria-controls="R-expandcontent-3654cdf68e5b3a3d391b4af4a3cd9b68">
+  <label class="expand-label" for="R-expand-3654cdf68e5b3a3d391b4af4a3cd9b68">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-3654cdf68e5b3a3d391b4af4a3cd9b68" class="expand-content">
+<p>test</p>
+  </div>
+</div>
+<h6 id="8-what-are-the-two-dynamic-link-aggregation-protocols-covered-in-the-chapter">8. What are the two dynamic link aggregation protocols covered in the chapter?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-e427dde67e2be3d0b8f9378a3aae9023" aria-controls="R-expandcontent-e427dde67e2be3d0b8f9378a3aae9023">
+  <label class="expand-label" for="R-expand-e427dde67e2be3d0b8f9378a3aae9023">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-e427dde67e2be3d0b8f9378a3aae9023" class="expand-content">
+<p>test</p>
+  </div>
+</div>
+<h6 id="9-how-does-etherchannel-enhance-redundancy-in-a-network">9. How does EtherChannel enhance redundancy in a network?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-c00a2c3cfa49f1d3d107ffece4ca5c62" aria-controls="R-expandcontent-c00a2c3cfa49f1d3d107ffece4ca5c62">
+  <label class="expand-label" for="R-expand-c00a2c3cfa49f1d3d107ffece4ca5c62">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-c00a2c3cfa49f1d3d107ffece4ca5c62" class="expand-content">
+<p>test</p>
+  </div>
+</div>
+<h6 id="10-what-is-the-impact-of-a-link-failure-within-an-etherchannel-bundle">10. What is the impact of a link failure within an EtherChannel bundle?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-da244773916f4f09c84886d82bb09ac6" aria-controls="R-expandcontent-da244773916f4f09c84886d82bb09ac6">
+  <label class="expand-label" for="R-expand-da244773916f4f09c84886d82bb09ac6">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-da244773916f4f09c84886d82bb09ac6" class="expand-content">
+<p>test</p>
+  </div>
+</div>
+<h6 id="11-how-is-load-balancing-handled-within-an-etherchannel-bundle">11. How is load balancing handled within an EtherChannel bundle?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-eb79db03eae390e3f0f270b9ab9462f9" aria-controls="R-expandcontent-eb79db03eae390e3f0f270b9ab9462f9">
+  <label class="expand-label" for="R-expand-eb79db03eae390e3f0f270b9ab9462f9">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-eb79db03eae390e3f0f270b9ab9462f9" class="expand-content">
+<p>test</p>
+  </div>
+</div>
+<h6 id="12-what-are-the-primary-benefits-of-using-etherchannel-over-individual-links">12. What are the primary benefits of using EtherChannel over individual links?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-139abe4884f2c91439a8b3240e2d2ebe" aria-controls="R-expandcontent-139abe4884f2c91439a8b3240e2d2ebe">
+  <label class="expand-label" for="R-expand-139abe4884f2c91439a8b3240e2d2ebe">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-139abe4884f2c91439a8b3240e2d2ebe" class="expand-content">
+<p>test</p>
+  </div>
+</div>
+<h6 id="13-what-is-the-significance-of-vtp-versions-and-how-do-they-differ">13. What is the significance of VTP versions, and how do they differ?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-1da0d19d3202c71d459ab0a5ca202b6f" aria-controls="R-expandcontent-1da0d19d3202c71d459ab0a5ca202b6f">
+  <label class="expand-label" for="R-expand-1da0d19d3202c71d459ab0a5ca202b6f">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-1da0d19d3202c71d459ab0a5ca202b6f" class="expand-content">
+<p>test</p>
+  </div>
+</div>
+<h6 id="14-how-can-the-status-of-an-etherchannel-be-verified-on-a-cisco-switch">14. How can the status of an EtherChannel be verified on a Cisco switch?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-7eb105ead1b344ae37add470b06aafe4" aria-controls="R-expandcontent-7eb105ead1b344ae37add470b06aafe4">
+  <label class="expand-label" for="R-expand-7eb105ead1b344ae37add470b06aafe4">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-7eb105ead1b344ae37add470b06aafe4" class="expand-content">
+<p>test</p>
+  </div>
+</div>
+<h6 id="15-what-steps-are-necessary-to-troubleshoot-issues-within-an-etherchannel-bundle">15. What steps are necessary to troubleshoot issues within an EtherChannel bundle?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-4b715d872be83292ebb754b986c60a1a" aria-controls="R-expandcontent-4b715d872be83292ebb754b986c60a1a">
+  <label class="expand-label" for="R-expand-4b715d872be83292ebb754b986c60a1a">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-4b715d872be83292ebb754b986c60a1a" class="expand-content">
+<p>test</p>
+  </div>
+</div>
+<h6 id="16-how-does-lacp-differ-from-pagp-and-when-would-you-use-one-over-the-other">16. How does LACP differ from PAgP, and when would you use one over the other?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-21c2822f295eda21f86cdf42ff2f0f08" aria-controls="R-expandcontent-21c2822f295eda21f86cdf42ff2f0f08">
+  <label class="expand-label" for="R-expand-21c2822f295eda21f86cdf42ff2f0f08">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-21c2822f295eda21f86cdf42ff2f0f08" class="expand-content">
+<p>test</p>
+  </div>
+</div>
+<h6 id="17-explain-how-to-configure-load-balancing-within-an-etherchannel">17. Explain how to configure load balancing within an EtherChannel.</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-341f26bf722048945da324596bd37b6b" aria-controls="R-expandcontent-341f26bf722048945da324596bd37b6b">
+  <label class="expand-label" for="R-expand-341f26bf722048945da324596bd37b6b">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-341f26bf722048945da324596bd37b6b" class="expand-content">
+<p>test</p>
+  </div>
+</div>
+<h6 id="18-what-are-some-advanced-configuration-options-available-for-lacp">18. What are some advanced configuration options available for LACP?&quot;</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-ac458acfdb0142b25c6165768cc15ad9" aria-controls="R-expandcontent-ac458acfdb0142b25c6165768cc15ad9">
+  <label class="expand-label" for="R-expand-ac458acfdb0142b25c6165768cc15ad9">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-ac458acfdb0142b25c6165768cc15ad9" class="expand-content">
+<p>test</p>
+  </div>
+</div>
+<h6 id="19-how-does-viewing-etherchannel-neighbors-assist-in-troubleshooting-network-issues">19. How does viewing EtherChannel neighbors assist in troubleshooting network issues?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-d12a1c9e68ca01a93337476625372bef" aria-controls="R-expandcontent-d12a1c9e68ca01a93337476625372bef">
+  <label class="expand-label" for="R-expand-d12a1c9e68ca01a93337476625372bef">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-d12a1c9e68ca01a93337476625372bef" class="expand-content">
+<p>test</p>
+  </div>
+</div>
+<h6 id="20-how-does-vtp-pruning-enhance-network-efficiency">20. How does VTP pruning enhance network efficiency?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-1731b45ab9c62284b7e6044a435c5c41" aria-controls="R-expandcontent-1731b45ab9c62284b7e6044a435c5c41">
+  <label class="expand-label" for="R-expand-1731b45ab9c62284b7e6044a435c5c41">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-1731b45ab9c62284b7e6044a435c5c41" class="expand-content">
+<p>test</p>
+  </div>
+</div>
 
+            <footer class="footline">
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation showVisitedLinks">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+<style>
+  #R-logo img {
+    color: #282828;
+    color: var(--MENU-SECTIONS-BG-color);
+    opacity: .945;
+  }
+
+  a#R-logo {
+    color: #282828;
+    color: var(--MENU-SECTIONS-BG-color);
+    font-family: 'Work Sans', 'Helvetica', 'Tahoma', 'Geneva', 'Arial', sans-serif;
+    font-size: 1.875rem;
+    font-weight: 300;
+    margin-top: -.8125rem;
+    max-width: 100%;
+    text-transform: uppercase;
+    width: 14.125rem;
+    white-space: nowrap;
+  }
+
+  a#R-logo:hover {
+    color: #282828;
+    color: var(--MENU-SECTIONS-BG-color);
+  }
+
+  #R-logo img {
+    margin-bottom: -1.25rem;
+    margin-inline-start: -1.47rem;
+    margin-inline-end: .5rem;
+    width: 100%;
+  }
+
+  @media only all and (max-width: 59.999rem) {
+    a#R-logo {
+      font-size: 1.5625rem;
+      margin-top: -.1875rem;
+    }
+    #R-logo img {
+      margin-bottom: -.75rem;
+      margin-inline-start: -1.47rem;
+      margin-inline-end: .5rem;
+    }
+  }
+</style>
+<a id="R-logo" href="/index.html">
+  <img src="/images/Ping-Square-logo.png" alt="Ping Square Logo" />
+</a>
+        </div>
+
+        <search>
+          <div class="searchbox default-animation">
+            <i class="fas fa-search" title="Search (CTRL+ALT+f)"></i>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </search>
+        <script>
+          var contentLangs=['en'];
+        </script>
+        <script src="/js/auto-complete.js?1728701640" defer></script>
+        <script src="/js/lunr/lunr.min.js?1728701640" defer></script>
+        <script src="/js/lunr/lunr.stemmer.support.min.js?1728701640" defer></script>
+        <script src="/js/lunr/lunr.multi.min.js?1728701640" defer></script>
+        <script src="/js/lunr/lunr.en.min.js?1728701640" defer></script>
+        <script src="/js/search.js?1728701640" defer></script>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <ul>
+          <li><a class="padding" href="/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+        </ul>
+        <hr class="padding">
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div id="R-topics">
+          <ul class="enlarge morespace collapsible-menu">
+          <li data-nav-id="/foundation/index.html" class=""><a class="padding" href="/foundation/index.html">Foundation<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ccnp-enterprise/index.html" class="parent "><input type="checkbox" id="R-section-2a6d77c010f03f87a7c51afbaa87cfab" aria-controls="R-subsections-2a6d77c010f03f87a7c51afbaa87cfab" checked><label for="R-section-2a6d77c010f03f87a7c51afbaa87cfab"><i class="fa-fw fas fa-chevron-down"></i><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu CCNP Enterprise</span></label><a class="padding" href="/ccnp-enterprise/index.html">CCNP Enterprise<i class="fa-fw fas fa-check read-icon"></i></a><ul id="R-subsections-2a6d77c010f03f87a7c51afbaa87cfab" class="morespace collapsible-menu">
+          <li data-nav-id="/ccnp-enterprise/encor/index.html" class="parent alwaysopen"><input type="checkbox" id="R-section-74735ddc671024f198d2388947242f5d" aria-controls="R-subsections-74735ddc671024f198d2388947242f5d" checked><label for="R-section-74735ddc671024f198d2388947242f5d"><i class="fa-fw fas fa-chevron-down"></i><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu ENCOR</span></label><a class="padding" href="/ccnp-enterprise/encor/index.html">ENCOR<i class="fa-fw fas fa-check read-icon"></i></a><ul id="R-subsections-74735ddc671024f198d2388947242f5d" class="morespace collapsible-menu">
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-1/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-1/index.html">Chapter 1<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-2/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-2/index.html">Chapter 2<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-3/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-3/index.html">Chapter 3<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-4/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-4/index.html">Chapter 4<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-5/index.html" class="active"><a class="padding" href="/ccnp-enterprise/encor/chapter-5/index.html">chapter 5<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-6/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-6/index.html">Chapter 6<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-7/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-7/index.html">Chapter 7<i class="fa-fw fas fa-check read-icon"></i></a></li></ul></li></ul></li>
+          </ul>
+        </div>
+        <div class="padding footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVariantSwitch showVisitedLinks showFooter"></div>
+        <div id="R-menu-footer">
+          <hr class="padding default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVariantSwitch showVisitedLinks showFooter">
+          <div id="R-prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks showVariantSwitch showVisitedLinks">
+            <ul>
+              <li id="R-select-language-container" class="footerLangSwitch">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-language"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-language">Language</label>
+                    <select id="R-select-language" onchange="location = this.querySelector( this.value ).dataset.url;">
+                      <option id="R-select-language-en" value="#R-select-language-en" data-url="/ccnp-enterprise/encor/chapter-5/index.html" lang="en-us" selected></option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+              <li id="R-select-variant-container" class="footerVariantSwitch showVariantSwitch">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-paint-brush"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-variant">Theme</label>
+                    <select id="R-select-variant" onchange="window.variants && variants.changeVariant( this.value );">
+                      <option id="R-select-variant-relearn-auto" value="relearn-auto" selected>Relearn Light/Dark</option>
+                      <option id="R-select-variant-relearn-light" value="relearn-light">Relearn Light</option>
+                      <option id="R-select-variant-relearn-dark" value="relearn-dark">Relearn Dark</option>
+                      <option id="R-select-variant-relearn-bright" value="relearn-bright">Relearn Bright</option>
+                      <option id="R-select-variant-zen-auto" value="zen-auto">Zen Light/Dark</option>
+                      <option id="R-select-variant-zen-light" value="zen-light">Zen Light</option>
+                      <option id="R-select-variant-zen-dark" value="zen-dark">Zen Dark</option>
+                      <option id="R-select-variant-retro-auto" value="retro-auto">Retro Learn/Neon</option>
+                      <option id="R-select-variant-neon" value="neon">Neon</option>
+                      <option id="R-select-variant-learn" value="learn">Learn</option>
+                      <option id="R-select-variant-blue" value="blue">Blue</option>
+                      <option id="R-select-variant-green" value="green">Green</option>
+                      <option id="R-select-variant-red" value="red">Red</option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+                <script>window.variants && variants.markSelectedVariant();</script>
+              </li>
+              <li class="footerVisitedLinks showVisitedLinks">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-history"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <button onclick="clearHistory();">Clear History</button>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div id="R-footer" class="footerFooter showFooter">
+	    <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <script src="/js/clipboard.min.js?1728701640" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1728701640" defer></script>
+    <script src="/js/theme.js?1728701640" defer></script>
+  </body>
+</html>
