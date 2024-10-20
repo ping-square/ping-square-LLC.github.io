@@ -1,54 +1,58 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="generator" content="Hugo 0.134.3">
     <meta name="generator" content="Relearn 6.4.0+tip">
     <meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
-    <meta name="description" content="EIGRP 1. What does EIGRP stand for, and what type of routing protocol is it? Answer EIGRP stands for Enhanced Interior Gateway Routing Protocol. It is an advanced distance vector routing protocol that includes features of both distance vector and link-state protocols.
-2. How does EIGRP differ from traditional distance vector protocols like RIP? Answer: Unlike RIP, EIGRP uses the Diffusing Update Algorithm (DUAL) to achieve faster convergence and supports variable-length subnet masks (VLSMs), classless inter-domain routing (CIDR), and unequal-cost load balancing.">
+    <meta name="description" content="EIGRP Do you know about the EIGRP (rfc 7868) protocol? Let’s find out!
+1) Can you explain the main advantages of using EIGRP in a network? Answer The main advantages of EIGRP include:
+fast convergence due to the use of the Diffusing Update Algorithm (DUAL) and its partial updates. scalability in large networks, support for unequal-cost load balancing. classless routing Support for VLSM 2) What type of routing protocol is EIGRP? Answer EIGRP is a hybrid routing protocol, meaning it combines the characteristics of both distance-vector and link-state protocols. I is more efficient, supports faster convergence, and uses a composite metric based on bandwidth, delay, load, and reliability.EIGRP only exchanges information about paths and has lower overhead in large networks.">
     <meta name="author" content="Sören Weber">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="http://localhost:1313/images/The_network_engineer.png">
+    <meta name="twitter:image" content="https://ping-square.com/images/The_network_engineer.png">
     <meta name="twitter:title" content="Chapter 7 :: Ping-Square.com">
-    <meta name="twitter:description" content="EIGRP 1. What does EIGRP stand for, and what type of routing protocol is it? Answer EIGRP stands for Enhanced Interior Gateway Routing Protocol. It is an advanced distance vector routing protocol that includes features of both distance vector and link-state protocols.
-2. How does EIGRP differ from traditional distance vector protocols like RIP? Answer: Unlike RIP, EIGRP uses the Diffusing Update Algorithm (DUAL) to achieve faster convergence and supports variable-length subnet masks (VLSMs), classless inter-domain routing (CIDR), and unequal-cost load balancing.">
-    <meta property="og:url" content="http://localhost:1313/ccnp-enterprise/encor/chapter-7/index.html">
+    <meta name="twitter:description" content="EIGRP Do you know about the EIGRP (rfc 7868) protocol? Let’s find out!
+1) Can you explain the main advantages of using EIGRP in a network? Answer The main advantages of EIGRP include:
+fast convergence due to the use of the Diffusing Update Algorithm (DUAL) and its partial updates. scalability in large networks, support for unequal-cost load balancing. classless routing Support for VLSM 2) What type of routing protocol is EIGRP? Answer EIGRP is a hybrid routing protocol, meaning it combines the characteristics of both distance-vector and link-state protocols. I is more efficient, supports faster convergence, and uses a composite metric based on bandwidth, delay, load, and reliability.EIGRP only exchanges information about paths and has lower overhead in large networks.">
+    <meta property="og:url" content="https://ping-square.com/ccnp-enterprise/encor/chapter-7/index.html">
     <meta property="og:site_name" content="Ping-Square.com">
     <meta property="og:title" content="Chapter 7 :: Ping-Square.com">
-    <meta property="og:description" content="EIGRP 1. What does EIGRP stand for, and what type of routing protocol is it? Answer EIGRP stands for Enhanced Interior Gateway Routing Protocol. It is an advanced distance vector routing protocol that includes features of both distance vector and link-state protocols.
-2. How does EIGRP differ from traditional distance vector protocols like RIP? Answer: Unlike RIP, EIGRP uses the Diffusing Update Algorithm (DUAL) to achieve faster convergence and supports variable-length subnet masks (VLSMs), classless inter-domain routing (CIDR), and unequal-cost load balancing.">
+    <meta property="og:description" content="EIGRP Do you know about the EIGRP (rfc 7868) protocol? Let’s find out!
+1) Can you explain the main advantages of using EIGRP in a network? Answer The main advantages of EIGRP include:
+fast convergence due to the use of the Diffusing Update Algorithm (DUAL) and its partial updates. scalability in large networks, support for unequal-cost load balancing. classless routing Support for VLSM 2) What type of routing protocol is EIGRP? Answer EIGRP is a hybrid routing protocol, meaning it combines the characteristics of both distance-vector and link-state protocols. I is more efficient, supports faster convergence, and uses a composite metric based on bandwidth, delay, load, and reliability.EIGRP only exchanges information about paths and has lower overhead in large networks.">
     <meta property="og:locale" content="en_us">
     <meta property="og:type" content="article">
     <meta property="article:section" content="CCNP Enterprise">
     <meta property="article:published_time" content="2024-10-05T15:18:51-05:00">
     <meta property="article:modified_time" content="2024-10-05T15:18:51-05:00">
-    <meta property="og:image" content="http://localhost:1313/images/The_network_engineer.png">
+    <meta property="og:image" content="https://ping-square.com/images/The_network_engineer.png">
     <meta itemprop="name" content="Chapter 7 :: Ping-Square.com">
-    <meta itemprop="description" content="EIGRP 1. What does EIGRP stand for, and what type of routing protocol is it? Answer EIGRP stands for Enhanced Interior Gateway Routing Protocol. It is an advanced distance vector routing protocol that includes features of both distance vector and link-state protocols.
-2. How does EIGRP differ from traditional distance vector protocols like RIP? Answer: Unlike RIP, EIGRP uses the Diffusing Update Algorithm (DUAL) to achieve faster convergence and supports variable-length subnet masks (VLSMs), classless inter-domain routing (CIDR), and unequal-cost load balancing.">
+    <meta itemprop="description" content="EIGRP Do you know about the EIGRP (rfc 7868) protocol? Let’s find out!
+1) Can you explain the main advantages of using EIGRP in a network? Answer The main advantages of EIGRP include:
+fast convergence due to the use of the Diffusing Update Algorithm (DUAL) and its partial updates. scalability in large networks, support for unequal-cost load balancing. classless routing Support for VLSM 2) What type of routing protocol is EIGRP? Answer EIGRP is a hybrid routing protocol, meaning it combines the characteristics of both distance-vector and link-state protocols. I is more efficient, supports faster convergence, and uses a composite metric based on bandwidth, delay, load, and reliability.EIGRP only exchanges information about paths and has lower overhead in large networks.">
     <meta itemprop="datePublished" content="2024-10-05T15:18:51-05:00">
     <meta itemprop="dateModified" content="2024-10-05T15:18:51-05:00">
-    <meta itemprop="wordCount" content="2948">
-    <meta itemprop="image" content="http://localhost:1313/images/The_network_engineer.png">
+    <meta itemprop="wordCount" content="1852">
+    <meta itemprop="image" content="https://ping-square.com/images/The_network_engineer.png">
     <title>Chapter 7 :: Ping-Square.com</title>
-    <link href="/css/fontawesome-all.min.css?1728701640" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1728701640" rel="stylesheet"></noscript>
-    <link href="/css/nucleus.css?1728701640" rel="stylesheet">
-    <link href="/css/auto-complete.css?1728701640" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1728701640" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar.min.css?1728701640" rel="stylesheet">
-    <link href="/css/fonts.css?1728701640" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1728701640" rel="stylesheet"></noscript>
-    <link href="/css/theme.css?1728701640" rel="stylesheet">
-    <link href="/css/theme-relearn-auto.css?1728701640" rel="stylesheet" id="R-variant-style">
-    <link href="/css/chroma-relearn-auto.css?1728701640" rel="stylesheet" id="R-variant-chroma-style">
-    <link href="/css/variant.css?1728701640" rel="stylesheet">
-    <link href="/css/print.css?1728701640" rel="stylesheet" media="print">
-    <script src="/js/variant.js?1728701640"></script>
+    <link href="/css/fontawesome-all.min.css?1729435926" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1729435926" rel="stylesheet"></noscript>
+    <link href="/css/nucleus.css?1729435926" rel="stylesheet">
+    <link href="/css/auto-complete.css?1729435926" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1729435926" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1729435926" rel="stylesheet">
+    <link href="/css/fonts.css?1729435926" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1729435926" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1729435926" rel="stylesheet">
+    <link href="/css/theme-relearn-auto.css?1729435926" rel="stylesheet" id="R-variant-style">
+    <link href="/css/chroma-relearn-auto.css?1729435926" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="/css/variant.css?1729435926" rel="stylesheet">
+    <link href="/css/print.css?1729435926" rel="stylesheet" media="print">
+    <script src="/js/variant.js?1729435926"></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.relBasePath='..\/..\/..';
       window.relearn.relBaseUri='..\/..\/..';
-      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.relearn.absBaseUri='https:\/\/ping-square.com';
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
       // variant stuff
@@ -75,16 +79,7 @@
             </div>
             <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
               <div class="topbar-content">
-                <div class="topbar-content-wrapper"><nav class="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li></li>
-        <li><a href="#interaction-between-the-tables">Interaction Between the Tables:</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+                <div class="topbar-content-wrapper"> 
                 </div>
               </div>
             </div>
@@ -97,7 +92,7 @@
           <div class="topbar-area topbar-area-end" data-area="end">
             <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/ccnp-enterprise/encor/chapter-6/index.html" title="Chapter 6 (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
             </div>
-            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><span class="topbar-control"><i class="fa-fw fas fa-chevron-right"></i></span>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/ccnp-enterprise/encor/chapter-8/index.html" title="Chapter 8 (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
             </div>
             <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
               <div class="topbar-content">
@@ -120,107 +115,139 @@
 <h1 id="chapter-7">Chapter 7</h1>
 
 <h1 id="eigrp"><strong>EIGRP</strong></h1>
-<h6 id="1-what-does-eigrp-stand-for-and-what-type-of-routing-protocol-is-it">1. <strong>What does EIGRP stand for, and what type of routing protocol is it?</strong></h6>
+<p>Do you know about the EIGRP (<a href="https://datatracker.ietf.org/doc/html/rfc7868" rel="external" target="_self">rfc 7868</a>) protocol? Let&rsquo;s find out!</p>
+<h6 id="1-can-you-explain-the-main-advantages-of-using-eigrp-in-a-network">1) Can you explain the main advantages of using EIGRP in a network?</h6>
 <div class="expand">
-  <input type="checkbox" id="R-expand-fddffd4ad536d0e58a4ba29186beafef" aria-controls="R-expandcontent-fddffd4ad536d0e58a4ba29186beafef">
-  <label class="expand-label" for="R-expand-fddffd4ad536d0e58a4ba29186beafef">
+  <input type="checkbox" id="R-expand-1337d23f215c23cddd86d1d4e437f6b0" aria-controls="R-expandcontent-1337d23f215c23cddd86d1d4e437f6b0">
+  <label class="expand-label" for="R-expand-1337d23f215c23cddd86d1d4e437f6b0">
     <i class="expander-icon fa-fw fas fa-chevron-down"></i>
     <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
   </label>
-  <div id="R-expandcontent-fddffd4ad536d0e58a4ba29186beafef" class="expand-content">
-<p>EIGRP stands for Enhanced Interior Gateway Routing Protocol. It is an advanced distance vector routing protocol that includes features of both distance vector and link-state protocols.</p>
+  <div id="R-expandcontent-1337d23f215c23cddd86d1d4e437f6b0" class="expand-content">
+<p>The main advantages of EIGRP include:</p>
+<ul>
+<li><strong>fast convergence</strong> due to the use of the Diffusing Update Algorithm (DUAL) and its partial updates.</li>
+<li><strong>scalability</strong> in large networks, support for <em>unequal-cost load balancing</em>.</li>
+<li><strong>classless routing</strong> Support for VLSM</li>
+</ul>
   </div>
 </div>
-<h6 id="2-how-does-eigrp-differ-from-traditional-distance-vector-protocols-like-rip">2. <strong>How does EIGRP differ from traditional distance vector protocols like RIP?</strong></h6>
-<p><strong>Answer:</strong> Unlike RIP, EIGRP uses the Diffusing Update Algorithm (DUAL) to achieve faster convergence and supports variable-length subnet masks (VLSMs), classless inter-domain routing (CIDR), and unequal-cost load balancing.</p>
-<h6 id="3-what-are-the-key-metrics-that-eigrp-uses-to-calculate-the-best-path">3. <strong>What are the key metrics that EIGRP uses to calculate the best path?</strong></h6>
-<p><strong>Answer:</strong> EIGRP uses bandwidth, delay, load, reliability, and MTU as its key metrics. However, by default, only bandwidth and delay are used for route calculation.</p>
-<h6 id="4-what-is-the-purpose-of-the-diffusing-update-algorithm-dual-in-eigrp">4. <strong>What is the purpose of the Diffusing Update Algorithm (DUAL) in EIGRP?</strong></h6>
-<p><strong>Answer:</strong> DUAL is used by EIGRP to provide fast convergence by maintaining a loop-free topology and ensuring that backup routes are available when a primary route fails.</p>
-<h6 id="5-explain-the-concept-of-a-feasible-successor-in-eigrp">5. <strong>Explain the concept of a feasible successor in EIGRP.</strong></h6>
-<p><strong>Answer:</strong> A feasible successor is a backup route that is considered loop-free and meets the feasibility condition, meaning its reported distance is less than the feasible distance of the current best path.</p>
-<h6 id="6-what-is-the-significance-of-the-eigrp-autonomous-system-as-number">6. <strong>What is the significance of the EIGRP autonomous system (AS) number?</strong></h6>
-<p><strong>Answer:</strong> The AS number is used to define the scope of an EIGRP routing domain, allowing multiple instances of EIGRP to run on the same router, each with its own routing table.</p>
-<h6 id="7-how-does-eigrp-handle-unequal-cost-load-balancing">7. <strong>How does EIGRP handle unequal-cost load balancing?</strong></h6>
-<p><strong>Answer:</strong> EIGRP can perform unequal-cost load balancing by using the <code>variance</code> command, which allows it to use multiple routes with different metrics to balance traffic.</p>
-<h6 id="8-what-is-the-role-of-eigrp-hello-packets">8. <strong>What is the role of EIGRP Hello packets?</strong></h6>
-<p><strong>Answer:</strong> Hello packets are used to establish and maintain neighbor relationships between EIGRP routers. They are sent periodically to detect link failures.</p>
-<h6 id="9-what-is-the-default-hello-interval-and-hold-time-for-eigrp">9. <strong>What is the default Hello interval and hold time for EIGRP?</strong></h6>
-<p><strong>Answer:</strong> The default Hello interval is 5 seconds, and the hold time is 15 seconds on most interfaces. On low-bandwidth networks (e.g., T1 or slower), the default Hello interval is 60 seconds, and the hold time is 180 seconds.</p>
-<h6 id="10-what-is-the-purpose-of-the-eigrp-metric-weights-command">10. <strong>What is the purpose of the EIGRP metric weights command?</strong></h6>
-<p><strong>Answer:</strong> The <code>metric weights</code> command allows administrators to change the influence of different metrics (bandwidth, delay, load, reliability, MTU) in the EIGRP route selection process.</p>
-<h6 id="11-how-does-eigrp-handle-route-summarization">11. <strong>How does EIGRP handle route summarization?</strong></h6>
-<p><strong>Answer:</strong> EIGRP supports both manual and automatic route summarization. Automatic summarization occurs at network boundaries, but it can be disabled using the <code>no auto-summary</code> command.</p>
-<h6 id="12-what-is-the-administrative-distance-ad-of-eigrp-for-internal-and-external-routes">12. <strong>What is the administrative distance (AD) of EIGRP for internal and external routes?</strong></h6>
-<p><strong>Answer:</strong> The AD for internal EIGRP routes is 90, while the AD for external EIGRP routes (routes redistributed into EIGRP) is 170.</p>
-<h6 id="13-explain-the-concept-of-eigrp-split-horizon-and-its-impact-on-routing-updates">13. <strong>Explain the concept of EIGRP split horizon and its impact on routing updates.</strong></h6>
-<p><strong>Answer:</strong> Split horizon prevents a router from sending routing information back out of the interface through which it was received, helping to prevent routing loops.</p>
-<h6 id="14-what-is-the-purpose-of-route-filtering-in-eigrp-and-how-can-it-be-achieved">14. <strong>What is the purpose of route filtering in EIGRP, and how can it be achieved?</strong></h6>
-<p><strong>Answer:</strong> Route filtering in EIGRP controls which routes are advertised or accepted. It can be done using access lists, prefix lists, or route maps.</p>
-<h6 id="15-how-does-eigrp-detect-a-link-failure">15. <strong>How does EIGRP detect a link failure?</strong></h6>
-<p><strong>Answer:</strong> EIGRP detects a link failure when it no longer receives Hello packets from a neighbor within the hold time interval. It then uses DUAL to find an alternative route.</p>
-<h6 id="16-what-is-the-difference-between-a-feasible-distance-fd-and-reported-distance-rd-in-eigrp">16. <strong>What is the difference between a feasible distance (FD) and reported distance (RD) in EIGRP?</strong></h6>
-<p><strong>Answer:</strong> The feasible distance is the metric from the local router to the destination, while the reported distance is the metric advertised by a neighboring router for a route</p>
-<p>Here are 20 sample comprehension questions based on Chapter 7 (EIGRP) from the book &ldquo;CCNP and CCIE Enterprise Core ENCOR 350-401 Official Cert Guide, 2nd Edition&rdquo;:</p>
+<h6 id="2-what-type-of-routing-protocol-is-eigrp">2) What type of routing protocol is EIGRP?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-97754c8b9c2ba5e60490fb50c3ac771d" aria-controls="R-expandcontent-97754c8b9c2ba5e60490fb50c3ac771d">
+  <label class="expand-label" for="R-expand-97754c8b9c2ba5e60490fb50c3ac771d">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-97754c8b9c2ba5e60490fb50c3ac771d" class="expand-content">
+<p>EIGRP is a <strong>hybrid</strong> routing protocol, meaning it combines the characteristics of both <strong>distance-vector</strong> and <strong>link-state</strong> protocols. I is more efficient, supports faster convergence, and uses a composite metric based on bandwidth, delay, load, and reliability.EIGRP only exchanges information about paths and has lower overhead in large networks.</p>
+<pre class="mermaid align-center zoomable">---
+title: What makes EIGRP and Hybrid routing protocol?
+---
+graph LR;
+  A(EIGRP) --&gt; B(Hybrid protocol)
+  B --&gt; C(Distance Vector)
+  C --&gt; G(Loop prevention)
+  G --&gt; H(Split Horizon)
+  G --&gt; I(Route poisoning)
+  G --&gt; J(Hold down Timers)
+  B --&gt; D(Link State)
+  D --&gt; K(Metric)
+  K --&gt; L(Includes **Bandwidth**)
+  D --&gt; M(Advanced routing features)
+  M --&gt; N(Unequal path load balancing)
+  M --&gt; O(Autonomous system)</pre>
+  </div>
+</div>
+<h6 id="3-what-is-the-purpose-of-the-diffusing-update-algorithm-dual-in-eigrp-and-how-does-it-work">3) What is the purpose of the Diffusing Update Algorithm (DUAL) in EIGRP, and how does it work?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-efb5fe0aa7dca66949da824b744f6755" aria-controls="R-expandcontent-efb5fe0aa7dca66949da824b744f6755">
+  <label class="expand-label" for="R-expand-efb5fe0aa7dca66949da824b744f6755">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-efb5fe0aa7dca66949da824b744f6755" class="expand-content">
+<p>The <strong>Diffusing Update Algorithm (DUAL)</strong> is used by EIGRP to ensure <strong>loop-free</strong> and <strong>fast convergence</strong>. It calculates the best path to a destination and maintains backup routes. DUAL continuously monitors the network and, if a failure occurs, it can rapidly switch to a feasible successor (backup route) without recalculating the entire topology.</p>
+  </div>
+</div>
+<h6 id="4-what-is-the-differences-between-a-successor-and-a-feasible-successor-in-eigrp">4) What is the differences between a successor and a feasible successor in EIGRP?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-9dd9725c9e9878f43623878f92af19d3" aria-controls="R-expandcontent-9dd9725c9e9878f43623878f92af19d3">
+  <label class="expand-label" for="R-expand-9dd9725c9e9878f43623878f92af19d3">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-9dd9725c9e9878f43623878f92af19d3" class="expand-content">
+<ul>
+<li>A <strong>successor</strong> is the route with the lowest path metric to a destination and is installed in the routing table.</li>
+<li>A <strong>feasible successor (Backup route)</strong> is a backup route that meets the feasibility condition (its reported distance is lower than the current feasible distance), and is kept in the topology table but not in the routing table unless the successor route fails.</li>
+</ul>
+  </div>
+</div>
+<h6 id="5-how-do-feasible-distance-and-reported-distance-impact-eigrp-route-selection">5) How do feasible distance and reported distance impact EIGRP route selection?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-db945f91f3f0f11519d4b0e6202b03a2" aria-controls="R-expandcontent-db945f91f3f0f11519d4b0e6202b03a2">
+  <label class="expand-label" for="R-expand-db945f91f3f0f11519d4b0e6202b03a2">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-db945f91f3f0f11519d4b0e6202b03a2" class="expand-content">
+<ul>
+<li>The <strong>feasible distance (FD)</strong> is the lowest calculated metric to reach a destination from the local router.</li>
+<li>The <strong>reported distance (RD)</strong> is the metric reported by a neighbor router for a particular route.
+For a route to be considered a feasible successor, its RD must be lower than the FD of the current successor, ensuring that no routing loops will occur.</li>
+</ul>
+  </div>
+</div>
+<h6 id="6-what-is-a-feasability-condition">6) What is a feasability condition?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-a944f6cbd65e395384bee25e0033900f" aria-controls="R-expandcontent-a944f6cbd65e395384bee25e0033900f">
+  <label class="expand-label" for="R-expand-a944f6cbd65e395384bee25e0033900f">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-a944f6cbd65e395384bee25e0033900f" class="expand-content">
+<p>For a route to be considered a valid backup, it must meet the <strong>feasibility condition</strong>, which ensures that the backup route is loop-free. A route meets the feasibility condition if <strong>reported distance</strong> &lt; <strong>feasible distance</strong> . This check prevents routing loops.</p>
+  </div>
+</div>
+<h6 id="7-what-are-the-different-types-of-eigrp-packets-and-what-are-their-respective-purposes">7) What are the different types of EIGRP packets, and what are their respective purposes?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-86b3e0029de2f20d0be9aa844ae63090" aria-controls="R-expandcontent-86b3e0029de2f20d0be9aa844ae63090">
+  <label class="expand-label" for="R-expand-86b3e0029de2f20d0be9aa844ae63090">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-86b3e0029de2f20d0be9aa844ae63090" class="expand-content">
+<p>There are five types of EIGRP packets:</p>
 <ol>
-<li><strong>What does EIGRP stand for, and what kind of routing protocol is it?</strong></li>
-<li><strong>Explain how EIGRP&rsquo;s &ldquo;hybrid&rdquo; nature distinguishes it from other types of routing protocols.</strong></li>
-<li><strong>What are the main advantages of EIGRP over traditional distance-vector routing protocols?</strong></li>
-<li><strong>Describe the role of the Diffusing Update Algorithm (DUAL) in EIGRP.</strong></li>
-<li><strong>What metric components does EIGRP use to determine the best path to a destination?</strong></li>
-<li><strong>How does EIGRP use composite metrics, and what factors can be adjusted to influence path selection?</strong></li>
-<li><strong>What is the default administrative distance of EIGRP, and how does it compare to other routing protocols like OSPF and RIP?</strong></li>
-<li><strong>Explain the concept of a successor and a feasible successor in EIGRP.</strong></li>
-<li><strong>What is the significance of the &ldquo;feasible distance&rdquo; and &ldquo;reported distance&rdquo; in EIGRP&rsquo;s route calculations?</strong></li>
-<li><strong>How does EIGRP handle unequal-cost load balancing, and which command enables this feature?</strong></li>
-<li><strong>What is the purpose of EIGRP Hello packets, and what is the default Hello interval?</strong></li>
-<li><strong>Explain how EIGRP forms neighbor relationships and the significance of the neighbor table.</strong></li>
-<li><strong>What types of packets are used in EIGRP, and what is the function of each type?</strong></li>
-<li><strong>Describe the process of EIGRP route summarization and its benefits.</strong></li>
-<li><strong>What is the difference between manual and automatic route summarization in EIGRP?</strong></li>
-<li><strong>How does EIGRP support IPv6, and what differences exist between EIGRP for IPv4 and EIGRP for IPv6?</strong></li>
-<li><strong>What role does the EIGRP topology table play, and how does it differ from the routing table?</strong></li>
-<li><strong>Explain the purpose of the &ldquo;passive interface&rdquo; feature in EIGRP, and when would you use it?</strong></li>
-<li><strong>What command would you use to verify EIGRP neighbor relationships, and what key information should you look for in the output?</strong></li>
-<li><strong>What troubleshooting steps would you take if EIGRP neighbors are not forming as expected?</strong></li>
+<li><strong>Hello</strong>: Used to establish and maintain EIGRP neighbor relationships (sent every <strong>5 seconds</strong> on most networks and every <strong>60 seconds</strong> on low-bandwidth networks).</li>
+<li><strong>Update</strong>: Used to send routing information to EIGRP neighbors.</li>
+<li><strong>Query</strong>: Sent when a router needs to find an alternative path to a destination.</li>
+<li><strong>Reply</strong>: Sent in response to a Query packet with information about an alternative path.</li>
+<li><strong>Request)</strong>: Used to get specific information from one or more neighbors.</li>
 </ol>
-<p>==============================================================================</p>
-<p>Here are detailed answers to the questions:</p>
-<ol>
-<li>
-<p><strong>What is EIGRP, and how does it differ from other routing protocols like OSPF and RIP?</strong></p>
-<ul>
-<li><strong>EIGRP (Enhanced Interior Gateway Routing Protocol)</strong> is a Cisco-proprietary advanced distance-vector routing protocol that combines the benefits of distance-vector and link-state protocols. Unlike <strong>RIP</strong>, which has a slow convergence time and uses hop count as its metric, EIGRP is more efficient, supports faster convergence, and uses a composite metric based on bandwidth, delay, load, and reliability. Unlike <strong>OSPF</strong>, which is purely a link-state protocol and maintains a complete map of the network, EIGRP only exchanges information about paths and has lower overhead in large networks.</li>
-</ul>
-</li>
-<li>
-<p><strong>Can you explain the main advantages of using EIGRP in a network?</strong></p>
-<ul>
-<li>The main advantages of EIGRP include <strong>fast convergence</strong> due to the use of the Diffusing Update Algorithm (DUAL), <strong>scalability</strong> in large networks, support for <strong>unequal-cost load balancing</strong>, <strong>classless routing</strong> (supporting VLSM), and its ability to reduce unnecessary traffic by sending partial updates instead of full ones like RIP.</li>
-</ul>
-</li>
-<li>
-<p><strong>What type of routing protocol is EIGRP, and what does &ldquo;hybrid&rdquo; mean in the context of EIGRP?</strong></p>
-<ul>
-<li>EIGRP is a <strong>hybrid</strong> routing protocol, meaning it combines the characteristics of both <strong>distance-vector</strong> and <strong>link-state</strong> protocols. It uses the distance-vector approach of sharing routes with neighbors but with the added ability to calculate more complex metrics and maintain a topology table like link-state protocols. This results in efficient route calculation and faster convergence.</li>
-</ul>
-</li>
-<li>
-<p><strong>What is the purpose of the Diffusing Update Algorithm (DUAL) in EIGRP, and how does it work?</strong></p>
-<ul>
-<li>The <strong>Diffusing Update Algorithm (DUAL)</strong> is used by EIGRP to ensure <strong>loop-free</strong> and <strong>fast convergence</strong>. It calculates the best path to a destination and maintains backup routes. DUAL continuously monitors the network and, if a failure occurs, it can rapidly switch to a feasible successor (backup route) without recalculating the entire topology.</li>
-</ul>
-</li>
-<li>
-<p><strong>How does EIGRP handle route recalculations when there is a change in the network topology?</strong></p>
-<ul>
-<li>EIGRP recalculates routes using DUAL. When a topology change occurs, EIGRP checks if there is a <strong>feasible successor</strong> (backup route). If one exists, the route change is immediate. If no feasible successor exists, DUAL triggers the process of recalculating a new path from available route updates from neighbors.</li>
-</ul>
-</li>
-<li>
-<p><strong>What are the key metric components used by EIGRP to determine the best path to a destination?</strong></p>
-<ul>
-<li>EIGRP uses a <strong>composite metric</strong> based on several factors:
+  </div>
+</div>
+<h6 id="8-how-does-eigrp-converge-when-there-is-a-change-in-the-network-topology">8) How does EIGRP converge when there is a change in the network topology?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-7525b3831e7a3bbce2ecc5d9edc9db79" aria-controls="R-expandcontent-7525b3831e7a3bbce2ecc5d9edc9db79">
+  <label class="expand-label" for="R-expand-7525b3831e7a3bbce2ecc5d9edc9db79">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-7525b3831e7a3bbce2ecc5d9edc9db79" class="expand-content">
+<p>EIGRP recalculates routes using DUAL. When a topology change occurs, EIGRP checks if there is a <strong>feasible successor</strong> (backup route). If one exists, the route change is immediate. If no feasible successor exists, DUAL triggers the process of recalculating a new path from available route updates from neighbors.</p>
+  </div>
+</div>
+<h6 id="9-what-are-the-key-metric-components-used-by-eigrp-to-determine-the-best-path-to-a-destination">9) What are the key metric components used by EIGRP to determine the best path to a destination?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-1f658eabce961ab00906a6ef0173df2f" aria-controls="R-expandcontent-1f658eabce961ab00906a6ef0173df2f">
+  <label class="expand-label" for="R-expand-1f658eabce961ab00906a6ef0173df2f">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-1f658eabce961ab00906a6ef0173df2f" class="expand-content">
+<p>EIGRP uses a <em>composite metric</em> based on several factors:</p>
 <ol>
 <li><strong>Bandwidth</strong> (minimum bandwidth along the path),</li>
 <li><strong>Delay</strong> (cumulative delay along the path),</li>
@@ -228,157 +255,201 @@
 <li><strong>Load</strong> (current traffic load on the link).
 By default, only bandwidth and delay are considered unless manually modified.</li>
 </ol>
-</li>
+  </div>
+</div>
+<h6 id="10-can-you-explain-how-eigrp-performs-unequal-cost-load-balancing-and-how-is-it-enabled">10) Can you explain how EIGRP performs unequal-cost load balancing, and how is it enabled?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-86bf8c963f50d00fda99076e8a0e8f9c" aria-controls="R-expandcontent-86bf8c963f50d00fda99076e8a0e8f9c">
+  <label class="expand-label" for="R-expand-86bf8c963f50d00fda99076e8a0e8f9c">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-86bf8c963f50d00fda99076e8a0e8f9c" class="expand-content">
+<p>EIGRP supports <strong>unequal-cost load balancing</strong>, allowing traffic to be distributed across multiple paths with different metrics. This is enabled using the <strong>variance</strong> command, which multiplies the metric of the best path and allows other paths with a lower or equal metric (within the variance range) to be included in load balancing.</p>
+  </div>
+</div>
+<h6 id="11-what-is-the-default-administrative-distance-of-eigrp">11) What is the default administrative distance of EIGRP?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-83125e2e7b10dc1e1e8d60f5325a1b36" aria-controls="R-expandcontent-83125e2e7b10dc1e1e8d60f5325a1b36">
+  <label class="expand-label" for="R-expand-83125e2e7b10dc1e1e8d60f5325a1b36">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-83125e2e7b10dc1e1e8d60f5325a1b36" class="expand-content">
+<p>The default <strong>administrative distance (AD)</strong> for EIGRP routes depends on its source:</p>
+<ul>
+<li><strong>Internal EIGRP route</strong>
+<ul>
+<li>source:  Internal routes are generated by routers running EIGRP within the same EIGRP EIGRP AS.</li>
+<li>AD = 90</li>
 </ul>
 </li>
-<li>
-<p><strong>Can you explain how EIGRP performs unequal-cost load balancing, and how is it enabled?</strong></p>
+<li><strong>External EIGRP route</strong>
 <ul>
-<li>EIGRP supports <strong>unequal-cost load balancing</strong>, allowing traffic to be distributed across multiple paths with different metrics. This is enabled using the <strong>variance</strong> command, which multiplies the metric of the best path and allows other paths with a lower or equal metric (within the variance range) to be included in load balancing.</li>
+<li>Source: External routes can come from any non-EIGRP routing protocol, such as OSPF, BGP, static routes, or even another EIGRP process from a different AS.</li>
+<li>AD = 170</li>
 </ul>
 </li>
-<li>
-<p><strong>What is the default administrative distance of EIGRP, and how does it compare to other routing protocols like OSPF and BGP?</strong></p>
-<ul>
-<li>The default <strong>administrative distance (AD)</strong> for internal EIGRP routes is <strong>90</strong>, which is lower (more preferred) than OSPF (110) and RIP (120), but higher than BGP external routes (20). For EIGRP external routes, the AD is <strong>170</strong>.</li>
 </ul>
-</li>
-<li>
-<p><strong>What are the differences between a successor and a feasible successor in EIGRP?</strong></p>
+  </div>
+</div>
+<h6 id="12-explain-the-role-of-the-eigrp-topology-table-and-how-does-it-differ-from-the-routing-table">12) Explain the role of the EIGRP topology table, and how does it differ from the routing table?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-2dd78130089b5f5fd2876adda1d25907" aria-controls="R-expandcontent-2dd78130089b5f5fd2876adda1d25907">
+  <label class="expand-label" for="R-expand-2dd78130089b5f5fd2876adda1d25907">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-2dd78130089b5f5fd2876adda1d25907" class="expand-content">
+<p>The <strong>topology table</strong> contains all the known routes to a destination, including both successors and feasible successors. It keeps a complete record of all possible paths. The <strong>routing table</strong>, on the other hand, only contains the best (successor) routes that will be used for forwarding traffic.</p>
+  </div>
+</div>
+<h6 id="13-describe-how-eigrp-forms-neighbor-relationships-and-maintains-neighbor-stability">13) Describe how EIGRP forms neighbor relationships and maintains neighbor stability.</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-5850df5657515258b0a32b5949a6673d" aria-controls="R-expandcontent-5850df5657515258b0a32b5949a6673d">
+  <label class="expand-label" for="R-expand-5850df5657515258b0a32b5949a6673d">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-5850df5657515258b0a32b5949a6673d" class="expand-content">
+<p>EIGRP forms neighbor relationships by exchanging Hello packets. When two routers exchange Hello packets and agree on common parameters (such as AS number, K-values, etc.), they establish a neighbor relationship and begin sharing route updates. Stability is maintained by continuously exchanging Hello packets to monitor link health.</p>
+  </div>
+</div>
+<h6 id="14-how-does-eigrp-handle-route-summarization-and-what-are-the-advantages-of-using-route-summarization-in-a-network">14) How does EIGRP handle route summarization, and what are the advantages of using route summarization in a network?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-adb005babc3524ef035c9d2907a3c749" aria-controls="R-expandcontent-adb005babc3524ef035c9d2907a3c749">
+  <label class="expand-label" for="R-expand-adb005babc3524ef035c9d2907a3c749">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-adb005babc3524ef035c9d2907a3c749" class="expand-content">
+<p>EIGRP supports both <strong>manual and automatic route summarization</strong>. Summarization reduces the size of the routing table by representing multiple networks with a single summary route, which reduces bandwidth usage for route updates and improves network efficiency.</p>
+  </div>
+</div>
+<h6 id="15-what-is-the-difference-between-manual-and-automatic-route-summarization-in-eigrp-and-how-do-you-configure-both">15) What is the difference between manual and automatic route summarization in EIGRP, and how do you configure both?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-9724f83bed04385b76a7c4c7414af592" aria-controls="R-expandcontent-9724f83bed04385b76a7c4c7414af592">
+  <label class="expand-label" for="R-expand-9724f83bed04385b76a7c4c7414af592">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-9724f83bed04385b76a7c4c7414af592" class="expand-content">
+<p><strong>Automatic summarization</strong> (enabled by default in older versions of EIGRP) automatically summarizes routes at major network boundaries, whereas <strong>manual summarization</strong> allows more granular control by letting administrators specify summary routes at any point in the network. Automatic summarization can be disabled using <code>no auto-summary</code>, and manual summarization is configured with the <code>ip summary-address</code> command.</p>
+  </div>
+</div>
+<h6 id="16-can-you-explain-the-purpose-of-the-passive-interface-feature-in-eigrp-and-in-which-scenarios-would-you-use-it">16) Can you explain the purpose of the passive interface feature in EIGRP, and in which scenarios would you use it?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-dd56842c9f7c67706e8c269792df27c1" aria-controls="R-expandcontent-dd56842c9f7c67706e8c269792df27c1">
+  <label class="expand-label" for="R-expand-dd56842c9f7c67706e8c269792df27c1">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-dd56842c9f7c67706e8c269792df27c1" class="expand-content">
+<p>The <strong>passive interface</strong> feature prevents a router from sending <strong>Hello packets</strong> on an interface, effectively disabling EIGRP neighbor relationships on that interface while still allowing the network to be advertised.
+It is used in scenarios where a router is connected to a network but does not need to form EIGRP neighbor relationships, such as connecting to end-user devices.</p>
+  </div>
+</div>
+<h6 id="17-when-is-a-route-said-to-be-stuck-in-active-sia">17) When is a route said to be stuck in Active (SIA)?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-6d484f8effb4e8d846be3e4c32ed8e18" aria-controls="R-expandcontent-6d484f8effb4e8d846be3e4c32ed8e18">
+  <label class="expand-label" for="R-expand-6d484f8effb4e8d846be3e4c32ed8e18">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-6d484f8effb4e8d846be3e4c32ed8e18" class="expand-content">
+<p>If a router does not receive a reply to its queries within a certain time, the route is declared <strong>stuck in active</strong> (SIA).</p>
+  </div>
+</div>
+<h6 id="18-what-command-would-you-use-to-view-the-eigrp-topology-table-and-what-information-does-it-provide">18) What command would you use to view the EIGRP topology table, and what information does it provide?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-ec0bf553372ec9162bf58f431596de87" aria-controls="R-expandcontent-ec0bf553372ec9162bf58f431596de87">
+  <label class="expand-label" for="R-expand-ec0bf553372ec9162bf58f431596de87">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-ec0bf553372ec9162bf58f431596de87" class="expand-content">
+<p>use the commands:</p>
 <ul>
-<li>A <strong>successor</strong> is the primary route to a destination, which has the lowest cost and is installed in the routing table. A <strong>feasible successor</strong> is a backup route that meets the feasibility condition (its reported distance is lower than the current feasible distance), and is kept in the topology table but not in the routing table unless the successor route fails.</li>
+<li><code>show ip eigrp topology</code></li>
+<li><code>show ipv6 eigrp topology</code></li>
 </ul>
-</li>
-<li>
-<p><strong>How do feasible distance and reported distance impact EIGRP route selection?</strong></p>
+<p>The commands display the EIGRP topology table, showing all the known routes, their feasible and reported distances, successors, and feasible successors.</p>
+  </div>
+</div>
+<h6 id="19-what-troubleshooting-steps-would-you-take-if-eigrp-neighbors-are-not-forming-as-expected">19) What troubleshooting steps would you take if EIGRP neighbors are not forming as expected?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-f76c7e099a85904a7ab6c4df74c56738" aria-controls="R-expandcontent-f76c7e099a85904a7ab6c4df74c56738">
+  <label class="expand-label" for="R-expand-f76c7e099a85904a7ab6c4df74c56738">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-f76c7e099a85904a7ab6c4df74c56738" class="expand-content">
 <ul>
-<li>The <strong>feasible distance (FD)</strong> is the lowest calculated metric to reach a destination from the local router. The <strong>reported distance (RD)</strong> is the metric reported by a neighbor router for a particular route. For a route to be considered a feasible successor, its RD must be lower than the FD of the current successor, ensuring that no routing loops will occur.</li>
+<li>To troubleshoot EIGRP neighbor issues:</li>
 </ul>
-</li>
-<li>
-<p><strong>Explain the role of the EIGRP topology table, and how does it differ from the routing table?</strong></p>
-<ul>
-<li>The <strong>topology table</strong> contains all the known routes to a destination, including both successors and feasible successors. It keeps a complete record of all possible paths. The <strong>routing table</strong>, on the other hand, only contains the best (successor) routes that will be used for forwarding traffic.</li>
-</ul>
-</li>
-<li>
-<p><strong>What are EIGRP Hello packets used for, and how often are they sent by default?</strong></p>
-<ul>
-<li>EIGRP <strong>Hello packets</strong> are used to establish and maintain neighbor relationships. They are sent at regular intervals to check if neighbors are reachable. By default, Hello packets are sent every <strong>5 seconds</strong> on most networks and every <strong>60 seconds</strong> on low-bandwidth networks like non-broadcast multi-access (NBMA) links.</li>
-</ul>
-</li>
-<li>
-<p><strong>Describe how EIGRP forms neighbor relationships and maintains neighbor stability.</strong></p>
-<ul>
-<li>EIGRP forms neighbor relationships by exchanging Hello packets. When two routers exchange Hello packets and agree on common parameters (such as AS number, K-values, etc.), they establish a neighbor relationship and begin sharing route updates. Stability is maintained by continuously exchanging Hello packets to monitor link health.</li>
-</ul>
-</li>
-<li>
-<p><strong>What are the five types of EIGRP packets, and what are the purposes of each?</strong></p>
-<ul>
-<li>The five types of EIGRP packets are:
-<ol>
-<li><strong>Hello</strong>: Used to establish and maintain neighbor relationships.</li>
-<li><strong>Update</strong>: Used to send routing information to neighbors.</li>
-<li><strong>Query</strong>: Sent when a router needs to find an alternative path to a destination.</li>
-<li><strong>Reply</strong>: Sent in response to a Query packet with information about an alternative path.</li>
-<li><strong>Acknowledgment (ACK)</strong>: Confirms receipt of Update, Query, and Reply packets.</li>
-</ol>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>How does EIGRP handle route summarization, and what are the advantages of using route summarization in a network?</strong></p>
-<ul>
-<li>EIGRP supports both <strong>manual and automatic route summarization</strong>. Summarization reduces the size of the routing table by representing multiple networks with a single summary route, which reduces bandwidth usage for route updates and improves network efficiency.</li>
-</ul>
-</li>
-<li>
-<p><strong>What is the difference between manual and automatic route summarization in EIGRP, and how do you configure both?</strong></p>
-<ul>
-<li><strong>Automatic summarization</strong> (enabled by default in older versions of EIGRP) automatically summarizes routes at major network boundaries, whereas <strong>manual summarization</strong> allows more granular control by letting administrators specify summary routes at any point in the network. Automatic summarization can be disabled using <code>no auto-summary</code>, and manual summarization is configured with the <code>ip summary-address</code> command.</li>
-</ul>
-</li>
-<li>
-<p><strong>How does EIGRP handle route filtering, and what commands are used to configure route filtering?</strong></p>
-<ul>
-<li>EIGRP supports <strong>route filtering</strong> to control which routes are advertised or received. Filtering can be done using <strong>prefix lists</strong>, <strong>access control lists (ACLs)</strong>, or <strong>route maps</strong>. Commands like <code>distribute-list</code> are used to apply filtering.</li>
-</ul>
-</li>
-<li>
-<p><strong>Can you explain the purpose of the passive interface feature in EIGRP, and in which scenarios would you use it?</strong></p>
-<ul>
-<li>The <strong>passive interface</strong> feature prevents a router from sending Hello packets on an interface, effectively disabling EIGRP neighbor relationships on that interface while still allowing the network to be advertised. It is used in scenarios where a router is connected to a network but does not need to form EIGRP neighbor relationships, such as connecting to end-user devices.</li>
-</ul>
-</li>
-<li>
-<p><strong>How does EIGRP support IPv6, and what are the differences between EIGRP for IPv4 and EIGRP for IPv6?</strong></p>
-<ul>
-<li><strong>EIGRP for IPv6</strong> works similarly to EIGRP for IPv4, but it operates using IPv6 addresses and interfaces. One major difference is that, in IPv6, EIGRP does not rely on network statements and uses the <code>ipv6 eigrp</code> command to enable it directly on interfaces.</li>
-</ul>
-</li>
-<li>
-<p><strong>What command would you use to view the EIGRP topology table, and what information does it provide?</strong></p>
-<ul>
-<li>The command <code>show ip eigrp topology</code> (or <code>show ipv6 eigrp topology</code> for IPv6) displays the EIGRP topology table, showing all the known routes, their feasible and reported distances, successors, and feasible successors.</li>
-</ul>
-</li>
-<li>
-<p><strong>What troubleshooting steps would you take if EIGRP neighbors are not forming as expected?</strong></p>
-<ul>
-<li>To troubleshoot EIGRP neighbor issues:
 <ol>
 <li>Verify matching AS numbers on both ends using <code>show ip eigrp interfaces</code>.</li>
 <li>Check the interface configurations and ensure both are not passive.</li>
-<li>Verify that Hello packets are being exchanged (`debug eigrp</li>
+<li>Verify that Hello packets are being exchanged (<code>debug eigrp packets hello</code>).</li>
+<li>Ensure there are no mismatched EIGRP K-values (<code>show ip protocols</code>).</li>
+<li>Check for proper authentication (if enabled).</li>
 </ol>
+  </div>
+</div>
+<h6 id="20-how-do-you-verify-eigrp-neighbor-relationships-and-what-information-can-you-gather-from-the-show-ip-eigrp-neighbors-command">20) How do you verify EIGRP neighbor relationships, and what information can you gather from the <code>show ip eigrp neighbors</code> command?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-b239703666788a02240bdc4e5871f584" aria-controls="R-expandcontent-b239703666788a02240bdc4e5871f584">
+  <label class="expand-label" for="R-expand-b239703666788a02240bdc4e5871f584">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-b239703666788a02240bdc4e5871f584" class="expand-content">
+<ul>
+<li>
+<p><code>show ip eigrp neighbors</code></p>
+<p>This command shows the state of EIGRP neighbor relationships, including the interface used, the neighbor&rsquo;s IP address, the hold time, uptime, and queue counts. This information helps confirm that the neighbors are stable and functioning properly.</p>
 </li>
 </ul>
-</li>
-</ol>
-<p>packets hello<code>). 4. Ensure there are no mismatched EIGRP K-values (</code>show ip protocols`).
-5. Check for proper authentication (if enabled).</p>
-<ol start="22">
-<li>
-<p><strong>How do you verify EIGRP neighbor relationships, and what information can you gather from the <code>show ip eigrp neighbors</code> command?</strong></p>
+  </div>
+</div>
+<h6 id="21-what-are-the-common-reasons-for-eigrp-neighbor-adjacency-failures-and-how-can-they-be-resolved">21) What are the common reasons for EIGRP neighbor adjacency failures, and how can they be resolved?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-31574ff622dc480f140e544811d173ff" aria-controls="R-expandcontent-31574ff622dc480f140e544811d173ff">
+  <label class="expand-label" for="R-expand-31574ff622dc480f140e544811d173ff">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-31574ff622dc480f140e544811d173ff" class="expand-content">
 <ul>
-<li>The <code>show ip eigrp neighbors</code> command shows the state of EIGRP neighbor relationships, including the interface used, the neighbor&rsquo;s IP address, the hold time, uptime, and queue counts. This information helps confirm that the neighbors are stable and functioning properly.</li>
-</ul>
-</li>
-<li>
-<p><strong>What are the common reasons for EIGRP neighbor adjacency failures, and how can they be resolved?</strong></p>
-<ul>
-<li>Common reasons include:
-<ul>
+<li>Common reasons include:</li>
 <li><strong>AS number mismatch</strong>.</li>
 <li><strong>K-value mismatch</strong>.</li>
 <li><strong>Passive interfaces</strong> preventing neighbor formation.</li>
 <li><strong>Authentication mismatch</strong>.</li>
-<li><strong>Layer 2 connectivity issues</strong> (e.g., link failures).</li>
+<li><strong>Layer 2 connectivity issues</strong> (e.g., link failures).
+Solutions involve checking and correcting these parameters and ensuring proper network connectivity.</li>
 </ul>
-</li>
-<li>Solutions involve checking and correcting these parameters and ensuring proper network connectivity.</li>
-</ul>
-</li>
-<li>
-<p><strong>How do you enable and configure EIGRP authentication, and why is authentication important in EIGRP?</strong></p>
-<ul>
-<li>EIGRP authentication is enabled using <strong>MD5 authentication</strong> to secure EIGRP updates and prevent unauthorized routers from joining the EIGRP domain. Configuration steps include creating a key chain and applying it to the EIGRP interfaces with the <code>ip authentication mode eigrp</code> and <code>ip authentication key-chain eigrp</code> commands.</li>
-</ul>
-</li>
-<li>
-<p><strong>What are the limitations of EIGRP, and in what scenarios would you avoid using EIGRP as the primary routing protocol?</strong></p>
-<ul>
-<li>EIGRP is Cisco-proprietary, meaning it is not ideal for multi-vendor environments. It also does not scale as well as OSPF or BGP in very large networks. Scenarios where EIGRP would be avoided include:
-<ul>
-<li><strong>Multi-vendor networks</strong> requiring open standards.</li>
-<li><strong>Large, hierarchical networks</strong> where link-state protocols like OSPF or BGP are more efficient.</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>In <strong>EIGRP</strong>, there are <strong>three main tables</strong> that interact to facilitate the routing process:</p>
+  </div>
+</div>
+<h6 id="22-how-do-you-enable-and-configure-eigrp-authentication-and-why-is-authentication-important-in-eigrp">22) How do you enable and configure EIGRP authentication, and why is authentication important in EIGRP?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-aa7d28f756cab879e96a1bbda99c7228" aria-controls="R-expandcontent-aa7d28f756cab879e96a1bbda99c7228">
+  <label class="expand-label" for="R-expand-aa7d28f756cab879e96a1bbda99c7228">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-aa7d28f756cab879e96a1bbda99c7228" class="expand-content">
+<p>EIGRP authentication is enabled using <strong>MD5 authentication</strong> to secure EIGRP updates and prevent unauthorized routers from joining the EIGRP domain. Configuration steps include creating a key chain and applying it to the EIGRP interfaces with the <code>ip authentication mode eigrp</code> and <code>ip authentication key-chain eigrp</code> commands.</p>
+  </div>
+</div>
+<h6 id="23-in-eigrp-there-are-three-main-tables-that-interact-to-facilitate-the-routing-process">23) In EIGRP, there are <strong>three main tables</strong> that interact to facilitate the routing process:</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-f80f04e5823599c935c27bf2e855a96e" aria-controls="R-expandcontent-f80f04e5823599c935c27bf2e855a96e">
+  <label class="expand-label" for="R-expand-f80f04e5823599c935c27bf2e855a96e">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-f80f04e5823599c935c27bf2e855a96e" class="expand-content">
 <ol>
 <li><strong>Neighbor Table</strong>:</li>
 </ol>
@@ -411,10 +482,10 @@ By default, only bandwidth and delay are considered unless manually modified.</l
 <li><strong>Topology Table</strong>: Receives routing updates from neighbors and stores multiple potential routes. It uses the DUAL algorithm to identify the best route (successor) and feasible successors.</li>
 <li><strong>Routing Table</strong>: Once the best route is identified, it is installed in the routing table for actual forwarding of packets.</li>
 </ul>
-</li>
-</ol>
 <p>In summary, the neighbor table keeps track of neighboring routers, the topology table stores all potential routes learned from these neighbors, and the routing table holds the most optimal routes that are actively used for packet forwarding.
 These answers cover a wide range of EIGRP topics that are critical for both technical interviews and certification exams.</p>
+  </div>
+</div>
 
             <footer class="footline">
             </footer>
@@ -486,12 +557,12 @@ These answers cover a wide range of EIGRP topics that are critical for both tech
         <script>
           var contentLangs=['en'];
         </script>
-        <script src="/js/auto-complete.js?1728701640" defer></script>
-        <script src="/js/lunr/lunr.min.js?1728701640" defer></script>
-        <script src="/js/lunr/lunr.stemmer.support.min.js?1728701640" defer></script>
-        <script src="/js/lunr/lunr.multi.min.js?1728701640" defer></script>
-        <script src="/js/lunr/lunr.en.min.js?1728701640" defer></script>
-        <script src="/js/search.js?1728701640" defer></script>
+        <script src="/js/auto-complete.js?1729435926" defer></script>
+        <script src="/js/lunr/lunr.min.js?1729435926" defer></script>
+        <script src="/js/lunr/lunr.stemmer.support.min.js?1729435926" defer></script>
+        <script src="/js/lunr/lunr.multi.min.js?1729435926" defer></script>
+        <script src="/js/lunr/lunr.en.min.js?1729435926" defer></script>
+        <script src="/js/search.js?1729435926" defer></script>
       </div>
       <div id="R-homelinks" class="default-animation homelinks">
         <ul>
@@ -505,13 +576,9 @@ These answers cover a wide range of EIGRP topics that are critical for both tech
           <li data-nav-id="/foundation/index.html" class=""><a class="padding" href="/foundation/index.html">Foundation<i class="fa-fw fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/ccnp-enterprise/index.html" class="parent "><input type="checkbox" id="R-section-2a6d77c010f03f87a7c51afbaa87cfab" aria-controls="R-subsections-2a6d77c010f03f87a7c51afbaa87cfab" checked><label for="R-section-2a6d77c010f03f87a7c51afbaa87cfab"><i class="fa-fw fas fa-chevron-down"></i><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu CCNP Enterprise</span></label><a class="padding" href="/ccnp-enterprise/index.html">CCNP Enterprise<i class="fa-fw fas fa-check read-icon"></i></a><ul id="R-subsections-2a6d77c010f03f87a7c51afbaa87cfab" class="morespace collapsible-menu">
           <li data-nav-id="/ccnp-enterprise/encor/index.html" class="parent alwaysopen"><input type="checkbox" id="R-section-74735ddc671024f198d2388947242f5d" aria-controls="R-subsections-74735ddc671024f198d2388947242f5d" checked><label for="R-section-74735ddc671024f198d2388947242f5d"><i class="fa-fw fas fa-chevron-down"></i><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu ENCOR</span></label><a class="padding" href="/ccnp-enterprise/encor/index.html">ENCOR<i class="fa-fw fas fa-check read-icon"></i></a><ul id="R-subsections-74735ddc671024f198d2388947242f5d" class="morespace collapsible-menu">
-          <li data-nav-id="/ccnp-enterprise/encor/chapter-1/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-1/index.html">Chapter 1<i class="fa-fw fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/ccnp-enterprise/encor/chapter-2/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-2/index.html">Chapter 2<i class="fa-fw fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/ccnp-enterprise/encor/chapter-3/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-3/index.html">Chapter 3<i class="fa-fw fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/ccnp-enterprise/encor/chapter-4/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-4/index.html">Chapter 4<i class="fa-fw fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/ccnp-enterprise/encor/chapter-5/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-5/index.html">chapter 5<i class="fa-fw fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/ccnp-enterprise/encor/chapter-6/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-6/index.html">Chapter 6<i class="fa-fw fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/ccnp-enterprise/encor/chapter-7/index.html" class="active"><a class="padding" href="/ccnp-enterprise/encor/chapter-7/index.html">Chapter 7<i class="fa-fw fas fa-check read-icon"></i></a></li></ul></li></ul></li>
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-7/index.html" class="active"><a class="padding" href="/ccnp-enterprise/encor/chapter-7/index.html">Chapter 7<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-8/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-8/index.html">Chapter 8<i class="fa-fw fas fa-check read-icon"></i></a></li></ul></li></ul></li>
           </ul>
         </div>
         <div class="padding footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVariantSwitch showVisitedLinks showFooter"></div>
@@ -576,8 +643,22 @@ These answers cover a wide range of EIGRP topics that are critical for both tech
         </div>
       </div>
     </aside>
-    <script src="/js/clipboard.min.js?1728701640" defer></script>
-    <script src="/js/perfect-scrollbar.min.js?1728701640" defer></script>
-    <script src="/js/theme.js?1728701640" defer></script>
+    <script src="/js/clipboard.min.js?1729435926" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1729435926" defer></script>
+    <script src="/js/d3/d3-color.min.js?1729435926" defer></script>
+    <script src="/js/d3/d3-dispatch.min.js?1729435926" defer></script>
+    <script src="/js/d3/d3-drag.min.js?1729435926" defer></script>
+    <script src="/js/d3/d3-ease.min.js?1729435926" defer></script>
+    <script src="/js/d3/d3-interpolate.min.js?1729435926" defer></script>
+    <script src="/js/d3/d3-selection.min.js?1729435926" defer></script>
+    <script src="/js/d3/d3-timer.min.js?1729435926" defer></script>
+    <script src="/js/d3/d3-transition.min.js?1729435926" defer></script>
+    <script src="/js/d3/d3-zoom.min.js?1729435926" defer></script>
+    <script src="/js/js-yaml.min.js?1729435926" defer></script>
+    <script src="/js/mermaid.min.js?1729435926" defer></script>
+    <script>
+      window.themeUseMermaid = JSON.parse("{ \"securityLevel\": \"loose\" }");
+    </script>
+    <script src="/js/theme.js?1729435926" defer></script>
   </body>
 </html>

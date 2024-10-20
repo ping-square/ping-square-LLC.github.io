@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ping-Square.com</title>
-    <link>http://localhost:1313/index.html</link>
+    <link>https://ping-square.com/index.html</link>
     <description>So you want to become a Network Engineer! In today’s increasingly digital world, network engineers play a critical role in ensuring businesses function smoothly by maintaining the backbone of IT infrastructure: the Network. Their responsibilities cover designing, implementing, and securing networks that connect devices, applications.&#xA;First and foremost, network engineers ensure seamless communication between various systems within an organization. They configure routers, switches, and other hardware to create efficient and reliable networks, allowing data to flow between computers, servers, mobile devices, and cloud services. In a time where real-time communication is essential for productivity, their work ensures smooth collaboration and interaction across different platforms and locations.</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 06 Oct 2024 12:12:13 -0500</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ping-square.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Foundation</title>
-      <link>http://localhost:1313/foundation/index.html</link>
+      <link>https://ping-square.com/foundation/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/foundation/index.html</guid>
+      <guid>https://ping-square.com/foundation/index.html</guid>
       <description>This chapter is dedicated to foundation concepts.</description>
     </item>
     <item>
       <title>CCNP Enterprise</title>
-      <link>http://localhost:1313/ccnp-enterprise/index.html</link>
+      <link>https://ping-square.com/ccnp-enterprise/index.html</link>
       <pubDate>Sun, 06 Oct 2024 12:12:13 -0500</pubDate>
-      <guid>http://localhost:1313/ccnp-enterprise/index.html</guid>
+      <guid>https://ping-square.com/ccnp-enterprise/index.html</guid>
       <description>This is a new chapter.</description>
     </item>
   </channel>

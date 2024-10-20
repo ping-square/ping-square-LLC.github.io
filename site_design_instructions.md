@@ -185,7 +185,7 @@ In other words, modify all the other files under `_default.html`, that is:
 - term.html
 
 
-# Using "Arberia Theme" as the homepage of my blog
+# Using "LoveIt as the homepage of my blog
 
 # Using "Ed" theme for the different articles in my blog
 
@@ -213,3 +213,10 @@ In other words, modify all the other files under `_default.html`, that is:
 
 # sample CCNP labs
 https://www.ccri.edu/faculty_staff/comp/jmowry/CCNP_Enterprise_Core_ENCOR/ENCOR_Pages/ENCOR_Page_4.htm
+
+# blog ideas
+Adding Google Analytics to your Hugo Site
+- https://gideonwolfe.com/posts/sysadmin/hugo/hugogoogleanalytics/
+- http://cloudywithachanceofdevops.com/posts/2018/05/17/setting-up-google-analytics-on-hugo/#step-3-configure-hugo-to-use-your-google-analytics-property-tracking-id
+- http://cloudywithachanceofdevops.com/posts/2018/05/17/setting-up-google-analytics-on-hugo/#step-3-configure-hugo-to-use-your-google-analytics-property-tracking-idx
+- https://www.kiroule.com/article/integrate-google-analytics-with-hugo-theme/
