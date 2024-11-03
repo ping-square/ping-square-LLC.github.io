@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://ping-square.com/foundation/index.html</loc>
+    <loc>http://localhost:1313/foundation/index.html</loc>
   </url>
   <url>
-    <loc>https://ping-square.com/ccnp-enterprise/encor/chapter-6/index.html</loc>
+    <loc>http://localhost:1313/ccnp-enterprise/encor/chapter-6/index.html</loc>
     <lastmod>2024-10-05T09:03:50-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ping-square.com/ccnp-enterprise/encor/chapter-7/index.html</loc>
+    <loc>http://localhost:1313/ccnp-enterprise/encor/chapter-7/index.html</loc>
     <lastmod>2024-10-05T15:18:51-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ping-square.com/ccnp-enterprise/encor/chapter-8/index.html</loc>
+    <loc>http://localhost:1313/ccnp-enterprise/encor/chapter-8/index.html</loc>
     <lastmod>2024-10-06T12:11:43-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ping-square.com/categories/index.html</loc>
+    <loc>http://localhost:1313/categories/index.html</loc>
   </url>
   <url>
-    <loc>https://ping-square.com/tags/index.html</loc>
+    <loc>http://localhost:1313/tags/index.html</loc>
   </url>
 </urlset>

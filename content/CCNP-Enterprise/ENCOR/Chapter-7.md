@@ -5,7 +5,7 @@ draft = false
 weight = 7
 +++
 # **EIGRP**
-Do you know about the EIGRP ([rfc 7868](https://datatracker.ietf.org/doc/html/rfc7868)) protocol? Let's find out!
+Do you know about the EIGRP ([RFC 7868](https://datatracker.ietf.org/doc/html/rfc7868)) protocol? Let's find out!
 
 ###### 1) Can you explain the main advantages of using EIGRP in a network?
 {{% expand title="Answer" %}}
@@ -69,7 +69,7 @@ There are five types of EIGRP packets:
    2. **Update**: Used to send routing information to EIGRP neighbors.
    3. **Query**: Sent when a router needs to find an alternative path to a destination.
    4. **Reply**: Sent in response to a Query packet with information about an alternative path.
-   5. **Request)**: Used to get specific information from one or more neighbors.
+   5. **Request**: Used to get specific information from one or more neighbors.
 {{% /expand %}}
 
 ###### 8) How does EIGRP converge when there is a change in the network topology?
