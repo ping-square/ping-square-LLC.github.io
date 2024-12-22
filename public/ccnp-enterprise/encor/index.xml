@@ -6,8 +6,43 @@
     <description>Part I Forwarding&#xA;Chapter 1: Packet Forwarding Part II Layer&#xA;Chapter 2: Spanning Tree Protocol&#xA;Chapter 3: Advanced STP Tuning&#xA;Chapter 4: Multiple Spanning Tree Protocol&#xA;Chapter 5: VLAN Trunks and EtherChannel Bundles&#xA;Part III Routing&#xA;Chapter 6: IP Routing Essentials&#xA;Chapter 7: EIGRP&#xA;Chapter 8: OSPF&#xA;Chapter 9: Advanced OSPF&#xA;Chapter 10: OSPFv3&#xA;Chapter 11: BGP&#xA;Chapter 12: Advanced BGP&#xA;Chapter 13: Multicast</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 06 Oct 2024 12:11:43 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 06 Oct 2024 12:12:13 -0500</lastBuildDate>
     <atom:link href="http://localhost:1313/ccnp-enterprise/encor/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Chapter 1</title>
+      <link>http://localhost:1313/ccnp-enterprise/encor/chapter-1/index.html</link>
+      <pubDate>Wed, 02 Oct 2024 22:40:27 -0500</pubDate>
+      <guid>http://localhost:1313/ccnp-enterprise/encor/chapter-1/index.html</guid>
+      <description>Packet Forwarding</description>
+    </item>
+    <item>
+      <title>Chapter 2</title>
+      <link>http://localhost:1313/ccnp-enterprise/encor/chapter-2/index.html</link>
+      <pubDate>Wed, 02 Oct 2024 22:40:36 -0500</pubDate>
+      <guid>http://localhost:1313/ccnp-enterprise/encor/chapter-2/index.html</guid>
+      <description>Advanced STP Tuning</description>
+    </item>
+    <item>
+      <title>Chapter 3</title>
+      <link>http://localhost:1313/ccnp-enterprise/encor/chapter-3/index.html</link>
+      <pubDate>Wed, 02 Oct 2024 22:40:45 -0500</pubDate>
+      <guid>http://localhost:1313/ccnp-enterprise/encor/chapter-3/index.html</guid>
+      <description>Advanced STP Tuning</description>
+    </item>
+    <item>
+      <title>Chapter 4</title>
+      <link>http://localhost:1313/ccnp-enterprise/encor/chapter-4/index.html</link>
+      <pubDate>Wed, 02 Oct 2024 22:40:52 -0500</pubDate>
+      <guid>http://localhost:1313/ccnp-enterprise/encor/chapter-4/index.html</guid>
+      <description>Multiple Spanning Tree Protocol</description>
+    </item>
+    <item>
+      <title>chapter 5</title>
+      <link>http://localhost:1313/ccnp-enterprise/encor/chapter-5/index.html</link>
+      <pubDate>Wed, 02 Oct 2024 22:39:32 -0500</pubDate>
+      <guid>http://localhost:1313/ccnp-enterprise/encor/chapter-5/index.html</guid>
+      <description>VLAN Trunks &amp; EtherChannel Bundles 1. What is the primary function of VLAN Trunking Protocol (VTP)? Answer test&#xA;2. Explain the purpose of a VLAN trunk in a network. Answer test&#xA;3. How does the Dynamic Trunking Protocol (DTP) facilitate switch-to-switch communication? Answer test&#xA;4. What is an EtherChannel bundle, and why is it used? Answer test</description>
+    </item>
     <item>
       <title>Chapter 6</title>
       <link>http://localhost:1313/ccnp-enterprise/encor/chapter-6/index.html</link>
@@ -16,18 +51,53 @@
       <description>IP routing Essentials 1) What is an AS? Answer An AS or Autonomous System (AS) is a connected group of IP networks managed by a single administrative entity, such as a university, government or a commercial organization.&#xA;2) What is an IGP? Answer An IGP or Interior Gateway Protocol is protocol that works best for the communication between IP networks within a single AS.</description>
     </item>
     <item>
-      <title>Chapter 7</title>
+      <title>Understanding EIGRP</title>
       <link>http://localhost:1313/ccnp-enterprise/encor/chapter-7/index.html</link>
       <pubDate>Sat, 05 Oct 2024 15:18:51 -0500</pubDate>
       <guid>http://localhost:1313/ccnp-enterprise/encor/chapter-7/index.html</guid>
-      <description>EIGRP Do you know about the EIGRP (RFC 7868) protocol? Let’s find out!&#xA;1) Can you explain the main advantages of using EIGRP in a network? Answer The main advantages of EIGRP include:&#xA;fast convergence due to the use of the Diffusing Update Algorithm (DUAL) and its partial updates. scalability in large networks, support for unequal-cost load balancing. classless routing Support for VLSM 2) What type of routing protocol is EIGRP? Answer EIGRP is a hybrid routing protocol, meaning it combines the characteristics of both distance-vector and link-state protocols. I is more efficient, supports faster convergence, and uses a composite metric based on bandwidth, delay, load, and reliability.EIGRP only exchanges information about paths and has lower overhead in large networks.</description>
+      <description>Understanding EIGRP Do you know about the EIGRP (RFC 7868) protocol? Let’s find out!&#xA;1) Can you explain the main advantages of using EIGRP in a network? Answer The main advantages of EIGRP include:&#xA;fast convergence due to the use of the Diffusing Update Algorithm (DUAL) and its partial updates. scalability in large networks, support for unequal-cost load balancing. classless routing Support for VLSM 2) What type of routing protocol is EIGRP? Answer EIGRP is a hybrid routing protocol, meaning it combines the characteristics of both distance-vector and link-state protocols. I is more efficient, supports faster convergence, and uses a composite metric based on bandwidth, delay, load, and reliability.EIGRP only exchanges information about paths and has lower overhead in large networks.</description>
     </item>
     <item>
-      <title>Chapter 8</title>
+      <title>Understanding OSPF</title>
       <link>http://localhost:1313/ccnp-enterprise/encor/chapter-8/index.html</link>
       <pubDate>Sun, 06 Oct 2024 12:11:43 -0500</pubDate>
       <guid>http://localhost:1313/ccnp-enterprise/encor/chapter-8/index.html</guid>
-      <description>OSPF So you think you know the OSPF protocol? Let’s find out!&#xA;RFC 2328&#xA;RFC 2328 RFC 2328 RFC 5340&#xA;RFC 5340 RFC 5340 1) What does OSPF stand for and what is its primary function? Answer OSPF stands for Open Shortest Path First. It is an open standard link-state routing protocol used for finding the best path between the source and the destination router using the shortest path first algorithm.</description>
+      <description>So you think you know the OSPF protocol? Let’s find out!&#xA;RFC 2328&#xA;RFC 2328 RFC 2328 RFC 5340&#xA;RFC 5340 RFC 5340 1) What does OSPF stand for and what is its primary function? Answer OSPF stands for Open Shortest Path First. It is an open standard link-state routing protocol used for finding the best path between the source and the destination router using the shortest path first algorithm.</description>
+    </item>
+    <item>
+      <title>Chapter 9</title>
+      <link>http://localhost:1313/ccnp-enterprise/encor/chapter-9/index.html</link>
+      <pubDate>Sun, 06 Oct 2024 12:11:53 -0500</pubDate>
+      <guid>http://localhost:1313/ccnp-enterprise/encor/chapter-9/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Chapter 10</title>
+      <link>http://localhost:1313/ccnp-enterprise/encor/chapter-10/index.html</link>
+      <pubDate>Sun, 06 Oct 2024 12:12:01 -0500</pubDate>
+      <guid>http://localhost:1313/ccnp-enterprise/encor/chapter-10/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Chapter 11</title>
+      <link>http://localhost:1313/ccnp-enterprise/encor/chapter-11/index.html</link>
+      <pubDate>Sun, 06 Oct 2024 12:12:13 -0500</pubDate>
+      <guid>http://localhost:1313/ccnp-enterprise/encor/chapter-11/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Chapter 12</title>
+      <link>http://localhost:1313/ccnp-enterprise/encor/chapter-12/index.html</link>
+      <pubDate>Sun, 06 Oct 2024 12:12:13 -0500</pubDate>
+      <guid>http://localhost:1313/ccnp-enterprise/encor/chapter-12/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Chapter 13</title>
+      <link>http://localhost:1313/ccnp-enterprise/encor/chapter-13/index.html</link>
+      <pubDate>Sun, 06 Oct 2024 12:12:13 -0500</pubDate>
+      <guid>http://localhost:1313/ccnp-enterprise/encor/chapter-13/index.html</guid>
+      <description></description>
     </item>
   </channel>
 </rss>

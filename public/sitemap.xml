@@ -4,6 +4,22 @@
     <loc>http://localhost:1313/foundation/index.html</loc>
   </url>
   <url>
+    <loc>http://localhost:1313/ccnp-enterprise/encor/chapter-2/index.html</loc>
+    <lastmod>2024-10-02T22:40:36-05:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/ccnp-enterprise/encor/chapter-3/index.html</loc>
+    <lastmod>2024-10-02T22:40:45-05:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/ccnp-enterprise/encor/chapter-4/index.html</loc>
+    <lastmod>2024-10-02T22:40:52-05:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/ccnp-enterprise/encor/chapter-5/index.html</loc>
+    <lastmod>2024-10-02T22:39:32-05:00</lastmod>
+  </url>
+  <url>
     <loc>http://localhost:1313/ccnp-enterprise/encor/chapter-6/index.html</loc>
     <lastmod>2024-10-05T09:03:50-05:00</lastmod>
   </url>
@@ -14,6 +30,22 @@
   <url>
     <loc>http://localhost:1313/ccnp-enterprise/encor/chapter-8/index.html</loc>
     <lastmod>2024-10-06T12:11:43-05:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/ccnp-enterprise/encor/chapter-9/index.html</loc>
+    <lastmod>2024-10-06T12:11:53-05:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/ccnp-enterprise/encor/chapter-11/index.html</loc>
+    <lastmod>2024-10-06T12:12:13-05:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/ccnp-enterprise/encor/chapter-12/index.html</loc>
+    <lastmod>2024-10-06T12:12:13-05:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/ccnp-enterprise/encor/chapter-13/index.html</loc>
+    <lastmod>2024-10-06T12:12:13-05:00</lastmod>
   </url>
   <url>
     <loc>http://localhost:1313/categories/index.html</loc>

@@ -1,10 +1,10 @@
 +++
-title = 'Chapter 7'
+title = 'Understanding EIGRP'
 date = 2024-10-05T15:18:51-05:00
 draft = false
 weight = 7
 +++
-# **EIGRP**
+# **Understanding EIGRP**
 Do you know about the EIGRP ([RFC 7868](https://datatracker.ietf.org/doc/html/rfc7868)) protocol? Let's find out!
 
 ###### 1) Can you explain the main advantages of using EIGRP in a network?
@@ -153,7 +153,7 @@ The commands display the EIGRP topology table, showing all the known routes, the
    5. Check for proper authentication (if enabled).
 {{% /expand %}}
 
-###### 20) How do you verify EIGRP neighbor relationships, and what information can you gather from the `show ip eigrp neighbors` command?
+###### 20) How do you verify EIGRP neighbor relationships?
 {{% expand title="Answer" %}}
 - `show ip eigrp neighbors`
 
