@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.139.5">
+    <meta name="generator" content="Relearn 6.4.0+tip">
+    <meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
+    <meta name="description" content="Quality of Service (QoS) 1. What are the leading causes of QOS? Answer The leading causes of quality issues:
+Lack of bandwidth Latency and jitter Packet loss 2. What are the most common causes of network latency? Answer The most common causes of network latency are:
+Propagation delay (fixed) Serialization delay (fixed): is the time it takes to place all the bits of a packet onto a link. Processing delay (fixed): is the fixed amount of time it takes for a networking device to take the packet from an input interface and place the packet onto the output queue of the output interface. The processing delay depends on factors such as the following: CPU speed (for software-based platforms) CPU utilization (load) IP packet switching mode (process switching, software CEF, or hardware CEF) Router architecture (centralized or distributed) Configured features on both input and output interfaces Delay variation (variable): also referred to as jitter, is the difference in the latency between packets in a single flow. 3. What are the different QoS implementation models? Answer there are 3 QoS implementation models:">
+    <meta name="author" content="Sören Weber">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="http://localhost:1313/images/The_network_engineer.png">
+    <meta name="twitter:title" content="Chapter 14 :: Ping-Square.com">
+    <meta name="twitter:description" content="Quality of Service (QoS) 1. What are the leading causes of QOS? Answer The leading causes of quality issues:
+Lack of bandwidth Latency and jitter Packet loss 2. What are the most common causes of network latency? Answer The most common causes of network latency are:
+Propagation delay (fixed) Serialization delay (fixed): is the time it takes to place all the bits of a packet onto a link. Processing delay (fixed): is the fixed amount of time it takes for a networking device to take the packet from an input interface and place the packet onto the output queue of the output interface. The processing delay depends on factors such as the following: CPU speed (for software-based platforms) CPU utilization (load) IP packet switching mode (process switching, software CEF, or hardware CEF) Router architecture (centralized or distributed) Configured features on both input and output interfaces Delay variation (variable): also referred to as jitter, is the difference in the latency between packets in a single flow. 3. What are the different QoS implementation models? Answer there are 3 QoS implementation models:">
+    <meta property="og:url" content="http://localhost:1313/ccnp-enterprise/encor/chapter-14/index.html">
+    <meta property="og:site_name" content="Ping-Square.com">
+    <meta property="og:title" content="Chapter 14 :: Ping-Square.com">
+    <meta property="og:description" content="Quality of Service (QoS) 1. What are the leading causes of QOS? Answer The leading causes of quality issues:
+Lack of bandwidth Latency and jitter Packet loss 2. What are the most common causes of network latency? Answer The most common causes of network latency are:
+Propagation delay (fixed) Serialization delay (fixed): is the time it takes to place all the bits of a packet onto a link. Processing delay (fixed): is the fixed amount of time it takes for a networking device to take the packet from an input interface and place the packet onto the output queue of the output interface. The processing delay depends on factors such as the following: CPU speed (for software-based platforms) CPU utilization (load) IP packet switching mode (process switching, software CEF, or hardware CEF) Router architecture (centralized or distributed) Configured features on both input and output interfaces Delay variation (variable): also referred to as jitter, is the difference in the latency between packets in a single flow. 3. What are the different QoS implementation models? Answer there are 3 QoS implementation models:">
+    <meta property="og:locale" content="en_us">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="CCNP Enterprise">
+    <meta property="article:published_time" content="2024-12-21T23:04:58-06:00">
+    <meta property="article:modified_time" content="2024-12-21T23:04:58-06:00">
+    <meta property="og:image" content="http://localhost:1313/images/The_network_engineer.png">
+    <meta itemprop="name" content="Chapter 14 :: Ping-Square.com">
+    <meta itemprop="description" content="Quality of Service (QoS) 1. What are the leading causes of QOS? Answer The leading causes of quality issues:
+Lack of bandwidth Latency and jitter Packet loss 2. What are the most common causes of network latency? Answer The most common causes of network latency are:
+Propagation delay (fixed) Serialization delay (fixed): is the time it takes to place all the bits of a packet onto a link. Processing delay (fixed): is the fixed amount of time it takes for a networking device to take the packet from an input interface and place the packet onto the output queue of the output interface. The processing delay depends on factors such as the following: CPU speed (for software-based platforms) CPU utilization (load) IP packet switching mode (process switching, software CEF, or hardware CEF) Router architecture (centralized or distributed) Configured features on both input and output interfaces Delay variation (variable): also referred to as jitter, is the difference in the latency between packets in a single flow. 3. What are the different QoS implementation models? Answer there are 3 QoS implementation models:">
+    <meta itemprop="datePublished" content="2024-12-21T23:04:58-06:00">
+    <meta itemprop="dateModified" content="2024-12-21T23:04:58-06:00">
+    <meta itemprop="wordCount" content="1807">
+    <meta itemprop="image" content="http://localhost:1313/images/The_network_engineer.png">
+    <title>Chapter 14 :: Ping-Square.com</title>
+    <link href="/css/fontawesome-all.min.css?1735154837" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1735154837" rel="stylesheet"></noscript>
+    <link href="/css/nucleus.css?1735154837" rel="stylesheet">
+    <link href="/css/auto-complete.css?1735154837" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1735154837" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1735154837" rel="stylesheet">
+    <link href="/css/fonts.css?1735154837" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1735154837" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1735154837" rel="stylesheet">
+    <link href="/css/theme-relearn-auto.css?1735154837" rel="stylesheet" id="R-variant-style">
+    <link href="/css/chroma-relearn-auto.css?1735154837" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="/css/variant.css?1735154837" rel="stylesheet">
+    <link href="/css/print.css?1735154837" rel="stylesheet" media="print">
+    <script src="/js/variant.js?1735154837"></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.relBasePath='..\/..\/..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      // variant stuff
+      window.variants && variants.init( [ 'relearn-auto', 'relearn-light', 'relearn-dark', 'relearn-bright', 'zen-auto', 'zen-light', 'zen-dark', 'retro-auto', 'neon', 'learn', 'blue', 'green', 'red' ] );
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+    </script>
+  </head>
+  <body class="mobile-support html disableInlineCopyToClipboard" data-url="/ccnp-enterprise/encor/chapter-14/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper"> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/ccnp-enterprise/index.html"><span itemprop="name">CCNP Enterprise</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/ccnp-enterprise/encor/index.html"><span itemprop="name">ENCOR</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Chapter 14</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/ccnp-enterprise/encor/chapter-13/index.html" title="Chapter 13 (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><span class="topbar-control"><i class="fa-fw fas fa-chevron-right"></i></span>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <article class="default">
+            <header class="headline">
+            </header>
+
+<h1 id="chapter-14">Chapter 14</h1>
+
+<h1 id="quality-of-service-qos"><strong>Quality of Service (QoS)</strong></h1>
+<h6 id="1-what-are-the-leading-causes-of-qos">1. What are the leading causes of QOS?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-b4ac5b0da38bc1146b598dde084eb339" aria-controls="R-expandcontent-b4ac5b0da38bc1146b598dde084eb339">
+  <label class="expand-label" for="R-expand-b4ac5b0da38bc1146b598dde084eb339">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-b4ac5b0da38bc1146b598dde084eb339" class="expand-content">
+<p>The leading causes of quality issues:</p>
+<ul>
+<li>Lack of bandwidth</li>
+<li>Latency and jitter</li>
+<li>Packet loss</li>
+</ul>
+  </div>
+</div>
+<h6 id="2-what-are-the-most-common-causes-of-network-latency">2. What are the most common causes of network latency?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-21418562acb422e0aaf59ded1c35a95a" aria-controls="R-expandcontent-21418562acb422e0aaf59ded1c35a95a">
+  <label class="expand-label" for="R-expand-21418562acb422e0aaf59ded1c35a95a">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-21418562acb422e0aaf59ded1c35a95a" class="expand-content">
+<p>The most common causes of network latency are:</p>
+<ul>
+<li><strong>Propagation delay (fixed)</strong></li>
+<li><strong>Serialization delay (fixed)</strong>:
+is the time it takes to place all the bits of a packet onto a link.</li>
+<li><strong>Processing delay (fixed)</strong>: is the fixed amount of time it takes for a networking device to take the packet from an input interface and place the packet onto the output queue of the output interface. The processing delay depends on factors such as the following:
+<ul>
+<li>CPU speed (for software-based platforms)</li>
+<li>CPU utilization (load)</li>
+<li>IP packet switching mode (process switching, software CEF, or hardware CEF)</li>
+<li>Router architecture (centralized or distributed)</li>
+<li>Configured features on both input and output interfaces</li>
+</ul>
+</li>
+<li><strong>Delay variation (variable)</strong>: also referred to as jitter, is the difference in the latency between packets in a single flow.</li>
+</ul>
+  </div>
+</div>
+<h6 id="3-what-are-the-different-qos-implementation-models">3. What are the different QoS implementation models?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-811f21d13dd1410654076e4cec802e82" aria-controls="R-expandcontent-811f21d13dd1410654076e4cec802e82">
+  <label class="expand-label" for="R-expand-811f21d13dd1410654076e4cec802e82">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-811f21d13dd1410654076e4cec802e82" class="expand-content">
+<p>there are 3 QoS implementation models:</p>
+<ul>
+<li><strong>Best effort</strong>: QoS is not enabled for this model. It is used for traffic that does not require any special treatment.</li>
+<li><strong>Integrated Services (IntServ)</strong>: Applications signal the network to make a bandwidth reservation and to indicate that they require special QoS treatment.</li>
+<li><strong>Differentiated Services (DiffServ)</strong>: The network identifies classes that require special QoS treatment.</li>
+</ul>
+  </div>
+</div>
+<h6 id="4-what-is-mqc">4. What is MQC?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-5b1d2468951ca3dd65b52005e195f463" aria-controls="R-expandcontent-5b1d2468951ca3dd65b52005e195f463">
+  <label class="expand-label" for="R-expand-5b1d2468951ca3dd65b52005e195f463">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-5b1d2468951ca3dd65b52005e195f463" class="expand-content">
+<p>Modular QoS CLI (MQC) is Cisco’s approach to implementing QoS on Cisco routers. It provides a modular CLI framework to create QoS policies that are used to perform traffic classification and QoS actions such as marking, policing, shaping, congestion management, and congestion avoidance.</p>
+  </div>
+</div>
+<h6 id="5-how-do-you-implement-mqc-policies">5. How do you implement MQC policies?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-ecee2aabbbd4b2b9022fff57f5b1df5f" aria-controls="R-expandcontent-ecee2aabbbd4b2b9022fff57f5b1df5f">
+  <label class="expand-label" for="R-expand-ecee2aabbbd4b2b9022fff57f5b1df5f">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-ecee2aabbbd4b2b9022fff57f5b1df5f" class="expand-content">
+<p>MQC policies are implemented by using the following three MQC components:</p>
+<ul>
+<li><strong>Class maps</strong>: These maps define the traffic classification criteria by identifying the type of traffic that needs QoS treatment (for example, matching voice traffic, matching video traffic).</li>
+<li><strong>Policy maps</strong>: These maps provide QoS actions for each traffic class defined by the class maps.</li>
+<li><strong>Service policies</strong>: These policies are used to apply policy maps to interfaces in an inbound and/or outbound direction.</li>
+</ul>
+  </div>
+</div>
+<h6 id="6-what-are-the-different-type-of-class-based-qos-that-mqc-can-apply-to-traffic">6. What are the different type of class-based QoS that MQC can apply to traffic?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-18809f5355720e15bf4e9e3227d7d7ce" aria-controls="R-expandcontent-18809f5355720e15bf4e9e3227d7d7ce">
+  <label class="expand-label" for="R-expand-18809f5355720e15bf4e9e3227d7d7ce">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-18809f5355720e15bf4e9e3227d7d7ce" class="expand-content">
+<ul>
+<li>Class-based weighted fair queuing (CBWFQ)</li>
+<li>Class-based policing</li>
+<li>Class-based shaping</li>
+<li>Class-based marking</li>
+</ul>
+  </div>
+</div>
+<h6 id="7-what-is-packet-classification">7. What is packet classification?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-82abfce9a0bd0b274662291d18e21703" aria-controls="R-expandcontent-82abfce9a0bd0b274662291d18e21703">
+  <label class="expand-label" for="R-expand-82abfce9a0bd0b274662291d18e21703">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-82abfce9a0bd0b274662291d18e21703" class="expand-content">
+<p>Packet classification is a QoS mechanism responsible for distinguishing between different traffic streams.</p>
+<ul>
+<li>It uses traffic descriptors to categorize an IP packet within a specific class.</li>
+<li>Packet classification should take place at the network edge, as close to the source of the traffic as possible.</li>
+</ul>
+  </div>
+</div>
+<h6 id="8-what-are-the-traffic--descriptors-used-for-packet-classification-">8. What are the traffic  descriptors used for packet classification ?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-402f74959455d6782da7d1e99323741d" aria-controls="R-expandcontent-402f74959455d6782da7d1e99323741d">
+  <label class="expand-label" for="R-expand-402f74959455d6782da7d1e99323741d">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-402f74959455d6782da7d1e99323741d" class="expand-content">
+<p>The following traffic descriptors are used for traffic classification:</p>
+<ul>
+<li><strong>Internal</strong>: QoS groups (locally significant to a router)</li>
+<li><strong>Layer 1</strong>: Physical interface, subinterface, or port</li>
+<li><strong>Layer 2</strong>: MAC address and 802.1Q/p class of service (CoS) bits</li>
+<li><strong>Layer 2.5</strong>: MPLS experimental (EXP) bits</li>
+<li><strong>Layer 3</strong>: Differentiated Services Code Points (DSCP), IP Precedence (IPP), and source/destination IP address</li>
+<li><strong>Layer 4</strong>: TCP or UDP ports</li>
+<li><strong>Layer 7</strong>: Next-Generation Network-Based Application Recognition (NBAR2)</li>
+</ul>
+  </div>
+</div>
+<h6 id="9-what-is-packet-marking">9. What is packet marking?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-ad4d42f98c7ac1df744abde339926bb8" aria-controls="R-expandcontent-ad4d42f98c7ac1df744abde339926bb8">
+  <label class="expand-label" for="R-expand-ad4d42f98c7ac1df744abde339926bb8">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-ad4d42f98c7ac1df744abde339926bb8" class="expand-content">
+<p><em>Packet marking</em> is a QoS mechanism that colors a packet by changing a field within a packet or a frame header with a traffic descriptor so it is distinguished from other packets during the application of other QoS mechanisms (such as re-marking, policing, queuing, or congestion avoidance).</p>
+  </div>
+</div>
+<h6 id="10-what-are-the-traffic-descriptors-used-for-packet-marking-">10. What are the traffic descriptors used for packet marking ?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-ef5f298f9f5fdc4dcc9fde4a8323cd67" aria-controls="R-expandcontent-ef5f298f9f5fdc4dcc9fde4a8323cd67">
+  <label class="expand-label" for="R-expand-ef5f298f9f5fdc4dcc9fde4a8323cd67">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-ef5f298f9f5fdc4dcc9fde4a8323cd67" class="expand-content">
+<p>The following traffic descriptors are used for marking traffic:</p>
+<ul>
+<li><strong>Internal</strong>: QoS groups</li>
+<li><strong>Layer 2</strong>: 802.1Q/p class of service (CoS) bits</li>
+<li><strong>Layer 2.5</strong>: MPLS experimental (EXP) bits</li>
+<li><strong>Layer 3</strong>: Differentiated Services Code Points (DSCP) and IP Precedence (IPP)</li>
+</ul>
+  </div>
+</div>
+<h6 id="11-what-is-the-difference-between-policing-and-shaping">11. What is the difference between Policing and Shaping?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-50407f103ff79667b33e521e8f88f42c" aria-controls="R-expandcontent-50407f103ff79667b33e521e8f88f42c">
+  <label class="expand-label" for="R-expand-50407f103ff79667b33e521e8f88f42c">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-50407f103ff79667b33e521e8f88f42c" class="expand-content">
+<p>Traffic <strong>policers</strong> and <strong>shapers</strong> are traffic-conditioning QoS mechanisms used to control the flow of traffic, but they differ in their implementation:</p>
+<ul>
+<li><strong>Policers</strong>: Transmit or re-mark incoming or outgoing traffic that conforms to the desired traffic rate, and drop or mark down incoming or outgoing traffic that goes beyond the desired traffic rate.</li>
+<li><strong>Shapers</strong>: Buffer and delay egress traffic rates that momentarily peak above the desired rate until the egress traffic rate drops below the defined traffic rate. If the egress traffic rate is below the desired rate, the traffic is sent immediately.</li>
+</ul>
+  </div>
+</div>
+<h6 id="12-what-are-fundamental-reasons-behind-link-congestion">12. What are fundamental reasons behind link congestion?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-f3e269e109b72e4aa98af3efa07b815f" aria-controls="R-expandcontent-f3e269e109b72e4aa98af3efa07b815f">
+  <label class="expand-label" for="R-expand-f3e269e109b72e4aa98af3efa07b815f">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-f3e269e109b72e4aa98af3efa07b815f" class="expand-content">
+<p>Congestion can occur for one of these two reasons:</p>
+<ul>
+<li>The input or ingress interface is a higher speed than the output or egress interface
+<ul>
+<li>For example, when packets are received on a 100 Gbps input interface and transmitted out of a 10 Gbps egress interface.</li>
+</ul>
+</li>
+<li>Multiple input or ingress interfaces forwarding packets to a single output or egress interface that is a lower speed than the sum of the speeds of the input or ingress interfaces
+<ul>
+<li>For example, when packets are received on twenty 10 Gbps input interfaces simultaneously (summing up to 200 Gbps) and transmitted out of a single 100 Gbps egress interface.</li>
+</ul>
+</li>
+</ul>
+  </div>
+</div>
+<h6 id="13-what-is-congestion-management-">13. What is congestion management ?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-39b9780b4744af2298ec71df98842661" aria-controls="R-expandcontent-39b9780b4744af2298ec71df98842661">
+  <label class="expand-label" for="R-expand-39b9780b4744af2298ec71df98842661">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-39b9780b4744af2298ec71df98842661" class="expand-content">
+<p>Congestion management is a combination of <strong>queuing</strong>(buffering) and <strong>scheduling</strong> algorithm.
+When congestion is taking place, the queues fill up, and packets can be reordered by some of the <strong>queuing algorithms</strong> so that higher-priority packets exit the output interface sooner than lower-priority ones. At this point, a <strong>scheduling algorithm</strong> decides which packet to transmit next</p>
+  </div>
+</div>
+<h6 id="14-what-are-the-different-queuing-algorithms-out-there">14. What are the different Queuing algorithms out there?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-4c637fe6419e55e23c0ab0a8ba8a7f82" aria-controls="R-expandcontent-4c637fe6419e55e23c0ab0a8ba8a7f82">
+  <label class="expand-label" for="R-expand-4c637fe6419e55e23c0ab0a8ba8a7f82">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-4c637fe6419e55e23c0ab0a8ba8a7f82" class="expand-content">
+<ul>
+<li>
+<p><strong>First-in, first-out queuing (FIFO)</strong>: FIFO involves a single queue where the first packet to be placed on the output interface queue is the first packet to leave the interface (first come, first served). In FIFO queuing, all traffic belongs to the same class.</p>
+</li>
+<li>
+<p><strong>Round robin</strong>: queues are serviced in sequence one after the other, and each queue processes one packet only. No queues starve with round robin because every queue gets an opportunity to send one packet every round. No queue has priority over others, and if the packet sizes from all queues are about the same, the interface bandwidth is shared equally across the round robin queues. A limitation of round robin is that it does not include a mechanism to prioritize traffic.</p>
+</li>
+<li>
+<p><strong>Weighted round robin (WRR)</strong>: WRR was developed to provide prioritization capabilities for round robin. It allows a weight to be assigned to each queue, and based on that weight, each queue effectively receives a portion of the interface bandwidth that is not necessarily equal to the other queues’ portions.</p>
+</li>
+<li>
+<p><strong>Custom queuing (CQ)</strong>: CQ is a Cisco implementation of WRR that involves a set of 16 queues with a round-robin scheduler and FIFO queuing within each queue. Each queue can be customized with a portion of the link bandwidth for each selected traffic type. If a particular type of traffic is not using the bandwidth reserved for it, other traffic types may use the unused bandwidth. CQ causes long delays and also suffers from all the same problems as FIFO within each of the 16 queues that it uses for traffic classification.</p>
+</li>
+<li>
+<p><strong>Priority queuing (PQ)</strong>: With PQ, four queues in a set (high, medium, normal, and low) are served in strict-priority order, with FIFO queuing within each queue. The high-priority queue is always serviced first, and lower-priority queues are serviced only when all higher-priority queues are empty. For example, the medium queue is serviced only when the high-priority queue is empty. The normal queue is serviced only when the high and medium queues are empty; finally, the low queue is serviced only when all the other queues are empty. At any point in time, if a packet arrives for a higher queue, the packet from the higher queue is processed before any packets in lower-level queues. For this reason, if the higher-priority queues are continuously being serviced, the lower-priority queues are starved.</p>
+</li>
+<li>
+<p><strong>Weighted fair queuing (WFQ)</strong>: The WFQ algorithm automatically divides the interface bandwidth by the number of flows (weighted by IP Precedence) to allocate bandwidth fairly among all flows. This method provides better service for high-priority real-time flows but can’t provide a fixed-bandwidth guarantee for any particular flow.</p>
+</li>
+<li>
+<p><strong>Class-based weighted fair queuing (CBWFQ)</strong>: CBWFQ enables the creation of up to 256 queues, serving up to 256 traffic classes. Each queue is serviced based on the bandwidth assigned to that class. It extends WFQ functionality to provide support for user-defined traffic classes. With CBWFQ, packet classification is done based on traffic descriptors such as QoS markings, protocols, ACLs, and input interfaces. After a packet is classified as belonging to a specific class, it is possible to assign bandwidth, weight, queue limit, and maximum packet limit to it. The bandwidth assigned to a class is the minimum bandwidth delivered to the class during congestion. The queue limit for that class is the maximum number of packets allowed to be buffered in the class queue. After a queue has reached the configured queue limit, excess packets are dropped. CBWFQ by itself does not provide a latency guarantee and is only suitable for non-real-time data traffic.</p>
+</li>
+<li>
+<p><strong>Low-latency queuing (LLQ)</strong>: LLQ is CBWFQ combined with priority queuing (PQ), and it was developed to meet the requirements of real-time traffic, such as voice. Traffic assigned to the strict-priority queue is serviced up to its assigned bandwidth before other CBWFQ queues are serviced. All real-time traffic should be configured to be serviced by the priority queue. Multiple classes of real-time traffic can be defined, and separate bandwidth guarantees can be given to each, but a single priority queue schedules all the combined traffic. If a traffic class is not using the bandwidth assigned to it, it is shared among the other classes.</p>
+</li>
+</ul>
+  </div>
+</div>
+<h6 id="15-what-are-the-recommended-queuing-algorithm-for-rich-media-network-voice-and-video-traffic">15. What are the recommended queuing algorithm for rich media network (voice and video traffic)?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-0038593e10b588dc292247c668103b1c" aria-controls="R-expandcontent-0038593e10b588dc292247c668103b1c">
+  <label class="expand-label" for="R-expand-0038593e10b588dc292247c668103b1c">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-0038593e10b588dc292247c668103b1c" class="expand-content">
+<ul>
+<li><strong>Class-based weighted fair queuing (CBWFQ)</strong></li>
+<li><strong>Low-latency queuing (LLQ)</strong></li>
+</ul>
+  </div>
+</div>
+<h6 id="16-what-is-congestion-avoidance--">16. What is congestion-avoidance  ?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-b265bba4188dd16ef59c8683d2a2fe54" aria-controls="R-expandcontent-b265bba4188dd16ef59c8683d2a2fe54">
+  <label class="expand-label" for="R-expand-b265bba4188dd16ef59c8683d2a2fe54">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-b265bba4188dd16ef59c8683d2a2fe54" class="expand-content">
+<p>Congestion-avoidance techniques monitor network traffic loads to anticipate and avoid congestion by dropping packets. The packet dropping algorithms are:</p>
+<ul>
+<li>
+<p><strong>Tail drop</strong>: treats all traffic equally and does not differentiate between classes of service. With tail drop, when the output queue buffers are full, all packets trying to enter the queue are dropped, regardless of their priority, until congestion clears up and the queue is no longer full.</p>
+</li>
+<li>
+<p><strong>random early detection (RED)</strong>: RED provides congestion avoidance by randomly dropping packets before the queue buffers are full. Randomly dropping packets instead of dropping them all at once, as with tail drop, avoids global synchronization of TCP sessions. RED monitors the buffer depth and performs early drops on random packets when the minimum defined queue threshold is exceeded.</p>
+</li>
+<li>
+<p><strong>weighted RED (WRED)</strong>. The difference between RED and WRED is that the randomness of packet drops can be manipulated by traffic weights denoted by either IP Precedence (IPP) or DSCP. Packets with a lower IPP value are dropped more aggressively than are higher IPP values</p>
+</li>
+</ul>
+  </div>
+</div>
+
+            <footer class="footline">
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation showVisitedLinks">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+<style>
+  #R-logo img {
+    color: #282828;
+    color: var(--MENU-SECTIONS-BG-color);
+    opacity: .945;
+  }
+
+  a#R-logo {
+    color: #282828;
+    color: var(--MENU-SECTIONS-BG-color);
+    font-family: 'Work Sans', 'Helvetica', 'Tahoma', 'Geneva', 'Arial', sans-serif;
+    font-size: 1.875rem;
+    font-weight: 300;
+    margin-top: -.8125rem;
+    max-width: 100%;
+    text-transform: uppercase;
+    width: 14.125rem;
+    white-space: nowrap;
+  }
+
+  a#R-logo:hover {
+    color: #282828;
+    color: var(--MENU-SECTIONS-BG-color);
+  }
+
+  #R-logo img {
+    margin-bottom: -1.25rem;
+    margin-inline-start: -1.47rem;
+    margin-inline-end: .5rem;
+    width: 100%;
+  }
+
+  @media only all and (max-width: 59.999rem) {
+    a#R-logo {
+      font-size: 1.5625rem;
+      margin-top: -.1875rem;
+    }
+    #R-logo img {
+      margin-bottom: -.75rem;
+      margin-inline-start: -1.47rem;
+      margin-inline-end: .5rem;
+    }
+  }
+</style>
+<a id="R-logo" href="/index.html">
+  <img src="/images/Ping-Square-logo.png" alt="Ping Square Logo" />
+</a>
+        </div>
+
+        <search>
+          <div class="searchbox default-animation">
+            <i class="fas fa-search" title="Search (CTRL+ALT+f)"></i>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </search>
+        <script>
+          var contentLangs=['en'];
+        </script>
+        <script src="/js/auto-complete.js?1735154837" defer></script>
+        <script src="/js/lunr/lunr.min.js?1735154837" defer></script>
+        <script src="/js/lunr/lunr.stemmer.support.min.js?1735154837" defer></script>
+        <script src="/js/lunr/lunr.multi.min.js?1735154837" defer></script>
+        <script src="/js/lunr/lunr.en.min.js?1735154837" defer></script>
+        <script src="/js/search.js?1735154837" defer></script>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <ul>
+          <li><a class="padding" href="/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+        </ul>
+        <hr class="padding">
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div id="R-topics">
+          <ul class="enlarge morespace collapsible-menu">
+          <li data-nav-id="/foundation/index.html" class=""><a class="padding" href="/foundation/index.html">Foundation<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ccnp-enterprise/index.html" class="parent "><input type="checkbox" id="R-section-4f5937f19b0a233464921f353e0ea350" aria-controls="R-subsections-4f5937f19b0a233464921f353e0ea350" checked><label for="R-section-4f5937f19b0a233464921f353e0ea350"><i class="fa-fw fas fa-chevron-down"></i><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu CCNP Enterprise</span></label><a class="padding" href="/ccnp-enterprise/index.html">CCNP Enterprise<i class="fa-fw fas fa-check read-icon"></i></a><ul id="R-subsections-4f5937f19b0a233464921f353e0ea350" class="morespace collapsible-menu">
+          <li data-nav-id="/ccnp-enterprise/encor/index.html" class="parent alwaysopen"><input type="checkbox" id="R-section-f491ae95724b75363a0879be5e384807" aria-controls="R-subsections-f491ae95724b75363a0879be5e384807" checked><label for="R-section-f491ae95724b75363a0879be5e384807"><i class="fa-fw fas fa-chevron-down"></i><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu ENCOR</span></label><a class="padding" href="/ccnp-enterprise/encor/index.html">ENCOR<i class="fa-fw fas fa-check read-icon"></i></a><ul id="R-subsections-f491ae95724b75363a0879be5e384807" class="morespace collapsible-menu">
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-1/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-1/index.html">Chapter 1<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-2/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-2/index.html">Chapter 2<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-3/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-3/index.html">Chapter 3<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-4/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-4/index.html">Chapter 4<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-5/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-5/index.html">chapter 5<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-6/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-6/index.html">Chapter 6<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-7/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-7/index.html">Understanding EIGRP<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-8/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-8/index.html">Understanding OSPF<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-9/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-9/index.html">Chapter 9<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-10/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-10/index.html">Chapter 10<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-11/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-11/index.html">Chapter 11<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-12/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-12/index.html">Chapter 12<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-13/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-13/index.html">Chapter 13<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-14/index.html" class="active"><a class="padding" href="/ccnp-enterprise/encor/chapter-14/index.html">Chapter 14<i class="fa-fw fas fa-check read-icon"></i></a></li></ul></li></ul></li>
+          </ul>
+        </div>
+        <div class="padding footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVariantSwitch showVisitedLinks showFooter"></div>
+        <div id="R-menu-footer">
+          <hr class="padding default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVariantSwitch showVisitedLinks showFooter">
+          <div id="R-prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks showVariantSwitch showVisitedLinks">
+            <ul>
+              <li id="R-select-language-container" class="footerLangSwitch">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-language"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-language">Language</label>
+                    <select id="R-select-language" onchange="location = this.querySelector( this.value ).dataset.url;">
+                      <option id="R-select-language-en" value="#R-select-language-en" data-url="/ccnp-enterprise/encor/chapter-14/index.html" lang="en-us" selected></option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+              <li id="R-select-variant-container" class="footerVariantSwitch showVariantSwitch">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-paint-brush"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-variant">Theme</label>
+                    <select id="R-select-variant" onchange="window.variants && variants.changeVariant( this.value );">
+                      <option id="R-select-variant-relearn-auto" value="relearn-auto" selected>Relearn Light/Dark</option>
+                      <option id="R-select-variant-relearn-light" value="relearn-light">Relearn Light</option>
+                      <option id="R-select-variant-relearn-dark" value="relearn-dark">Relearn Dark</option>
+                      <option id="R-select-variant-relearn-bright" value="relearn-bright">Relearn Bright</option>
+                      <option id="R-select-variant-zen-auto" value="zen-auto">Zen Light/Dark</option>
+                      <option id="R-select-variant-zen-light" value="zen-light">Zen Light</option>
+                      <option id="R-select-variant-zen-dark" value="zen-dark">Zen Dark</option>
+                      <option id="R-select-variant-retro-auto" value="retro-auto">Retro Learn/Neon</option>
+                      <option id="R-select-variant-neon" value="neon">Neon</option>
+                      <option id="R-select-variant-learn" value="learn">Learn</option>
+                      <option id="R-select-variant-blue" value="blue">Blue</option>
+                      <option id="R-select-variant-green" value="green">Green</option>
+                      <option id="R-select-variant-red" value="red">Red</option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+                <script>window.variants && variants.markSelectedVariant();</script>
+              </li>
+              <li class="footerVisitedLinks showVisitedLinks">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-history"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <button onclick="clearHistory();">Clear History</button>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div id="R-footer" class="footerFooter showFooter">
+	    <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <script src="/js/clipboard.min.js?1735154837" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1735154837" defer></script>
+    <script src="/js/theme.js?1735154837" defer></script>
+  </body>
+</html>

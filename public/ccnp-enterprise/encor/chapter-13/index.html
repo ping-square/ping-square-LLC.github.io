@@ -34,20 +34,20 @@ Internet Group Management Protocol (IGMP) for its operation in Layer 2 networks 
 2. What IPv4 address range is reserved for multicast traffic? Answer Internet Assigned Numbers Authority (IANA) assigned the IP Class D address space 224.0.0.0/4 for multicast addressing; it includes addresses ranging from 224.0.0.0 to 239.255.255.255. The first 4 bits of this whole range start with 1110.">
     <meta itemprop="datePublished" content="2024-10-06T12:12:13-05:00">
     <meta itemprop="dateModified" content="2024-10-06T12:12:13-05:00">
-    <meta itemprop="wordCount" content="336">
+    <meta itemprop="wordCount" content="403">
     <meta itemprop="image" content="http://localhost:1313/images/The_network_engineer.png">
     <title>Chapter 13 :: Ping-Square.com</title>
-    <link href="/css/fontawesome-all.min.css?1734735219" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1734735219" rel="stylesheet"></noscript>
-    <link href="/css/nucleus.css?1734735219" rel="stylesheet">
-    <link href="/css/auto-complete.css?1734735219" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1734735219" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar.min.css?1734735219" rel="stylesheet">
-    <link href="/css/fonts.css?1734735219" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1734735219" rel="stylesheet"></noscript>
-    <link href="/css/theme.css?1734735219" rel="stylesheet">
-    <link href="/css/theme-relearn-auto.css?1734735219" rel="stylesheet" id="R-variant-style">
-    <link href="/css/chroma-relearn-auto.css?1734735219" rel="stylesheet" id="R-variant-chroma-style">
-    <link href="/css/variant.css?1734735219" rel="stylesheet">
-    <link href="/css/print.css?1734735219" rel="stylesheet" media="print">
-    <script src="/js/variant.js?1734735219"></script>
+    <link href="/css/fontawesome-all.min.css?1735146232" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1735146232" rel="stylesheet"></noscript>
+    <link href="/css/nucleus.css?1735146232" rel="stylesheet">
+    <link href="/css/auto-complete.css?1735146232" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1735146232" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1735146232" rel="stylesheet">
+    <link href="/css/fonts.css?1735146232" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1735146232" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1735146232" rel="stylesheet">
+    <link href="/css/theme-relearn-auto.css?1735146232" rel="stylesheet" id="R-variant-style">
+    <link href="/css/chroma-relearn-auto.css?1735146232" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="/css/variant.css?1735146232" rel="stylesheet">
+    <link href="/css/print.css?1735146232" rel="stylesheet" media="print">
+    <script src="/js/variant.js?1735146232"></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.relBasePath='..\/..\/..';
@@ -92,7 +92,7 @@ Internet Group Management Protocol (IGMP) for its operation in Layer 2 networks 
           <div class="topbar-area topbar-area-end" data-area="end">
             <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/ccnp-enterprise/encor/chapter-12/index.html" title="Chapter 12 (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
             </div>
-            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><span class="topbar-control"><i class="fa-fw fas fa-chevron-right"></i></span>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/ccnp-enterprise/encor/chapter-14/index.html" title="Chapter 14 (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
             </div>
             <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
               <div class="topbar-content">
@@ -117,12 +117,12 @@ Internet Group Management Protocol (IGMP) for its operation in Layer 2 networks 
 <h1 id="multicast"><strong>Multicast</strong></h1>
 <h6 id="1-what-protocol-are-used-by-the-multicast-technology">1. What protocol are used by the multicast technology?</h6>
 <div class="expand">
-  <input type="checkbox" id="R-expand-39ccb06692325ccdd4c78b4b87cf7331" aria-controls="R-expandcontent-39ccb06692325ccdd4c78b4b87cf7331">
-  <label class="expand-label" for="R-expand-39ccb06692325ccdd4c78b4b87cf7331">
+  <input type="checkbox" id="R-expand-402e6bd441d662c49b07eb3a36e642ef" aria-controls="R-expandcontent-402e6bd441d662c49b07eb3a36e642ef">
+  <label class="expand-label" for="R-expand-402e6bd441d662c49b07eb3a36e642ef">
     <i class="expander-icon fa-fw fas fa-chevron-down"></i>
     <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
   </label>
-  <div id="R-expandcontent-39ccb06692325ccdd4c78b4b87cf7331" class="expand-content">
+  <div id="R-expandcontent-402e6bd441d662c49b07eb3a36e642ef" class="expand-content">
 <p>multicast technology relies on 2 protocols:</p>
 <ul>
 <li>Internet Group Management Protocol (IGMP) for its operation in Layer 2 networks</li>
@@ -132,89 +132,92 @@ Internet Group Management Protocol (IGMP) for its operation in Layer 2 networks 
 </div>
 <h6 id="3-what-is-the-primary-function-of-vlan-trunking-protocol-vtp">3. What is the primary function of VLAN Trunking Protocol (VTP)?</h6>
 <div class="expand">
-  <input type="checkbox" id="R-expand-5fc4a3619d48fcbca606cdcb3f6e429c" aria-controls="R-expandcontent-5fc4a3619d48fcbca606cdcb3f6e429c">
-  <label class="expand-label" for="R-expand-5fc4a3619d48fcbca606cdcb3f6e429c">
+  <input type="checkbox" id="R-expand-f46a6cc8492c964aa4ff0794c5e6fbc0" aria-controls="R-expandcontent-f46a6cc8492c964aa4ff0794c5e6fbc0">
+  <label class="expand-label" for="R-expand-f46a6cc8492c964aa4ff0794c5e6fbc0">
     <i class="expander-icon fa-fw fas fa-chevron-down"></i>
     <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
   </label>
-  <div id="R-expandcontent-5fc4a3619d48fcbca606cdcb3f6e429c" class="expand-content">
+  <div id="R-expandcontent-f46a6cc8492c964aa4ff0794c5e6fbc0" class="expand-content">
 <p>test</p>
   </div>
 </div>
 <h6 id="2-what-ipv4-address-range-is-reserved-for-multicast-traffic">2. What IPv4 address range is reserved for multicast traffic?</h6>
 <div class="expand">
-  <input type="checkbox" id="R-expand-77b1eb267b9e8af430f893b7ecadd512" aria-controls="R-expandcontent-77b1eb267b9e8af430f893b7ecadd512">
-  <label class="expand-label" for="R-expand-77b1eb267b9e8af430f893b7ecadd512">
+  <input type="checkbox" id="R-expand-3735cc978d92fd50d03011981132ecdc" aria-controls="R-expandcontent-3735cc978d92fd50d03011981132ecdc">
+  <label class="expand-label" for="R-expand-3735cc978d92fd50d03011981132ecdc">
     <i class="expander-icon fa-fw fas fa-chevron-down"></i>
     <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
   </label>
-  <div id="R-expandcontent-77b1eb267b9e8af430f893b7ecadd512" class="expand-content">
+  <div id="R-expandcontent-3735cc978d92fd50d03011981132ecdc" class="expand-content">
 <p>Internet Assigned Numbers Authority (IANA) assigned the IP Class D address space 224.0.0.0/4 for multicast addressing; it includes addresses ranging from 224.0.0.0 to 239.255.255.255. The first 4 bits of this whole range start with 1110.</p>
   </div>
 </div>
 <h6 id="3-what-does-a-receiver-do-to-request-a-specific-multicast-feed">3. What does a receiver do to request a specific multicast feed?</h6>
 <div class="expand">
-  <input type="checkbox" id="R-expand-2e7451743467e64ace15def780e144f7" aria-controls="R-expandcontent-2e7451743467e64ace15def780e144f7">
-  <label class="expand-label" for="R-expand-2e7451743467e64ace15def780e144f7">
+  <input type="checkbox" id="R-expand-8cf7cd6f12326ffde73de503b58caa3a" aria-controls="R-expandcontent-8cf7cd6f12326ffde73de503b58caa3a">
+  <label class="expand-label" for="R-expand-8cf7cd6f12326ffde73de503b58caa3a">
     <i class="expander-icon fa-fw fas fa-chevron-down"></i>
     <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
   </label>
-  <div id="R-expandcontent-2e7451743467e64ace15def780e144f7" class="expand-content">
+  <div id="R-expandcontent-8cf7cd6f12326ffde73de503b58caa3a" class="expand-content">
 <p>When a receiver wants to receive a specific multicast feed, it sends an <strong>IGMP join</strong> to the local router using the multicast IP group address for that feed. The receiver reprograms its interface to accept the multicast MAC group address that correlates to the group address.</p>
   </div>
 </div>
 <h6 id="4-what-is-igmp">4. What is IGMP?</h6>
 <div class="expand">
-  <input type="checkbox" id="R-expand-ad62889b57eb1f0a380e99b401c137d3" aria-controls="R-expandcontent-ad62889b57eb1f0a380e99b401c137d3">
-  <label class="expand-label" for="R-expand-ad62889b57eb1f0a380e99b401c137d3">
+  <input type="checkbox" id="R-expand-50c6699fc66c1bc91246a8c4bced0f5c" aria-controls="R-expandcontent-50c6699fc66c1bc91246a8c4bced0f5c">
+  <label class="expand-label" for="R-expand-50c6699fc66c1bc91246a8c4bced0f5c">
     <i class="expander-icon fa-fw fas fa-chevron-down"></i>
     <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
   </label>
-  <div id="R-expandcontent-ad62889b57eb1f0a380e99b401c137d3" class="expand-content">
+  <div id="R-expandcontent-50c6699fc66c1bc91246a8c4bced0f5c" class="expand-content">
 <p>Internet Group Management Protocol (IGMP) is the protocol that receivers use to join multicast groups and start receiving traffic from those groups.</p>
   </div>
 </div>
 <h6 id="5-what-is-the-difference-bewteen-igmpv2-and-igmpv3">5. What is the difference bewteen IGMPv2 and IGMPv3?</h6>
 <div class="expand">
-  <input type="checkbox" id="R-expand-e7f3f72f91860921c5a13da0ec60da8c" aria-controls="R-expandcontent-e7f3f72f91860921c5a13da0ec60da8c">
-  <label class="expand-label" for="R-expand-e7f3f72f91860921c5a13da0ec60da8c">
+  <input type="checkbox" id="R-expand-f165b876968620796f352702d9e96879" aria-controls="R-expandcontent-f165b876968620796f352702d9e96879">
+  <label class="expand-label" for="R-expand-f165b876968620796f352702d9e96879">
     <i class="expander-icon fa-fw fas fa-chevron-down"></i>
     <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
   </label>
-  <div id="R-expandcontent-e7f3f72f91860921c5a13da0ec60da8c" class="expand-content">
+  <div id="R-expandcontent-f165b876968620796f352702d9e96879" class="expand-content">
 <p>IGMPv3 is used to provide source filtering for Source Specific Multicast (SSM) while IGMPv2 cannot provide source filtering. In other words, when a receiver sends a membership report using IGMPv2 (<strong>IGMP join</strong>) to join a multicast group, it does not specify which source it would like to receive multicast traffic from but IGMPv3 does.</p>
   </div>
 </div>
 <h6 id="6-what-is-igmp-snooping">6. What is IGMP snooping?</h6>
 <div class="expand">
-  <input type="checkbox" id="R-expand-a2bf7c0592ebeff72ac67db6a44b6206" aria-controls="R-expandcontent-a2bf7c0592ebeff72ac67db6a44b6206">
-  <label class="expand-label" for="R-expand-a2bf7c0592ebeff72ac67db6a44b6206">
+  <input type="checkbox" id="R-expand-1d9a533e43f6014e7cea45fd71dbef09" aria-controls="R-expandcontent-1d9a533e43f6014e7cea45fd71dbef09">
+  <label class="expand-label" for="R-expand-1d9a533e43f6014e7cea45fd71dbef09">
     <i class="expander-icon fa-fw fas fa-chevron-down"></i>
     <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
   </label>
-  <div id="R-expandcontent-a2bf7c0592ebeff72ac67db6a44b6206" class="expand-content">
+  <div id="R-expandcontent-1d9a533e43f6014e7cea45fd71dbef09" class="expand-content">
 <p>When the switch receives a multicast frame destined for a multicast group, it forwards the packet only out the ports where IGMP joins were received for that specific multicast group. IGMP snooping is the most widely used method which consists in examining IGMP joins sent by receivers and maintaining a table of interfaces to IGMP joins.</p>
   </div>
 </div>
 <h6 id="7-what-is-the-difference-between-pim-and-igmp-protocols">7. What is the difference between PIM and IGMP protocols?</h6>
 <div class="expand">
-  <input type="checkbox" id="R-expand-b2a6de42a3cf188a0d055134f3492cad" aria-controls="R-expandcontent-b2a6de42a3cf188a0d055134f3492cad">
-  <label class="expand-label" for="R-expand-b2a6de42a3cf188a0d055134f3492cad">
+  <input type="checkbox" id="R-expand-cfa43b9ca56194bac8e4a064afa9fd8a" aria-controls="R-expandcontent-cfa43b9ca56194bac8e4a064afa9fd8a">
+  <label class="expand-label" for="R-expand-cfa43b9ca56194bac8e4a064afa9fd8a">
     <i class="expander-icon fa-fw fas fa-chevron-down"></i>
     <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
   </label>
-  <div id="R-expandcontent-b2a6de42a3cf188a0d055134f3492cad" class="expand-content">
-<p>test</p>
+  <div id="R-expandcontent-cfa43b9ca56194bac8e4a064afa9fd8a" class="expand-content">
+<ul>
+<li>IGMP is used for managing membership of multicast groups primarily within a local network segment. PIM, on the other hand, is used for routing multicast data across a network of routers, ensuring it reaches all segments with interested hosts.</li>
+<li>IGMP operates between hosts and their directly connected routers, managing local group membership. PIM operates between routers, managing the paths that multicast traffic should take across an entire network.</li>
+</ul>
   </div>
 </div>
 <h6 id="8-what-is-the-primary-function-of-vlan-trunking-protocol-vtp">8. What is the primary function of VLAN Trunking Protocol (VTP)?</h6>
 <div class="expand">
-  <input type="checkbox" id="R-expand-2dac8bb60a27711b68b2391ccd3e739e" aria-controls="R-expandcontent-2dac8bb60a27711b68b2391ccd3e739e">
-  <label class="expand-label" for="R-expand-2dac8bb60a27711b68b2391ccd3e739e">
+  <input type="checkbox" id="R-expand-fb7991cdb18c5584fa187aa17aaf7089" aria-controls="R-expandcontent-fb7991cdb18c5584fa187aa17aaf7089">
+  <label class="expand-label" for="R-expand-fb7991cdb18c5584fa187aa17aaf7089">
     <i class="expander-icon fa-fw fas fa-chevron-down"></i>
     <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
   </label>
-  <div id="R-expandcontent-2dac8bb60a27711b68b2391ccd3e739e" class="expand-content">
+  <div id="R-expandcontent-fb7991cdb18c5584fa187aa17aaf7089" class="expand-content">
 <p>test</p>
   </div>
 </div>
@@ -289,12 +292,12 @@ Internet Group Management Protocol (IGMP) for its operation in Layer 2 networks 
         <script>
           var contentLangs=['en'];
         </script>
-        <script src="/js/auto-complete.js?1734735219" defer></script>
-        <script src="/js/lunr/lunr.min.js?1734735219" defer></script>
-        <script src="/js/lunr/lunr.stemmer.support.min.js?1734735219" defer></script>
-        <script src="/js/lunr/lunr.multi.min.js?1734735219" defer></script>
-        <script src="/js/lunr/lunr.en.min.js?1734735219" defer></script>
-        <script src="/js/search.js?1734735219" defer></script>
+        <script src="/js/auto-complete.js?1735146232" defer></script>
+        <script src="/js/lunr/lunr.min.js?1735146232" defer></script>
+        <script src="/js/lunr/lunr.stemmer.support.min.js?1735146232" defer></script>
+        <script src="/js/lunr/lunr.multi.min.js?1735146232" defer></script>
+        <script src="/js/lunr/lunr.en.min.js?1735146232" defer></script>
+        <script src="/js/search.js?1735146232" defer></script>
       </div>
       <div id="R-homelinks" class="default-animation homelinks">
         <ul>
@@ -320,7 +323,8 @@ Internet Group Management Protocol (IGMP) for its operation in Layer 2 networks 
           <li data-nav-id="/ccnp-enterprise/encor/chapter-10/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-10/index.html">Chapter 10<i class="fa-fw fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/ccnp-enterprise/encor/chapter-11/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-11/index.html">Chapter 11<i class="fa-fw fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/ccnp-enterprise/encor/chapter-12/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-12/index.html">Chapter 12<i class="fa-fw fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/ccnp-enterprise/encor/chapter-13/index.html" class="active"><a class="padding" href="/ccnp-enterprise/encor/chapter-13/index.html">Chapter 13<i class="fa-fw fas fa-check read-icon"></i></a></li></ul></li></ul></li>
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-13/index.html" class="active"><a class="padding" href="/ccnp-enterprise/encor/chapter-13/index.html">Chapter 13<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-14/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-14/index.html">Chapter 14<i class="fa-fw fas fa-check read-icon"></i></a></li></ul></li></ul></li>
           </ul>
         </div>
         <div class="padding footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVariantSwitch showVisitedLinks showFooter"></div>
@@ -385,8 +389,8 @@ Internet Group Management Protocol (IGMP) for its operation in Layer 2 networks 
         </div>
       </div>
     </aside>
-    <script src="/js/clipboard.min.js?1734735219" defer></script>
-    <script src="/js/perfect-scrollbar.min.js?1734735219" defer></script>
-    <script src="/js/theme.js?1734735219" defer></script>
+    <script src="/js/clipboard.min.js?1735146232" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1735146232" defer></script>
+    <script src="/js/theme.js?1735146232" defer></script>
   </body>
 </html>

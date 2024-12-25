@@ -45,7 +45,8 @@ When the switch receives a multicast frame destined for a multicast group, it fo
 
 ###### 7. What is the difference between PIM and IGMP protocols?
 {{% expand title="Answer" %}}
-test
+- IGMP is used for managing membership of multicast groups primarily within a local network segment. PIM, on the other hand, is used for routing multicast data across a network of routers, ensuring it reaches all segments with interested hosts.
+- IGMP operates between hosts and their directly connected routers, managing local group membership. PIM operates between routers, managing the paths that multicast traffic should take across an entire network.
 {{% /expand %}}
 
 ###### 8. What is the primary function of VLAN Trunking Protocol (VTP)?
