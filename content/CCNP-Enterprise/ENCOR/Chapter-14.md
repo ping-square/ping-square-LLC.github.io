@@ -1,7 +1,7 @@
 +++
 title = 'Chapter 14'
 date = 2024-12-21T23:04:58-06:00
-draft = true
+draft = false
 +++
 
 # **Quality of Service (QoS)**
