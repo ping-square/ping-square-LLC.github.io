@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.140.1">
+    <meta name="generator" content="Relearn 6.4.0+tip">
+    <meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
+    <meta name="description" content="Wireless Infrastructure 1. What is a BSS? Answer BSS stands for *Basic Service Set
+2. What is a SSID? Answer SSID = Service Set Identifier
+3. What is Split-MAC architecture? Answer Split-MAC architecture is when Cisco AP has to join a WLC to become fully functional.
+4. What is CAPWAP? Answer CAPWAP are logical tunnels joining an AP to a WLC. They transport control and data traffic and can extend through the wired network.">
+    <meta name="author" content="Sören Weber">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="http://localhost:1313/images/The_network_engineer.png">
+    <meta name="twitter:title" content="Chapter 18 :: Ping-Square.com">
+    <meta name="twitter:description" content="Wireless Infrastructure 1. What is a BSS? Answer BSS stands for *Basic Service Set
+2. What is a SSID? Answer SSID = Service Set Identifier
+3. What is Split-MAC architecture? Answer Split-MAC architecture is when Cisco AP has to join a WLC to become fully functional.
+4. What is CAPWAP? Answer CAPWAP are logical tunnels joining an AP to a WLC. They transport control and data traffic and can extend through the wired network.">
+    <meta property="og:url" content="http://localhost:1313/ccnp-enterprise/encor/chapter-18/index.html">
+    <meta property="og:site_name" content="Ping-Square.com">
+    <meta property="og:title" content="Chapter 18 :: Ping-Square.com">
+    <meta property="og:description" content="Wireless Infrastructure 1. What is a BSS? Answer BSS stands for *Basic Service Set
+2. What is a SSID? Answer SSID = Service Set Identifier
+3. What is Split-MAC architecture? Answer Split-MAC architecture is when Cisco AP has to join a WLC to become fully functional.
+4. What is CAPWAP? Answer CAPWAP are logical tunnels joining an AP to a WLC. They transport control and data traffic and can extend through the wired network.">
+    <meta property="og:locale" content="en_us">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="CCNP Enterprise">
+    <meta property="article:published_time" content="2025-01-08T21:13:29-06:00">
+    <meta property="article:modified_time" content="2025-01-08T21:13:29-06:00">
+    <meta property="og:image" content="http://localhost:1313/images/The_network_engineer.png">
+    <meta itemprop="name" content="Chapter 18 :: Ping-Square.com">
+    <meta itemprop="description" content="Wireless Infrastructure 1. What is a BSS? Answer BSS stands for *Basic Service Set
+2. What is a SSID? Answer SSID = Service Set Identifier
+3. What is Split-MAC architecture? Answer Split-MAC architecture is when Cisco AP has to join a WLC to become fully functional.
+4. What is CAPWAP? Answer CAPWAP are logical tunnels joining an AP to a WLC. They transport control and data traffic and can extend through the wired network.">
+    <meta itemprop="datePublished" content="2025-01-08T21:13:29-06:00">
+    <meta itemprop="dateModified" content="2025-01-08T21:13:29-06:00">
+    <meta itemprop="wordCount" content="1781">
+    <meta itemprop="image" content="http://localhost:1313/images/The_network_engineer.png">
+    <title>Chapter 18 :: Ping-Square.com</title>
+    <link href="/css/fontawesome-all.min.css?1737141975" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1737141975" rel="stylesheet"></noscript>
+    <link href="/css/nucleus.css?1737141975" rel="stylesheet">
+    <link href="/css/auto-complete.css?1737141975" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1737141975" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1737141975" rel="stylesheet">
+    <link href="/css/fonts.css?1737141975" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1737141975" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1737141975" rel="stylesheet">
+    <link href="/css/theme-relearn-auto.css?1737141975" rel="stylesheet" id="R-variant-style">
+    <link href="/css/chroma-relearn-auto.css?1737141975" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="/css/variant.css?1737141975" rel="stylesheet">
+    <link href="/css/print.css?1737141975" rel="stylesheet" media="print">
+    <script src="/js/variant.js?1737141975"></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.relBasePath='..\/..\/..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      // variant stuff
+      window.variants && variants.init( [ 'relearn-auto', 'relearn-light', 'relearn-dark', 'relearn-bright', 'zen-auto', 'zen-light', 'zen-dark', 'retro-auto', 'neon', 'learn', 'blue', 'green', 'red' ] );
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+    </script>
+  </head>
+  <body class="mobile-support html disableInlineCopyToClipboard" data-url="/ccnp-enterprise/encor/chapter-18/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper"> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/ccnp-enterprise/index.html"><span itemprop="name">CCNP Enterprise</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/ccnp-enterprise/encor/index.html"><span itemprop="name">ENCOR</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Chapter 18</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/ccnp-enterprise/encor/chapter-20/index.html" title="Chapter 20 (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/ccnp-enterprise/encor/chapter-16/index.html" title="Chapter 16 (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <article class="default">
+            <header class="headline">
+            </header>
+
+<h1 id="chapter-18">Chapter 18</h1>
+
+<h1 id="wireless-infrastructure"><strong>Wireless Infrastructure</strong></h1>
+<h6 id="1-what-is-a-bss">1. What is a <strong>BSS</strong>?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-c56a9f03f103ba962bf0ce40cea50b63" aria-controls="R-expandcontent-c56a9f03f103ba962bf0ce40cea50b63">
+  <label class="expand-label" for="R-expand-c56a9f03f103ba962bf0ce40cea50b63">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-c56a9f03f103ba962bf0ce40cea50b63" class="expand-content">
+<p>BSS stands for *<em>Basic Service Set</em></p>
+  </div>
+</div>
+<h6 id="2-what-is-a-ssid">2. What is a <strong>SSID</strong>?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-cf7e97200b0ca0d06ef2bf180f44c670" aria-controls="R-expandcontent-cf7e97200b0ca0d06ef2bf180f44c670">
+  <label class="expand-label" for="R-expand-cf7e97200b0ca0d06ef2bf180f44c670">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-cf7e97200b0ca0d06ef2bf180f44c670" class="expand-content">
+<p>SSID = Service Set Identifier</p>
+  </div>
+</div>
+<h6 id="3-what-is-split-mac-architecture">3. What is <strong>Split-MAC architecture</strong>?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-ce24856ff132d46ce2da702b56b680d3" aria-controls="R-expandcontent-ce24856ff132d46ce2da702b56b680d3">
+  <label class="expand-label" for="R-expand-ce24856ff132d46ce2da702b56b680d3">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-ce24856ff132d46ce2da702b56b680d3" class="expand-content">
+<p><strong>Split-MAC architecture</strong> is when Cisco AP has to join a WLC to become fully functional.</p>
+  </div>
+</div>
+<h6 id="4-what-is-capwap">4. What is <strong>CAPWAP</strong>?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-c899e3d5ff20db024c9f66092a8cf164" aria-controls="R-expandcontent-c899e3d5ff20db024c9f66092a8cf164">
+  <label class="expand-label" for="R-expand-c899e3d5ff20db024c9f66092a8cf164">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-c899e3d5ff20db024c9f66092a8cf164" class="expand-content">
+<p><strong>CAPWAP</strong> are logical tunnels joining an AP to a WLC. They transport control and data traffic and can extend through the wired network.</p>
+  </div>
+</div>
+<h6 id="5-what-is-a-rogue-ap">5. What is a <strong>Rogue AP</strong>?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-23d1b144a8d0abf14bbc1c9f11a67c3b" aria-controls="R-expandcontent-23d1b144a8d0abf14bbc1c9f11a67c3b">
+  <label class="expand-label" for="R-expand-23d1b144a8d0abf14bbc1c9f11a67c3b">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-23d1b144a8d0abf14bbc1c9f11a67c3b" class="expand-content">
+<p>A <strong>Rogue AP</strong> is a AP that has been installed on a secure network without explicit authorization from a local network administration.</p>
+  </div>
+</div>
+<h6 id="6-what-are-the-different-modes-a-cisco-ap-can-have-on-a-wlc">6. What are the different modes a Cisco AP can have on a WLC?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-821ce30da5598f24802506bffe72713f" aria-controls="R-expandcontent-821ce30da5598f24802506bffe72713f">
+  <label class="expand-label" for="R-expand-821ce30da5598f24802506bffe72713f">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-821ce30da5598f24802506bffe72713f" class="expand-content">
+<ul>
+<li>
+<p><strong>Local mode</strong>: The default lightweight mode that offers one or more functioning BSSs on a specific channel. In other words, an AP in local mode serves wireless clients. During times when it is not transmitting, the AP scans the other channels to measure the level of noise, measure interference, discover rogue devices, and match against intrusion detection system (IDS) events.</p>
+</li>
+<li>
+<p><strong>FlexConnect mode</strong>: An AP at a remote site maintains a control CAPWAP tunnel to a central WLC while forwarding data normally, without a CAPWAP tunnel. If the remote site’s WAN link goes down, taking the control CAPWAP tunnel down too.</p>
+</li>
+<li>
+<p><strong>Monitor mode</strong>: The AP does not transmit at all, but its receiver is enabled to act as a dedicated sensor. The AP checks for IDS events, detects rogue access points, and determines the position of stations through location-based services.</p>
+</li>
+<li>
+<p><strong>Sniffer mode</strong>: An AP dedicates its radios to receiving 802.11 traffic from other sources, much like a sniffer or packet capture device. The captured traffic is then forwarded to a PC running network analyzer software such as Wireshark, where it can be analyzed further.</p>
+</li>
+<li>
+<p><strong>Rogue detector mode</strong>: An AP dedicates itself to detecting rogue devices by correlating MAC addresses heard on the wired network with those heard over the air. Rogue devices are those that appear on both networks.</p>
+</li>
+<li>
+<p><strong>Bridge mode</strong>: An AP becomes a dedicated bridge (point-to-point or point-to-multipoint) between two networks. Two APs in bridge mode can be used to link two locations separated by a distance. Multiple APs in bridge mode can form an indoor or outdoor mesh network.</p>
+</li>
+<li>
+<p><strong>Flex+Bridge mode</strong>: FlexConnect operation is enabled on a mesh AP.</p>
+</li>
+<li>
+<p><strong>SE-Connect mode</strong>: The AP dedicates its radios to spectrum analysis on all wireless channels. You can remotely connect a PC running software such as MetaGeek Chanalyzer or Cisco Spectrum Expert to the AP to collect and analyze the spectrum analysis data to discover sources of interference.</p>
+</li>
+</ul>
+  </div>
+</div>
+<h6 id="7-what-are-the-different-types-of--cisco-wireless-deployments">7. What are the different types of  <strong>Cisco Wireless deployments</strong>?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-70c71efbf28cdd0ca5ce92d73abe642b" aria-controls="R-expandcontent-70c71efbf28cdd0ca5ce92d73abe642b">
+  <label class="expand-label" for="R-expand-70c71efbf28cdd0ca5ce92d73abe642b">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-70c71efbf28cdd0ca5ce92d73abe642b" class="expand-content">
+<p>There are 3 main categories of Cisco Wireless deployments:</p>
+<ul>
+<li><strong>Lightweithg Wireless deployment</strong>- there is no controller involved and the AP operates in <strong>local mode</strong> only. they act like natural extension of switch network</li>
+<li><strong>Controller-less Wireless deployment</strong>- the WLC is a software embedded in the AP. the AP that hosts the WLC forms a CAPWAP tunnel with the WLC. EWC typically supports up to 100 APs and up to 2,000 wireless clients.</li>
+<li><strong>Controller-based Wireless deployment</strong>- The entire wireless network infrastructure is managed from a standalone WLC. There are 3 types of Controller-based Wireless deployment:
+<ul>
+<li><strong>centralized wireless LAN deployment</strong>: The WLC is placed in a central location, in a data center or near the network core, in order the maximise the number of AP that can join to it. A typical centralized WLC meant for a large enterprise can support up to 6000 APs and up to 64,000 wireless clients.</li>
+<li><strong>cloud-based wireless LAN deployment</strong>: In this case the centralized WLC is located either in a public cloud or in a private cloud. Cloud-based controllers can typically support up to 6000 APs and up to 64,000 wireless clients.</li>
+<li><strong>distributed wireless deployment</strong>: WLC can be located further down in the network hierarchy, for example at the distribution layer associated with multiple remote sites. Distributed controllers are commonly smaller standalone models that can support up to 250 APs and 5,000 wireless clients.</li>
+</ul>
+</li>
+</ul>
+  </div>
+</div>
+<h6 id="8-what-is-a-state-machine">8. What is a <strong>state machine</strong>?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-849ad0429d86b35eb241623e4c1ff724" aria-controls="R-expandcontent-849ad0429d86b35eb241623e4c1ff724">
+  <label class="expand-label" for="R-expand-849ad0429d86b35eb241623e4c1ff724">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-849ad0429d86b35eb241623e4c1ff724" class="expand-content">
+<p>a <strong>state machine</strong> is a sequence of states the lightweight AP goes through from the time it powers up to the time it becomes fully functional.</p>
+  </div>
+</div>
+<h6 id="9-what-are-the-different-states-of-the-state-machine">9. What are the different states of the <strong>state machine</strong>?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-4c3105c870eb50050ae1022b84a32995" aria-controls="R-expandcontent-4c3105c870eb50050ae1022b84a32995">
+  <label class="expand-label" for="R-expand-4c3105c870eb50050ae1022b84a32995">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-4c3105c870eb50050ae1022b84a32995" class="expand-content">
+<ul>
+<li><strong>AP boots</strong>: After an AP receives power, it boots on a small IOS image so that it can work through the remaining states and communicate over its network connection. The AP must also receive an IP address from either a Dynamic Host Configuration Protocol (DHCP) server or a static configuration so that it can communicate over the network.</li>
+<li><strong>WLC discovery</strong>: The AP goes through a series of steps to find one or more controllers that it might join.</li>
+<li><strong>CAPWAP tunnel</strong>: The AP attempts to build a CAPWAP tunnel with one or more controllers. The tunnel will provide a secure Datagram Transport Layer Security (DTLS) channel for subsequent AP-WLC control messages. The AP and WLC authenticate each other through an exchange of digital certificates.</li>
+<li><strong>WLC join</strong>: The AP selects a WLC from a list of candidates and then sends a CAPWAP Join Request message to it. The WLC replies with a CAPWAP Join Response message.</li>
+<li><strong>Download image</strong>: The WLC informs the AP of its software release. If the AP’s own software is a different release, the AP downloads a matching image from the controller, reboots to apply the new image, and then returns to step 1. If the two are running identical releases, no download is needed.</li>
+<li><strong>Download config</strong>: The AP pulls configuration parameters down from the WLC and can update existing values with those sent from the controller. Settings include RF, service set identifier (SSID), security, and quality of service (QoS) parameters.</li>
+<li><strong>Run state</strong>: Once the AP is fully initialized, the WLC places it in the “<em>run</em>” state. The AP and WLC then begin providing a BSS and begin accepting wireless clients.</li>
+<li><strong>Reset</strong>: If an AP is reset by the WLC, it tears down existing client associations and any CAPWAP tunnels to WLCs. The AP then reboots and starts through the entire state machine again.</li>
+</ul>
+  </div>
+</div>
+<h6 id="10-what-is-the-goal-of-wlc-discovery">10. What is the goal of WLC discovery?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-ce18907e115147ad95fa7b597b2ef685" aria-controls="R-expandcontent-ce18907e115147ad95fa7b597b2ef685">
+  <label class="expand-label" for="R-expand-ce18907e115147ad95fa7b597b2ef685">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-ce18907e115147ad95fa7b597b2ef685" class="expand-content">
+<p>The goal of WLC discovery is just to build a list of live WLC candidate controllers that are available in case the AP needs any of them.</p>
+  </div>
+</div>
+<h6 id="11-what-are-different-wlc-discovery-methods">11. What are different WLC discovery methods?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-ae976e2018f9fb5f831b62a422a6a31b" aria-controls="R-expandcontent-ae976e2018f9fb5f831b62a422a6a31b">
+  <label class="expand-label" for="R-expand-ae976e2018f9fb5f831b62a422a6a31b">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-ae976e2018f9fb5f831b62a422a6a31b" class="expand-content">
+<ul>
+<li>Prior knowledge of WLCs
+<ul>
+<li>The AP may already have the WLC&rsquo;s IP address manually configured or provisioned.</li>
+</ul>
+</li>
+<li>Plug-and-play with Cisco DNA Center
+<ul>
+<li>Cisco DNA automates the provisioning of APs and WLCs.</li>
+<li>DNA enables a PnP onboarding process for APs. When an AP is added to the network, DNA Center recognizes it, assigns policies, and connects it to the appropriate WLC automatically.</li>
+</ul>
+</li>
+<li>DHCP and DNS information to suggest some controllers
+<ul>
+<li><strong>Step 1</strong>.The DHCP server that supplies the AP with an IP address can also send DHCP option 43 to suggest a list of WLC addresses.</li>
+<li><strong>Step 2</strong>.The AP attempts to resolve the name CISCO-CAPWAP-CONTROLLER. localdomain with a DNS request (where localdomain is the domain name learned from DHCP). If the name resolves to an IP address, the AP attempts to contact a WLC at that address.</li>
+</ul>
+</li>
+<li>Broadcast on the local subnet to solicit controllers
+<ul>
+<li><strong>Step 1</strong>.The AP broadcasts a <em>CAPWAP Discovery Request</em> on its local wired subnet. Any WLCs that also exist on the subnet answer with a <em>CAPWAP Discovery Response</em>.</li>
+<li><strong>Step 2</strong>.An AP can be “primed” with up to three controllers—a primary, a secondary, and a tertiary. These are stored in nonvolatile memory so that the AP can remember them after a reboot or power failure.</li>
+<li><strong>Step 3</strong>.The DHCP server that supplies the AP with an IP address can also send DHCP option 43 to suggest a list of WLC addresses.</li>
+<li><strong>Step 4</strong>.The AP attempts to resolve the name CISCO-CAPWAP-CONTROLLER. localdomain with a DNS request (where localdomain is the domain name learned from DHCP). If the name resolves to an IP address, the AP attempts to contact a WLC at that address.</li>
+<li><strong>Step 5</strong>.If none of the steps have been successful, the AP resets itself and starts the discovery process all over again.</li>
+</ul>
+</li>
+</ul>
+  </div>
+</div>
+<h6 id="12-how-an-ap-selects-a-wlc">12. How an AP selects a WLC?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-0cf78e54b790c28d437a84694748df81" aria-controls="R-expandcontent-0cf78e54b790c28d437a84694748df81">
+  <label class="expand-label" for="R-expand-0cf78e54b790c28d437a84694748df81">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-0cf78e54b790c28d437a84694748df81" class="expand-content">
+<p>When an AP has finished the discovery process, it should have built a list of live candidate controllers. Now it must begin a separate process to select one WLC and attempt to join it. The WLC selection process consists of the following three steps:
+- <strong>step 1</strong>.If the AP has previously joined a controller and has been configured or “primed” with a primary, secondary, and tertiary controller, it tries to join those controllers in succession.
+- <strong>Step 2</strong>.If the AP does not know of any candidate controller, it tries to discover one. If a controller has been configured as a master controller, it responds to the AP’s request.
+- <strong>Step 3</strong>.The AP attempts to join the least-loaded WLC, in an effort to load balance APs across a set of controllers. During the discovery phase, each controller reports its load—the ratio of the number of currently joined APs to the total AP capacity. The least-loaded WLC is the one with the lowest ratio.</p>
+  </div>
+</div>
+<h6 id="13-how-does-an-ap-is-aware-of-the-status-of-a-wlc">13. How does an AP is aware of the status of a WLC?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-7cb0446e67103be5594dffd655c8d6be" aria-controls="R-expandcontent-7cb0446e67103be5594dffd655c8d6be">
+  <label class="expand-label" for="R-expand-7cb0446e67103be5594dffd655c8d6be">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-7cb0446e67103be5594dffd655c8d6be" class="expand-content">
+<p>After an AP joins a controller, it sends keepalive (also called heartbeat) messages to the controller over the wired network at regular intervals. By default, keepalives are sent every 30 seconds. The controller is expected to answer each keepalive as evidence that it is still alive and working. If a keepalive is not answered, an AP escalates the test by sending four more keepalives at 3-second intervals. If the controller answers, all is well; if it does not answer, the AP presumes that the controller has failed. The AP then moves quickly to find a successor to join.</p>
+  </div>
+</div>
+<h6 id="14-how-can-you-guaranti-ha-with-wlc">14. How can you guaranti HA with WLC?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-0b8bae6fcd9701eaa790f4d0d5941c95" aria-controls="R-expandcontent-0b8bae6fcd9701eaa790f4d0d5941c95">
+  <label class="expand-label" for="R-expand-0b8bae6fcd9701eaa790f4d0d5941c95">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-0b8bae6fcd9701eaa790f4d0d5941c95" class="expand-content">
+<p>If a controller full of 1000 APs fails, all 1000 APs must detect the failure, discover other candidate controllers, and then select the least-loaded one to join. During that time, wireless clients can be left stranded with no connectivity. There are 2 methods that can be used to guaranti HA with the WLC design:</p>
+<ul>
+<li>An AP can be “primed” with up to three controllers—a primary, a secondary, and a tertiary. These are stored in nonvolatile memory so that the AP can remember them after a reboot or power failure.</li>
+<li>WLCs also support high availability (HA) with stateful switchover (SSO) redundancy.</li>
+</ul>
+  </div>
+</div>
+<h6 id="15-what-is-client-density">15. What is <strong>Client density</strong>?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-ad8c85dc9547ca7d5dc59068a4f69d4a" aria-controls="R-expandcontent-ad8c85dc9547ca7d5dc59068a4f69d4a">
+  <label class="expand-label" for="R-expand-ad8c85dc9547ca7d5dc59068a4f69d4a">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-ad8c85dc9547ca7d5dc59068a4f69d4a" class="expand-content">
+<p>Client density is essentially the number of devices per AP.</p>
+  </div>
+</div>
+<h6 id="16-what-is-rss">16. What is <strong>RSS</strong>?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-6146caa77fbfec14071b3baf04924565" aria-controls="R-expandcontent-6146caa77fbfec14071b3baf04924565">
+  <label class="expand-label" for="R-expand-6146caa77fbfec14071b3baf04924565">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-6146caa77fbfec14071b3baf04924565" class="expand-content">
+<p><strong>RSS</strong>: Received Signal Strength</p>
+  </div>
+</div>
+<h6 id="16-what-is-">16. What is <strong>&quot;</strong>?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-3bf5a58aaf7aef96af8e5636a1d836be" aria-controls="R-expandcontent-3bf5a58aaf7aef96af8e5636a1d836be">
+  <label class="expand-label" for="R-expand-3bf5a58aaf7aef96af8e5636a1d836be">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-3bf5a58aaf7aef96af8e5636a1d836be" class="expand-content">
+<p>yes</p>
+  </div>
+</div>
+
+            <footer class="footline">
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation showVisitedLinks">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+<style>
+  #R-logo img {
+    color: #282828;
+    color: var(--MENU-SECTIONS-BG-color);
+    opacity: .945;
+  }
+
+  a#R-logo {
+    color: #282828;
+    color: var(--MENU-SECTIONS-BG-color);
+    font-family: 'Work Sans', 'Helvetica', 'Tahoma', 'Geneva', 'Arial', sans-serif;
+    font-size: 1.875rem;
+    font-weight: 300;
+    margin-top: -.8125rem;
+    max-width: 100%;
+    text-transform: uppercase;
+    width: 14.125rem;
+    white-space: nowrap;
+  }
+
+  a#R-logo:hover {
+    color: #282828;
+    color: var(--MENU-SECTIONS-BG-color);
+  }
+
+  #R-logo img {
+    margin-bottom: -1.25rem;
+    margin-inline-start: -1.47rem;
+    margin-inline-end: .5rem;
+    width: 100%;
+  }
+
+  @media only all and (max-width: 59.999rem) {
+    a#R-logo {
+      font-size: 1.5625rem;
+      margin-top: -.1875rem;
+    }
+    #R-logo img {
+      margin-bottom: -.75rem;
+      margin-inline-start: -1.47rem;
+      margin-inline-end: .5rem;
+    }
+  }
+</style>
+<a id="R-logo" href="/index.html">
+  <img src="/images/Ping-Square-logo.png" alt="Ping Square Logo" />
+</a>
+        </div>
+
+        <search>
+          <div class="searchbox default-animation">
+            <i class="fas fa-search" title="Search (CTRL+ALT+f)"></i>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </search>
+        <script>
+          var contentLangs=['en'];
+        </script>
+        <script src="/js/auto-complete.js?1737141975" defer></script>
+        <script src="/js/lunr/lunr.min.js?1737141975" defer></script>
+        <script src="/js/lunr/lunr.stemmer.support.min.js?1737141975" defer></script>
+        <script src="/js/lunr/lunr.multi.min.js?1737141975" defer></script>
+        <script src="/js/lunr/lunr.en.min.js?1737141975" defer></script>
+        <script src="/js/search.js?1737141975" defer></script>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <ul>
+          <li><a class="padding" href="/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+        </ul>
+        <hr class="padding">
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div id="R-topics">
+          <ul class="enlarge morespace collapsible-menu">
+          <li data-nav-id="/foundation/index.html" class=""><a class="padding" href="/foundation/index.html">Foundation<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ccnp-enterprise/index.html" class="parent "><input type="checkbox" id="R-section-4f5937f19b0a233464921f353e0ea350" aria-controls="R-subsections-4f5937f19b0a233464921f353e0ea350" checked><label for="R-section-4f5937f19b0a233464921f353e0ea350"><i class="fa-fw fas fa-chevron-down"></i><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu CCNP Enterprise</span></label><a class="padding" href="/ccnp-enterprise/index.html">CCNP Enterprise<i class="fa-fw fas fa-check read-icon"></i></a><ul id="R-subsections-4f5937f19b0a233464921f353e0ea350" class="morespace collapsible-menu">
+          <li data-nav-id="/ccnp-enterprise/encor/index.html" class="parent alwaysopen"><input type="checkbox" id="R-section-f491ae95724b75363a0879be5e384807" aria-controls="R-subsections-f491ae95724b75363a0879be5e384807" checked><label for="R-section-f491ae95724b75363a0879be5e384807"><i class="fa-fw fas fa-chevron-down"></i><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu ENCOR</span></label><a class="padding" href="/ccnp-enterprise/encor/index.html">ENCOR<i class="fa-fw fas fa-check read-icon"></i></a><ul id="R-subsections-f491ae95724b75363a0879be5e384807" class="morespace collapsible-menu">
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-1/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-1/index.html">Chapter 1<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-2/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-2/index.html">Chapter 2<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-3/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-3/index.html">Chapter 3<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-4/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-4/index.html">Chapter 4<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-5/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-5/index.html">chapter 5<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-6/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-6/index.html">Chapter 6<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-7/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-7/index.html">Understanding EIGRP<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-8/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-8/index.html">Understanding OSPF<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-9/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-9/index.html">Chapter 9<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-10/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-10/index.html">Chapter 10<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-11/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-11/index.html">Chapter 11<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-12/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-12/index.html">Chapter 12<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-13/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-13/index.html">Chapter 13<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-20/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-20/index.html">Chapter 20<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-18/index.html" class="active"><a class="padding" href="/ccnp-enterprise/encor/chapter-18/index.html">Chapter 18<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-16/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-16/index.html">Chapter 16<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-15/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-15/index.html">Chapter 15<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-14/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-14/index.html">Chapter 14<i class="fa-fw fas fa-check read-icon"></i></a></li></ul></li></ul></li>
+          </ul>
+        </div>
+        <div class="padding footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVariantSwitch showVisitedLinks showFooter"></div>
+        <div id="R-menu-footer">
+          <hr class="padding default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVariantSwitch showVisitedLinks showFooter">
+          <div id="R-prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks showVariantSwitch showVisitedLinks">
+            <ul>
+              <li id="R-select-language-container" class="footerLangSwitch">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-language"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-language">Language</label>
+                    <select id="R-select-language" onchange="location = this.querySelector( this.value ).dataset.url;">
+                      <option id="R-select-language-en" value="#R-select-language-en" data-url="/ccnp-enterprise/encor/chapter-18/index.html" lang="en-us" selected></option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+              <li id="R-select-variant-container" class="footerVariantSwitch showVariantSwitch">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-paint-brush"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-variant">Theme</label>
+                    <select id="R-select-variant" onchange="window.variants && variants.changeVariant( this.value );">
+                      <option id="R-select-variant-relearn-auto" value="relearn-auto" selected>Relearn Light/Dark</option>
+                      <option id="R-select-variant-relearn-light" value="relearn-light">Relearn Light</option>
+                      <option id="R-select-variant-relearn-dark" value="relearn-dark">Relearn Dark</option>
+                      <option id="R-select-variant-relearn-bright" value="relearn-bright">Relearn Bright</option>
+                      <option id="R-select-variant-zen-auto" value="zen-auto">Zen Light/Dark</option>
+                      <option id="R-select-variant-zen-light" value="zen-light">Zen Light</option>
+                      <option id="R-select-variant-zen-dark" value="zen-dark">Zen Dark</option>
+                      <option id="R-select-variant-retro-auto" value="retro-auto">Retro Learn/Neon</option>
+                      <option id="R-select-variant-neon" value="neon">Neon</option>
+                      <option id="R-select-variant-learn" value="learn">Learn</option>
+                      <option id="R-select-variant-blue" value="blue">Blue</option>
+                      <option id="R-select-variant-green" value="green">Green</option>
+                      <option id="R-select-variant-red" value="red">Red</option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+                <script>window.variants && variants.markSelectedVariant();</script>
+              </li>
+              <li class="footerVisitedLinks showVisitedLinks">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-history"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <button onclick="clearHistory();">Clear History</button>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div id="R-footer" class="footerFooter showFooter">
+	    <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <script src="/js/clipboard.min.js?1737141975" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1737141975" defer></script>
+    <script src="/js/theme.js?1737141975" defer></script>
+  </body>
+</html>

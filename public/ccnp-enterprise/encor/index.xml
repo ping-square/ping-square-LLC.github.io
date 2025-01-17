@@ -6,7 +6,7 @@
     <description>Part I Forwarding&#xA;Chapter 1: Packet Forwarding Part II Layer&#xA;Chapter 2: Spanning Tree Protocol&#xA;Chapter 3: Advanced STP Tuning&#xA;Chapter 4: Multiple Spanning Tree Protocol&#xA;Chapter 5: VLAN Trunks and EtherChannel Bundles&#xA;Part III Routing&#xA;Chapter 6: IP Routing Essentials&#xA;Chapter 7: EIGRP&#xA;Chapter 8: OSPF&#xA;Chapter 9: Advanced OSPF&#xA;Chapter 10: OSPFv3&#xA;Chapter 11: BGP&#xA;Chapter 12: Advanced BGP&#xA;Chapter 13: Multicast</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 06 Oct 2024 12:11:43 -0500</lastBuildDate>
+    <lastBuildDate>Sat, 21 Dec 2024 23:04:58 -0600</lastBuildDate>
     <atom:link href="https://ping-square.com/ccnp-enterprise/encor/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Chapter 6</title>
@@ -28,6 +28,13 @@
       <pubDate>Sun, 06 Oct 2024 12:11:43 -0500</pubDate>
       <guid>https://ping-square.com/ccnp-enterprise/encor/chapter-8/index.html</guid>
       <description>So you think you know the OSPF protocol? Let’s find out!&#xA;RFC 2328&#xA;RFC 2328 RFC 2328 RFC 5340&#xA;RFC 5340 RFC 5340 1) What does OSPF stand for and what is its primary function? Answer OSPF stands for Open Shortest Path First. It is an open standard link-state routing protocol used for finding the best path between the source and the destination router using the shortest path first algorithm.</description>
+    </item>
+    <item>
+      <title>Chapter 14</title>
+      <link>https://ping-square.com/ccnp-enterprise/encor/chapter-14/index.html</link>
+      <pubDate>Sat, 21 Dec 2024 23:04:58 -0600</pubDate>
+      <guid>https://ping-square.com/ccnp-enterprise/encor/chapter-14/index.html</guid>
+      <description>Quality of Service (QoS) 1. What are the leading causes of QOS? Answer The leading causes of quality issues:&#xA;Lack of bandwidth Latency and jitter Packet loss 2. What are the most common causes of network latency? Answer The most common causes of network latency are:&#xA;Propagation delay (fixed) Serialization delay (fixed): is the time it takes to place all the bits of a packet onto a link. Processing delay (fixed): is the fixed amount of time it takes for a networking device to take the packet from an input interface and place the packet onto the output queue of the output interface. The processing delay depends on factors such as the following: CPU speed (for software-based platforms) CPU utilization (load) IP packet switching mode (process switching, software CEF, or hardware CEF) Router architecture (centralized or distributed) Configured features on both input and output interfaces Delay variation (variable): also referred to as jitter, is the difference in the latency between packets in a single flow. 3. What are the different QoS implementation models? Answer there are 3 QoS implementation models:</description>
     </item>
   </channel>
 </rss>

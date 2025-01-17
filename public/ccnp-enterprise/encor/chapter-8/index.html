@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="generator" content="Hugo 0.139.5">
+    <meta name="generator" content="Hugo 0.140.1">
     <meta name="generator" content="Relearn 6.4.0+tip">
     <meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
     <meta name="description" content="So you think you know the OSPF protocol? Let’s find out!
@@ -41,17 +41,17 @@ RFC 5340 RFC 5340 1) What does OSPF stand for and what is its primary function? 
     <meta itemprop="wordCount" content="3078">
     <meta itemprop="image" content="https://ping-square.com/images/The_network_engineer.png">
     <title>Understanding OSPF :: Ping-Square.com</title>
-    <link href="/css/fontawesome-all.min.css?1735154940" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1735154940" rel="stylesheet"></noscript>
-    <link href="/css/nucleus.css?1735154940" rel="stylesheet">
-    <link href="/css/auto-complete.css?1735154940" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1735154940" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar.min.css?1735154940" rel="stylesheet">
-    <link href="/css/fonts.css?1735154940" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1735154940" rel="stylesheet"></noscript>
-    <link href="/css/theme.css?1735154940" rel="stylesheet">
-    <link href="/css/theme-relearn-auto.css?1735154940" rel="stylesheet" id="R-variant-style">
-    <link href="/css/chroma-relearn-auto.css?1735154940" rel="stylesheet" id="R-variant-chroma-style">
-    <link href="/css/variant.css?1735154940" rel="stylesheet">
-    <link href="/css/print.css?1735154940" rel="stylesheet" media="print">
-    <script src="/js/variant.js?1735154940"></script>
+    <link href="/css/fontawesome-all.min.css?1737141981" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1737141981" rel="stylesheet"></noscript>
+    <link href="/css/nucleus.css?1737141981" rel="stylesheet">
+    <link href="/css/auto-complete.css?1737141981" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1737141981" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1737141981" rel="stylesheet">
+    <link href="/css/fonts.css?1737141981" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1737141981" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1737141981" rel="stylesheet">
+    <link href="/css/theme-relearn-auto.css?1737141981" rel="stylesheet" id="R-variant-style">
+    <link href="/css/chroma-relearn-auto.css?1737141981" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="/css/variant.css?1737141981" rel="stylesheet">
+    <link href="/css/print.css?1737141981" rel="stylesheet" media="print">
+    <script src="/js/variant.js?1737141981"></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.relBasePath='..\/..\/..';
@@ -96,7 +96,7 @@ RFC 5340 RFC 5340 1) What does OSPF stand for and what is its primary function? 
           <div class="topbar-area topbar-area-end" data-area="end">
             <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/ccnp-enterprise/encor/chapter-7/index.html" title="Understanding EIGRP (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
             </div>
-            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><span class="topbar-control"><i class="fa-fw fas fa-chevron-right"></i></span>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/ccnp-enterprise/encor/chapter-14/index.html" title="Chapter 14 (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
             </div>
             <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
               <div class="topbar-content">
@@ -131,23 +131,23 @@ RFC 5340 RFC 5340 1) What does OSPF stand for and what is its primary function? 
 </ul>
 <h6 id="1-what-does-ospf-stand-for-and-what-is-its-primary-function">1) What does OSPF stand for and what is its primary function?</h6>
 <div class="expand">
-  <input type="checkbox" id="R-expand-d7393027013110920aed42511aad798c" aria-controls="R-expandcontent-d7393027013110920aed42511aad798c">
-  <label class="expand-label" for="R-expand-d7393027013110920aed42511aad798c">
+  <input type="checkbox" id="R-expand-0aa54d5be71491a4131c8f039089b8b4" aria-controls="R-expandcontent-0aa54d5be71491a4131c8f039089b8b4">
+  <label class="expand-label" for="R-expand-0aa54d5be71491a4131c8f039089b8b4">
     <i class="expander-icon fa-fw fas fa-chevron-down"></i>
     <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
   </label>
-  <div id="R-expandcontent-d7393027013110920aed42511aad798c" class="expand-content">
+  <div id="R-expandcontent-0aa54d5be71491a4131c8f039089b8b4" class="expand-content">
 <p>OSPF stands for <strong>Open Shortest Path First</strong>. It is an open standard link-state routing protocol used for finding the best path between the source and the destination router using the shortest path first algorithm.</p>
   </div>
 </div>
 <h6 id="2-what-are-the-different-types-of-ospf-packets">2) What are the different types of OSPF packets?</h6>
 <div class="expand">
-  <input type="checkbox" id="R-expand-75a1c5f8b08bdc9ef5eb8e64640d2801" aria-controls="R-expandcontent-75a1c5f8b08bdc9ef5eb8e64640d2801">
-  <label class="expand-label" for="R-expand-75a1c5f8b08bdc9ef5eb8e64640d2801">
+  <input type="checkbox" id="R-expand-b68e5f9155943f232ac6565d1fd7fe0c" aria-controls="R-expandcontent-b68e5f9155943f232ac6565d1fd7fe0c">
+  <label class="expand-label" for="R-expand-b68e5f9155943f232ac6565d1fd7fe0c">
     <i class="expander-icon fa-fw fas fa-chevron-down"></i>
     <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
   </label>
-  <div id="R-expandcontent-75a1c5f8b08bdc9ef5eb8e64640d2801" class="expand-content">
+  <div id="R-expandcontent-b68e5f9155943f232ac6565d1fd7fe0c" class="expand-content">
 <ul>
 <li>
 <p><strong>Hello packets</strong>: These packets are sent periodically on all interfaces (including virtual links) in order to establish and maintain neighbor relationships.</p>
@@ -169,12 +169,12 @@ RFC 5340 RFC 5340 1) What does OSPF stand for and what is its primary function? 
 </div>
 <h6 id="3-can-you-list-the-data-contained-in-an-hello-which-are-used-to-negotiate-neighbor-relationships">3) Can you list the data contained in an Hello which are used to negotiate neighbor relationships?</h6>
 <div class="expand">
-  <input type="checkbox" id="R-expand-6f6c6c3a38f5aa03f19f9550f524b749" aria-controls="R-expandcontent-6f6c6c3a38f5aa03f19f9550f524b749">
-  <label class="expand-label" for="R-expand-6f6c6c3a38f5aa03f19f9550f524b749">
+  <input type="checkbox" id="R-expand-d2b0f74d38eae53849af69f97b54c5d3" aria-controls="R-expandcontent-d2b0f74d38eae53849af69f97b54c5d3">
+  <label class="expand-label" for="R-expand-d2b0f74d38eae53849af69f97b54c5d3">
     <i class="expander-icon fa-fw fas fa-chevron-down"></i>
     <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
   </label>
-  <div id="R-expandcontent-6f6c6c3a38f5aa03f19f9550f524b749" class="expand-content">
+  <div id="R-expandcontent-d2b0f74d38eae53849af69f97b54c5d3" class="expand-content">
 <ul>
 <li><strong>Router ID (RID)</strong> - is an address by which an OSPF router identifies itself.  It is either:
 <ul>
@@ -202,23 +202,23 @@ RFC 5340 RFC 5340 1) What does OSPF stand for and what is its primary function? 
 </div>
 <h6 id="4-what-is-the-significance-of-designated-router-dr-in-ospf">4) What is the significance of Designated Router (DR) in OSPF?</h6>
 <div class="expand">
-  <input type="checkbox" id="R-expand-75804586dbfaf297faee06fa980886aa" aria-controls="R-expandcontent-75804586dbfaf297faee06fa980886aa">
-  <label class="expand-label" for="R-expand-75804586dbfaf297faee06fa980886aa">
+  <input type="checkbox" id="R-expand-e0b6f6e098cfe3727e701861972c2139" aria-controls="R-expandcontent-e0b6f6e098cfe3727e701861972c2139">
+  <label class="expand-label" for="R-expand-e0b6f6e098cfe3727e701861972c2139">
     <i class="expander-icon fa-fw fas fa-chevron-down"></i>
     <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
   </label>
-  <div id="R-expandcontent-75804586dbfaf297faee06fa980886aa" class="expand-content">
+  <div id="R-expandcontent-e0b6f6e098cfe3727e701861972c2139" class="expand-content">
 <p>The Designated Router (DR) minimizes the number of adjacencies by acting as a central point for exchanges of routing information between OSPF routers in the same broadcast network.</p>
   </div>
 </div>
 <h6 id="5-how-does-the-dr-election-works">5) How does the DR election works&quot;</h6>
 <div class="expand">
-  <input type="checkbox" id="R-expand-837458e73ca85b8bc4443844b027744f" aria-controls="R-expandcontent-837458e73ca85b8bc4443844b027744f">
-  <label class="expand-label" for="R-expand-837458e73ca85b8bc4443844b027744f">
+  <input type="checkbox" id="R-expand-48bc0c6b28d24500388e7702e5eca11c" aria-controls="R-expandcontent-48bc0c6b28d24500388e7702e5eca11c">
+  <label class="expand-label" for="R-expand-48bc0c6b28d24500388e7702e5eca11c">
     <i class="expander-icon fa-fw fas fa-chevron-down"></i>
     <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
   </label>
-  <div id="R-expandcontent-837458e73ca85b8bc4443844b027744f" class="expand-content">
+  <div id="R-expandcontent-48bc0c6b28d24500388e7702e5eca11c" class="expand-content">
 <p>In the DR election process:</p>
 <ul>
 <li>the router with the <strong>highest priority</strong> is elected as the DR.</li>
@@ -236,12 +236,12 @@ RFC 5340 RFC 5340 1) What does OSPF stand for and what is its primary function? 
 </div>
 <h6 id="6-what-is-the-difference-between-an-ospf-neighbor-router-and-ospf-adjacent-router">6) what is the difference between an OSPF neighbor router and OSPF adjacent router?</h6>
 <div class="expand">
-  <input type="checkbox" id="R-expand-ec7f7961723757a47a7bfb3ebc9993bf" aria-controls="R-expandcontent-ec7f7961723757a47a7bfb3ebc9993bf">
-  <label class="expand-label" for="R-expand-ec7f7961723757a47a7bfb3ebc9993bf">
+  <input type="checkbox" id="R-expand-ccf749f8414f06a5186eedfb65d737b1" aria-controls="R-expandcontent-ccf749f8414f06a5186eedfb65d737b1">
+  <label class="expand-label" for="R-expand-ccf749f8414f06a5186eedfb65d737b1">
     <i class="expander-icon fa-fw fas fa-chevron-down"></i>
     <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
   </label>
-  <div id="R-expandcontent-ec7f7961723757a47a7bfb3ebc9993bf" class="expand-content">
+  <div id="R-expandcontent-ccf749f8414f06a5186eedfb65d737b1" class="expand-content">
 <ul>
 <li><strong>An OSPF neighbor router</strong> is a router that shares a common OSPF-enabled network link. They are discovered OSPF hello packets.</li>
 <li><strong>An OSPF adjacent router</strong> is an OSPF neighbor that shares a synchronized OSPF database between the two neighbors.
@@ -251,12 +251,12 @@ Two routers can be neighbors without neccessary becoming adjacents. For example,
 </div>
 <h6 id="7-for-ospf-neigbor-routers-to-become-adjacent-the-neigbor-relationship-has-to-evolve-through-different-states-what-are-those-ospf-neighbor-states">7) For OSPF neigbor routers to become adjacent, The neigbor relationship has to evolve through different states. What are those OSPF neighbor states?</h6>
 <div class="expand">
-  <input type="checkbox" id="R-expand-c56b32a1cf91ad9827ad6804f2cc653a" aria-controls="R-expandcontent-c56b32a1cf91ad9827ad6804f2cc653a">
-  <label class="expand-label" for="R-expand-c56b32a1cf91ad9827ad6804f2cc653a">
+  <input type="checkbox" id="R-expand-adc0d6e96641fd41c246471608fb83b9" aria-controls="R-expandcontent-adc0d6e96641fd41c246471608fb83b9">
+  <label class="expand-label" for="R-expand-adc0d6e96641fd41c246471608fb83b9">
     <i class="expander-icon fa-fw fas fa-chevron-down"></i>
     <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
   </label>
-  <div id="R-expandcontent-c56b32a1cf91ad9827ad6804f2cc653a" class="expand-content">
+  <div id="R-expandcontent-adc0d6e96641fd41c246471608fb83b9" class="expand-content">
 <ul>
 <li><strong>Down</strong> - This is the initial state of a neighbor relationship. It indicates that the router has not received any OSPF hello packets.</li>
 <li><strong>Attempt</strong> - This state is relevant to NBMA networks that do not support broadcast and require explicit neighbor configuration. This state indicates that no information has been received recently, but the router is still attempting communication.</li>
@@ -271,12 +271,12 @@ Two routers can be neighbors without neccessary becoming adjacents. For example,
 </div>
 <h6 id="8-what-are-the-type-of-ospf-networks">8) What are the type of OSPF networks?</h6>
 <div class="expand">
-  <input type="checkbox" id="R-expand-d275aed3b65553d66bce952d10c1a946" aria-controls="R-expandcontent-d275aed3b65553d66bce952d10c1a946">
-  <label class="expand-label" for="R-expand-d275aed3b65553d66bce952d10c1a946">
+  <input type="checkbox" id="R-expand-14d53693efe29fbe53b92f66295c5b24" aria-controls="R-expandcontent-14d53693efe29fbe53b92f66295c5b24">
+  <label class="expand-label" for="R-expand-14d53693efe29fbe53b92f66295c5b24">
     <i class="expander-icon fa-fw fas fa-chevron-down"></i>
     <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
   </label>
-  <div id="R-expandcontent-d275aed3b65553d66bce952d10c1a946" class="expand-content">
+  <div id="R-expandcontent-14d53693efe29fbe53b92f66295c5b24" class="expand-content">
 <ul>
 <li><strong>Broadcast network</strong>:
 <ul>
@@ -317,12 +317,12 @@ Two routers can be neighbors without neccessary becoming adjacents. For example,
 </div>
 <h6 id="9-what-are-ospf-interface-roles">9) What are OSPF interface roles?</h6>
 <div class="expand">
-  <input type="checkbox" id="R-expand-25dbadef84296721e44011977b46168b" aria-controls="R-expandcontent-25dbadef84296721e44011977b46168b">
-  <label class="expand-label" for="R-expand-25dbadef84296721e44011977b46168b">
+  <input type="checkbox" id="R-expand-534df84ca1ba2ff91379dcbf0fa84590" aria-controls="R-expandcontent-534df84ca1ba2ff91379dcbf0fa84590">
+  <label class="expand-label" for="R-expand-534df84ca1ba2ff91379dcbf0fa84590">
     <i class="expander-icon fa-fw fas fa-chevron-down"></i>
     <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
   </label>
-  <div id="R-expandcontent-25dbadef84296721e44011977b46168b" class="expand-content">
+  <div id="R-expandcontent-534df84ca1ba2ff91379dcbf0fa84590" class="expand-content">
 <ul>
 <li><strong>DR</strong> - In this state, the router is the DR on the attached network and will establish adjacencies with the other routers on the multi-access network.</li>
 <li><strong>BDR</strong> - In this state, the router is the BDR on the attached network, and will establish adjacencies with the other routers on the multi-access network.</li>
@@ -336,23 +336,23 @@ Two routers can be neighbors without neccessary becoming adjacents. For example,
 </div>
 <h6 id="10-what-is-a-passive-interface-in-ospf">10) What is a passive interface in OSPF?</h6>
 <div class="expand">
-  <input type="checkbox" id="R-expand-9bb0f117b69de49e81fa15cdc2fe22b1" aria-controls="R-expandcontent-9bb0f117b69de49e81fa15cdc2fe22b1">
-  <label class="expand-label" for="R-expand-9bb0f117b69de49e81fa15cdc2fe22b1">
+  <input type="checkbox" id="R-expand-68e8fa5cda6e3ca50c511f98bdcca005" aria-controls="R-expandcontent-68e8fa5cda6e3ca50c511f98bdcca005">
+  <label class="expand-label" for="R-expand-68e8fa5cda6e3ca50c511f98bdcca005">
     <i class="expander-icon fa-fw fas fa-chevron-down"></i>
     <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
   </label>
-  <div id="R-expandcontent-9bb0f117b69de49e81fa15cdc2fe22b1" class="expand-content">
+  <div id="R-expandcontent-68e8fa5cda6e3ca50c511f98bdcca005" class="expand-content">
 <p>Making the network interface passive still adds the network segment into the LSDB but prohibits the interface from forming OSPF adjacencies</p>
   </div>
 </div>
 <h6 id="11-what-happens-when-ospf-priority-is-setup-to-zero">11) What happens when OSPF priority is setup to zero?</h6>
 <div class="expand">
-  <input type="checkbox" id="R-expand-e3d22c4a96df218d77754344e45e140d" aria-controls="R-expandcontent-e3d22c4a96df218d77754344e45e140d">
-  <label class="expand-label" for="R-expand-e3d22c4a96df218d77754344e45e140d">
+  <input type="checkbox" id="R-expand-e964f0b67c0f99e9618824f89539c1ef" aria-controls="R-expandcontent-e964f0b67c0f99e9618824f89539c1ef">
+  <label class="expand-label" for="R-expand-e964f0b67c0f99e9618824f89539c1ef">
     <i class="expander-icon fa-fw fas fa-chevron-down"></i>
     <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
   </label>
-  <div id="R-expandcontent-e3d22c4a96df218d77754344e45e140d" class="expand-content">
+  <div id="R-expandcontent-e964f0b67c0f99e9618824f89539c1ef" class="expand-content">
 <p>When OSPF priority is setup to zero on a router, that router will not be able to enter into DR/BDR election.
 To configure interface priority, please use the following commands:</p>
 <ul>
@@ -363,12 +363,12 @@ To configure interface priority, please use the following commands:</p>
 </div>
 <h6 id="12-what-are-ospf-multicast-addresses">12) What are OSPF multicast addresses</h6>
 <div class="expand">
-  <input type="checkbox" id="R-expand-7d8f981d571eef329407732416f55e28" aria-controls="R-expandcontent-7d8f981d571eef329407732416f55e28">
-  <label class="expand-label" for="R-expand-7d8f981d571eef329407732416f55e28">
+  <input type="checkbox" id="R-expand-a9f2563e1f920e6bb4fd8372374378fc" aria-controls="R-expandcontent-a9f2563e1f920e6bb4fd8372374378fc">
+  <label class="expand-label" for="R-expand-a9f2563e1f920e6bb4fd8372374378fc">
     <i class="expander-icon fa-fw fas fa-chevron-down"></i>
     <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
   </label>
-  <div id="R-expandcontent-7d8f981d571eef329407732416f55e28" class="expand-content">
+  <div id="R-expandcontent-a9f2563e1f920e6bb4fd8372374378fc" class="expand-content">
 <ul>
 <li><strong>224.0.0.5</strong> - this is an <em>All OSPF routers</em>  address is used to send Hello packets to all OSPF routers on a network segment.</li>
 <li><strong>224.0.0.6</strong> - this is an <em>All designated routers</em> address is used to send OSPF routing information to designated routers on a network segment.</li>
@@ -377,23 +377,23 @@ To configure interface priority, please use the following commands:</p>
 </div>
 <h6 id="13-what-is-an-ospf-area">13) What is an OSPF area?</h6>
 <div class="expand">
-  <input type="checkbox" id="R-expand-c39bf43e5367573071f18db443abd266" aria-controls="R-expandcontent-c39bf43e5367573071f18db443abd266">
-  <label class="expand-label" for="R-expand-c39bf43e5367573071f18db443abd266">
+  <input type="checkbox" id="R-expand-c25379ac32c772b3d7c75390206629f8" aria-controls="R-expandcontent-c25379ac32c772b3d7c75390206629f8">
+  <label class="expand-label" for="R-expand-c25379ac32c772b3d7c75390206629f8">
     <i class="expander-icon fa-fw fas fa-chevron-down"></i>
     <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
   </label>
-  <div id="R-expandcontent-c39bf43e5367573071f18db443abd266" class="expand-content">
+  <div id="R-expandcontent-c25379ac32c772b3d7c75390206629f8" class="expand-content">
 <p>An OSPF area is a logical grouping of routers or (more specifically, a logical grouping of router interfaces) within which all routers have an identical link state database.</p>
   </div>
 </div>
 <h6 id="14-why-would-you-have-an-ospf-achitecture-with-multiple-areas">14) Why would you have an OSPF achitecture with multiple areas?</h6>
 <div class="expand">
-  <input type="checkbox" id="R-expand-d48df154e48c6df3ab623810e498dc50" aria-controls="R-expandcontent-d48df154e48c6df3ab623810e498dc50">
-  <label class="expand-label" for="R-expand-d48df154e48c6df3ab623810e498dc50">
+  <input type="checkbox" id="R-expand-dfbbc8bee1d98b80610b4a09a5db25b8" aria-controls="R-expandcontent-dfbbc8bee1d98b80610b4a09a5db25b8">
+  <label class="expand-label" for="R-expand-dfbbc8bee1d98b80610b4a09a5db25b8">
     <i class="expander-icon fa-fw fas fa-chevron-down"></i>
     <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
   </label>
-  <div id="R-expandcontent-d48df154e48c6df3ab623810e498dc50" class="expand-content">
+  <div id="R-expandcontent-dfbbc8bee1d98b80610b4a09a5db25b8" class="expand-content">
 <p>The primary purpose of OSPF areas is to optimize the OSPF routing process and to scale large networks by:</p>
 <ul>
 <li>minimizing the frequency of routing table calculations</li>
@@ -404,45 +404,45 @@ To configure interface priority, please use the following commands:</p>
 </div>
 <h6 id="15-what-is-an-ospf-backbone-area">15) What is an OSPF backbone area?</h6>
 <div class="expand">
-  <input type="checkbox" id="R-expand-311a90c1e6f725d8f996913759bec3d5" aria-controls="R-expandcontent-311a90c1e6f725d8f996913759bec3d5">
-  <label class="expand-label" for="R-expand-311a90c1e6f725d8f996913759bec3d5">
+  <input type="checkbox" id="R-expand-0d22a22743560d0adb1861c73cc76790" aria-controls="R-expandcontent-0d22a22743560d0adb1861c73cc76790">
+  <label class="expand-label" for="R-expand-0d22a22743560d0adb1861c73cc76790">
     <i class="expander-icon fa-fw fas fa-chevron-down"></i>
     <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
   </label>
-  <div id="R-expandcontent-311a90c1e6f725d8f996913759bec3d5" class="expand-content">
+  <div id="R-expandcontent-0d22a22743560d0adb1861c73cc76790" class="expand-content">
 <p>The OSPF backbone area (Area 0) is the core of an OSPF network to which all other areas must connect, either directly or through virtual links. All other areas must send their INTER-area traffic through the backbone</p>
   </div>
 </div>
 <h6 id="16-what-is-a-partitioned-area">16) What is a partitioned area?</h6>
 <div class="expand">
-  <input type="checkbox" id="R-expand-c319b4ff72d832a0d1b171de7982139b" aria-controls="R-expandcontent-c319b4ff72d832a0d1b171de7982139b">
-  <label class="expand-label" for="R-expand-c319b4ff72d832a0d1b171de7982139b">
+  <input type="checkbox" id="R-expand-c0a72813affdf255cc69036c636baa05" aria-controls="R-expandcontent-c0a72813affdf255cc69036c636baa05">
+  <label class="expand-label" for="R-expand-c0a72813affdf255cc69036c636baa05">
     <i class="expander-icon fa-fw fas fa-chevron-down"></i>
     <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
   </label>
-  <div id="R-expandcontent-c319b4ff72d832a0d1b171de7982139b" class="expand-content">
+  <div id="R-expandcontent-c0a72813affdf255cc69036c636baa05" class="expand-content">
 <p>A partitioned area is an area connected through a backbone area. That is an area where intra-area communication has to go through the backbone area.</p>
   </div>
 </div>
 <h6 id="17-what-is-a-link-state-database">17) What is a link state database?</h6>
 <div class="expand">
-  <input type="checkbox" id="R-expand-5c7f5ac7fb740b060d37fcd174c677f9" aria-controls="R-expandcontent-5c7f5ac7fb740b060d37fcd174c677f9">
-  <label class="expand-label" for="R-expand-5c7f5ac7fb740b060d37fcd174c677f9">
+  <input type="checkbox" id="R-expand-bcc894735335057b4da1606f3d07b022" aria-controls="R-expandcontent-bcc894735335057b4da1606f3d07b022">
+  <label class="expand-label" for="R-expand-bcc894735335057b4da1606f3d07b022">
     <i class="expander-icon fa-fw fas fa-chevron-down"></i>
     <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
   </label>
-  <div id="R-expandcontent-5c7f5ac7fb740b060d37fcd174c677f9" class="expand-content">
+  <div id="R-expandcontent-bcc894735335057b4da1606f3d07b022" class="expand-content">
 <p>It is where the router stores all the OSPF LSAs it knows of, including its own.</p>
   </div>
 </div>
 <h6 id="18-what-are-the-different-types-of-ospf-routers">18) What are the different types of OSPF routers</h6>
 <div class="expand">
-  <input type="checkbox" id="R-expand-02efa7a6c6db5db8975f146ad720fe1c" aria-controls="R-expandcontent-02efa7a6c6db5db8975f146ad720fe1c">
-  <label class="expand-label" for="R-expand-02efa7a6c6db5db8975f146ad720fe1c">
+  <input type="checkbox" id="R-expand-cae980bf0e77726c71908a56b99da41d" aria-controls="R-expandcontent-cae980bf0e77726c71908a56b99da41d">
+  <label class="expand-label" for="R-expand-cae980bf0e77726c71908a56b99da41d">
     <i class="expander-icon fa-fw fas fa-chevron-down"></i>
     <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
   </label>
-  <div id="R-expandcontent-02efa7a6c6db5db8975f146ad720fe1c" class="expand-content">
+  <div id="R-expandcontent-cae980bf0e77726c71908a56b99da41d" class="expand-content">
 <p>1- <strong>Internal router</strong>:</p>
 <ul>
 <li>All OSPF interfaces belong to the same area.</li>
@@ -468,12 +468,12 @@ To configure interface priority, please use the following commands:</p>
 </div>
 <h6 id="19-what-are-the-different-types-of-lsa-used-by-ipv4">19) What are the different types of LSA used by IPv4?</h6>
 <div class="expand">
-  <input type="checkbox" id="R-expand-83fcd12dc7620672560d5648e0336497" aria-controls="R-expandcontent-83fcd12dc7620672560d5648e0336497">
-  <label class="expand-label" for="R-expand-83fcd12dc7620672560d5648e0336497">
+  <input type="checkbox" id="R-expand-e9356fbdd629f694ec989e05b719d30f" aria-controls="R-expandcontent-e9356fbdd629f694ec989e05b719d30f">
+  <label class="expand-label" for="R-expand-e9356fbdd629f694ec989e05b719d30f">
     <i class="expander-icon fa-fw fas fa-chevron-down"></i>
     <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
   </label>
-  <div id="R-expandcontent-83fcd12dc7620672560d5648e0336497" class="expand-content">
+  <div id="R-expandcontent-e9356fbdd629f694ec989e05b719d30f" class="expand-content">
 <p>1- <strong>Type 1</strong> (router LSA)</p>
 <ul>
 <li>Every OSPF router advertises a type 1 LSA.</li>
@@ -517,12 +517,12 @@ To configure interface priority, please use the following commands:</p>
 </div>
 <h6 id="20-what-are-the-different-types-of-areas-and-how-they-differ">20) What are the different types of areas and how they differ?</h6>
 <div class="expand">
-  <input type="checkbox" id="R-expand-6e6701f09174e567df56e533669840cc" aria-controls="R-expandcontent-6e6701f09174e567df56e533669840cc">
-  <label class="expand-label" for="R-expand-6e6701f09174e567df56e533669840cc">
+  <input type="checkbox" id="R-expand-742bf8a39fc60e8793e3b41157d04ac5" aria-controls="R-expandcontent-742bf8a39fc60e8793e3b41157d04ac5">
+  <label class="expand-label" for="R-expand-742bf8a39fc60e8793e3b41157d04ac5">
     <i class="expander-icon fa-fw fas fa-chevron-down"></i>
     <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
   </label>
-  <div id="R-expandcontent-6e6701f09174e567df56e533669840cc" class="expand-content">
+  <div id="R-expandcontent-742bf8a39fc60e8793e3b41157d04ac5" class="expand-content">
 <p>1- Regular area</p>
 <p>2- Backbone area</p>
 <p>3- stub area:</p>
@@ -552,24 +552,24 @@ To configure interface priority, please use the following commands:</p>
 </div>
 <h6 id="21-what-is-the-default-hello-interval">21) What is the default Hello Interval?</h6>
 <div class="expand">
-  <input type="checkbox" id="R-expand-c15d1750e04189ea556340957b508333" aria-controls="R-expandcontent-c15d1750e04189ea556340957b508333">
-  <label class="expand-label" for="R-expand-c15d1750e04189ea556340957b508333">
+  <input type="checkbox" id="R-expand-d1ed7bd35581fbd409d2fa455937e1c6" aria-controls="R-expandcontent-d1ed7bd35581fbd409d2fa455937e1c6">
+  <label class="expand-label" for="R-expand-d1ed7bd35581fbd409d2fa455937e1c6">
     <i class="expander-icon fa-fw fas fa-chevron-down"></i>
     <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
   </label>
-  <div id="R-expandcontent-c15d1750e04189ea556340957b508333" class="expand-content">
+  <div id="R-expandcontent-d1ed7bd35581fbd409d2fa455937e1c6" class="expand-content">
 <p>10 sec on Broadcast networks
 30 sec on Non-broadcast networks</p>
   </div>
 </div>
 <h6 id="22-what-is-the-default-routerdeadinterval">22) What is the default RouterDeadInterval?</h6>
 <div class="expand">
-  <input type="checkbox" id="R-expand-3a732de63a12723c1b37aedd031af7a0" aria-controls="R-expandcontent-3a732de63a12723c1b37aedd031af7a0">
-  <label class="expand-label" for="R-expand-3a732de63a12723c1b37aedd031af7a0">
+  <input type="checkbox" id="R-expand-3edade0ae11ab0cacd7b649d9213ccf2" aria-controls="R-expandcontent-3edade0ae11ab0cacd7b649d9213ccf2">
+  <label class="expand-label" for="R-expand-3edade0ae11ab0cacd7b649d9213ccf2">
     <i class="expander-icon fa-fw fas fa-chevron-down"></i>
     <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
   </label>
-  <div id="R-expandcontent-3a732de63a12723c1b37aedd031af7a0" class="expand-content">
+  <div id="R-expandcontent-3edade0ae11ab0cacd7b649d9213ccf2" class="expand-content">
 <p>It is 4 times the Hello Interval:</p>
 <ul>
 <li>40 sec on Broadcast networks</li>
@@ -579,34 +579,34 @@ To configure interface priority, please use the following commands:</p>
 </div>
 <h6 id="23-how-often-lsas-are-transmitted">23) How often LSAs are transmitted?</h6>
 <div class="expand">
-  <input type="checkbox" id="R-expand-1515166ba3d4975188197991afe2e940" aria-controls="R-expandcontent-1515166ba3d4975188197991afe2e940">
-  <label class="expand-label" for="R-expand-1515166ba3d4975188197991afe2e940">
+  <input type="checkbox" id="R-expand-fa88c577c2268345bed80267723798fa" aria-controls="R-expandcontent-fa88c577c2268345bed80267723798fa">
+  <label class="expand-label" for="R-expand-fa88c577c2268345bed80267723798fa">
     <i class="expander-icon fa-fw fas fa-chevron-down"></i>
     <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
   </label>
-  <div id="R-expandcontent-1515166ba3d4975188197991afe2e940" class="expand-content">
+  <div id="R-expandcontent-fa88c577c2268345bed80267723798fa" class="expand-content">
 <p>Every 30 minute by default</p>
   </div>
 </div>
 <h6 id="24-what-is-maxage">24) What is MaxAge?</h6>
 <div class="expand">
-  <input type="checkbox" id="R-expand-9fc355c644492a065ceb3ce3d7f7bdde" aria-controls="R-expandcontent-9fc355c644492a065ceb3ce3d7f7bdde">
-  <label class="expand-label" for="R-expand-9fc355c644492a065ceb3ce3d7f7bdde">
+  <input type="checkbox" id="R-expand-8d50b2e2ef4cb9302f796eeb50def891" aria-controls="R-expandcontent-8d50b2e2ef4cb9302f796eeb50def891">
+  <label class="expand-label" for="R-expand-8d50b2e2ef4cb9302f796eeb50def891">
     <i class="expander-icon fa-fw fas fa-chevron-down"></i>
     <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
   </label>
-  <div id="R-expandcontent-9fc355c644492a065ceb3ce3d7f7bdde" class="expand-content">
+  <div id="R-expandcontent-8d50b2e2ef4cb9302f796eeb50def891" class="expand-content">
 <p>It is the age at which an LSA is considered obsolete. It is 1 hour.</p>
   </div>
 </div>
 <h6 id="25-what-are-the-different-type-of-ospf-pathsroutes">25) What are the different type of OSPF paths/routes?</h6>
 <div class="expand">
-  <input type="checkbox" id="R-expand-8aaf0bd09c2c441cf77ba360c061ad1d" aria-controls="R-expandcontent-8aaf0bd09c2c441cf77ba360c061ad1d">
-  <label class="expand-label" for="R-expand-8aaf0bd09c2c441cf77ba360c061ad1d">
+  <input type="checkbox" id="R-expand-5542de54b8cb36362d64329fca833fc8" aria-controls="R-expandcontent-5542de54b8cb36362d64329fca833fc8">
+  <label class="expand-label" for="R-expand-5542de54b8cb36362d64329fca833fc8">
     <i class="expander-icon fa-fw fas fa-chevron-down"></i>
     <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
   </label>
-  <div id="R-expandcontent-8aaf0bd09c2c441cf77ba360c061ad1d" class="expand-content">
+  <div id="R-expandcontent-5542de54b8cb36362d64329fca833fc8" class="expand-content">
 <ol>
 <li>
 <p><strong>Intra-area path</strong>:</p>
@@ -658,67 +658,67 @@ To configure interface priority, please use the following commands:</p>
 </div>
 <h6 id="26-what-are-the-route-preference-order-in-ospf">26) What are the route preference order in OSPF?</h6>
 <div class="expand">
-  <input type="checkbox" id="R-expand-96fcc5c2c95b462734458bd44d1f092c" aria-controls="R-expandcontent-96fcc5c2c95b462734458bd44d1f092c">
-  <label class="expand-label" for="R-expand-96fcc5c2c95b462734458bd44d1f092c">
+  <input type="checkbox" id="R-expand-3f1e23f818d33fced966cbed155d2604" aria-controls="R-expandcontent-3f1e23f818d33fced966cbed155d2604">
+  <label class="expand-label" for="R-expand-3f1e23f818d33fced966cbed155d2604">
     <i class="expander-icon fa-fw fas fa-chevron-down"></i>
     <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
   </label>
-  <div id="R-expandcontent-96fcc5c2c95b462734458bd44d1f092c" class="expand-content">
+  <div id="R-expandcontent-3f1e23f818d33fced966cbed155d2604" class="expand-content">
 <p>Intra-area route (O) &raquo; Inter-area routes (O IA) &raquo; External type 1 route (O E1) &raquo; External Type 2 (O E2) &raquo; NSSA-1 (O N1) &raquo; NSSA-2 (O N2)</p>
   </div>
 </div>
 <h6 id="27-what-are-the-main-differences-between-e-routes-an-n-routes">27) What are the main differences between E-routes an N-routes?</h6>
 <div class="expand">
-  <input type="checkbox" id="R-expand-c662c9981a8f673bb6c9bbdc8d4ed5fd" aria-controls="R-expandcontent-c662c9981a8f673bb6c9bbdc8d4ed5fd">
-  <label class="expand-label" for="R-expand-c662c9981a8f673bb6c9bbdc8d4ed5fd">
+  <input type="checkbox" id="R-expand-a32d7c28708146d13e41e3aed26be863" aria-controls="R-expandcontent-a32d7c28708146d13e41e3aed26be863">
+  <label class="expand-label" for="R-expand-a32d7c28708146d13e41e3aed26be863">
     <i class="expander-icon fa-fw fas fa-chevron-down"></i>
     <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
   </label>
-  <div id="R-expandcontent-c662c9981a8f673bb6c9bbdc8d4ed5fd" class="expand-content">
+  <div id="R-expandcontent-a32d7c28708146d13e41e3aed26be863" class="expand-content">
 <p>N-Routes are routes found only within an NSSA area that are advertised by LSA 7. They are converted to E-routes when advertised out of the NSSA domain to the rest of the OSPF domain, that is using LSA type 5.</p>
   </div>
 </div>
 <h6 id="28-what-is-the-ospf-metric-used-to-compute-the-best-path">28) What is the OSPF Metric used to compute the best path?</h6>
 <div class="expand">
-  <input type="checkbox" id="R-expand-7daa1ecd0339f774c8bf2f3709763eb8" aria-controls="R-expandcontent-7daa1ecd0339f774c8bf2f3709763eb8">
-  <label class="expand-label" for="R-expand-7daa1ecd0339f774c8bf2f3709763eb8">
+  <input type="checkbox" id="R-expand-2f05ae3edf265a59e08800a12a845fae" aria-controls="R-expandcontent-2f05ae3edf265a59e08800a12a845fae">
+  <label class="expand-label" for="R-expand-2f05ae3edf265a59e08800a12a845fae">
     <i class="expander-icon fa-fw fas fa-chevron-down"></i>
     <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
   </label>
-  <div id="R-expandcontent-7daa1ecd0339f774c8bf2f3709763eb8" class="expand-content">
+  <div id="R-expandcontent-2f05ae3edf265a59e08800a12a845fae" class="expand-content">
 <p>The OSPF metric used is the cost</p>
   </div>
 </div>
 <h6 id="29-how-do-you-compute-the-cost-of-a-route">29) How do you compute the cost of a route?</h6>
 <div class="expand">
-  <input type="checkbox" id="R-expand-a67e1229748626b05ca955819576d69a" aria-controls="R-expandcontent-a67e1229748626b05ca955819576d69a">
-  <label class="expand-label" for="R-expand-a67e1229748626b05ca955819576d69a">
+  <input type="checkbox" id="R-expand-ba0c3eefbb5027a138510e1bb619eafc" aria-controls="R-expandcontent-ba0c3eefbb5027a138510e1bb619eafc">
+  <label class="expand-label" for="R-expand-ba0c3eefbb5027a138510e1bb619eafc">
     <i class="expander-icon fa-fw fas fa-chevron-down"></i>
     <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
   </label>
-  <div id="R-expandcontent-a67e1229748626b05ca955819576d69a" class="expand-content">
+  <div id="R-expandcontent-ba0c3eefbb5027a138510e1bb619eafc" class="expand-content">
 <p>The cost of a route is the sum of the costs of all the outgoing interfaces to a destination.</p>
   </div>
 </div>
 <h6 id="30-how-does-a-cisco-router-calculate-the-outgoing-cost-of-an-interface">30) How does a Cisco router calculate the outgoing cost of an interface?</h6>
 <div class="expand">
-  <input type="checkbox" id="R-expand-1ac9a66c136ee042f93b341209dc5e22" aria-controls="R-expandcontent-1ac9a66c136ee042f93b341209dc5e22">
-  <label class="expand-label" for="R-expand-1ac9a66c136ee042f93b341209dc5e22">
+  <input type="checkbox" id="R-expand-67e1f6352ae5e6ff0c14ee093fce7bec" aria-controls="R-expandcontent-67e1f6352ae5e6ff0c14ee093fce7bec">
+  <label class="expand-label" for="R-expand-67e1f6352ae5e6ff0c14ee093fce7bec">
     <i class="expander-icon fa-fw fas fa-chevron-down"></i>
     <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
   </label>
-  <div id="R-expandcontent-1ac9a66c136ee042f93b341209dc5e22" class="expand-content">
+  <div id="R-expandcontent-67e1f6352ae5e6ff0c14ee093fce7bec" class="expand-content">
 <p>Cisco IOS calculate the outgoing cost of an interface as 10^8/BW</p>
   </div>
 </div>
 <h6 id="31-how-do-we-manage-the-cost-when-the-bandwidth-of-the-link-like-gigabit-ethernet-link-is-higher-than-the-reference-bandwidth">31) How do we manage the cost when the bandwidth of the link (like Gigabit Ethernet link) is higher than the reference bandwidth?</h6>
 <div class="expand">
-  <input type="checkbox" id="R-expand-93fc85ec6f6f8421468496cdd0ee06eb" aria-controls="R-expandcontent-93fc85ec6f6f8421468496cdd0ee06eb">
-  <label class="expand-label" for="R-expand-93fc85ec6f6f8421468496cdd0ee06eb">
+  <input type="checkbox" id="R-expand-bfe23ddc5e3f25d8ae597d44da8014b3" aria-controls="R-expandcontent-bfe23ddc5e3f25d8ae597d44da8014b3">
+  <label class="expand-label" for="R-expand-bfe23ddc5e3f25d8ae597d44da8014b3">
     <i class="expander-icon fa-fw fas fa-chevron-down"></i>
     <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
   </label>
-  <div id="R-expandcontent-93fc85ec6f6f8421468496cdd0ee06eb" class="expand-content">
+  <div id="R-expandcontent-bfe23ddc5e3f25d8ae597d44da8014b3" class="expand-content">
 <p>There is a command which can be used which allows the default reference bandwidth to be changed:</p>
 <ul>
 <li><code>auto-cost reference-bandwidth</code></li>
@@ -727,23 +727,23 @@ To configure interface priority, please use the following commands:</p>
 </div>
 <h6 id="32-explain-the-process-of-route-summarization-in-ospf">32) Explain the process of route summarization in OSPF.</h6>
 <div class="expand">
-  <input type="checkbox" id="R-expand-6179d57065b74cea2f58d827553d04ce" aria-controls="R-expandcontent-6179d57065b74cea2f58d827553d04ce">
-  <label class="expand-label" for="R-expand-6179d57065b74cea2f58d827553d04ce">
+  <input type="checkbox" id="R-expand-73f4e2f2cd4a7674b169c1ef952f41d4" aria-controls="R-expandcontent-73f4e2f2cd4a7674b169c1ef952f41d4">
+  <label class="expand-label" for="R-expand-73f4e2f2cd4a7674b169c1ef952f41d4">
     <i class="expander-icon fa-fw fas fa-chevron-down"></i>
     <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
   </label>
-  <div id="R-expandcontent-6179d57065b74cea2f58d827553d04ce" class="expand-content">
+  <div id="R-expandcontent-73f4e2f2cd4a7674b169c1ef952f41d4" class="expand-content">
 <p>Route summarization in OSPF is done at area border routers (ABRs), where routes from one area are summarized before being advertised into another area to reduce the size of routing tables.</p>
   </div>
 </div>
 <h6 id="33-what-are-the-advantages-of-summarization">33) What are the advantages of summarization?</h6>
 <div class="expand">
-  <input type="checkbox" id="R-expand-f3fab11e0c717c80dd1207dfb821eafc" aria-controls="R-expandcontent-f3fab11e0c717c80dd1207dfb821eafc">
-  <label class="expand-label" for="R-expand-f3fab11e0c717c80dd1207dfb821eafc">
+  <input type="checkbox" id="R-expand-f2165341d0cdecf3153cba16e1cfddbd" aria-controls="R-expandcontent-f2165341d0cdecf3153cba16e1cfddbd">
+  <label class="expand-label" for="R-expand-f2165341d0cdecf3153cba16e1cfddbd">
     <i class="expander-icon fa-fw fas fa-chevron-down"></i>
     <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
   </label>
-  <div id="R-expandcontent-f3fab11e0c717c80dd1207dfb821eafc" class="expand-content">
+  <div id="R-expandcontent-f2165341d0cdecf3153cba16e1cfddbd" class="expand-content">
 <ul>
 <li>Reduces the amount of information stored in a routing table.</li>
 <li>Allocates an existing pool of addresses more economically</li>
@@ -755,12 +755,12 @@ To configure interface priority, please use the following commands:</p>
 </div>
 <h6 id="34-what-is-the-default-redistribution-cost-into-ospf">34) What is the default redistribution cost into OSPF?</h6>
 <div class="expand">
-  <input type="checkbox" id="R-expand-bf705abf859f5f4c6e9694ae770b2503" aria-controls="R-expandcontent-bf705abf859f5f4c6e9694ae770b2503">
-  <label class="expand-label" for="R-expand-bf705abf859f5f4c6e9694ae770b2503">
+  <input type="checkbox" id="R-expand-b0061c1546a7d35702d4ea42e7189da2" aria-controls="R-expandcontent-b0061c1546a7d35702d4ea42e7189da2">
+  <label class="expand-label" for="R-expand-b0061c1546a7d35702d4ea42e7189da2">
     <i class="expander-icon fa-fw fas fa-chevron-down"></i>
     <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
   </label>
-  <div id="R-expandcontent-bf705abf859f5f4c6e9694ae770b2503" class="expand-content">
+  <div id="R-expandcontent-b0061c1546a7d35702d4ea42e7189da2" class="expand-content">
 <ul>
 <li>Redistribution from BGP to OSPF default cost = 1</li>
 <li>Redistribution from another OSPF process, take the source route metric.</li>
@@ -770,12 +770,12 @@ To configure interface priority, please use the following commands:</p>
 </div>
 <h6 id="35-how-many-table-do-we-have-in-ospf-protocols">35) How many table do we have in OSPF protocols?</h6>
 <div class="expand">
-  <input type="checkbox" id="R-expand-a43ec0da886d670b67152eb57c6134e4" aria-controls="R-expandcontent-a43ec0da886d670b67152eb57c6134e4">
-  <label class="expand-label" for="R-expand-a43ec0da886d670b67152eb57c6134e4">
+  <input type="checkbox" id="R-expand-f31d095e6f1877491cf0dc53250e7a49" aria-controls="R-expandcontent-f31d095e6f1877491cf0dc53250e7a49">
+  <label class="expand-label" for="R-expand-f31d095e6f1877491cf0dc53250e7a49">
     <i class="expander-icon fa-fw fas fa-chevron-down"></i>
     <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
   </label>
-  <div id="R-expandcontent-a43ec0da886d670b67152eb57c6134e4" class="expand-content">
+  <div id="R-expandcontent-f31d095e6f1877491cf0dc53250e7a49" class="expand-content">
 <p>There are  4 tables in OSPF:</p>
 <ul>
 <li>
@@ -810,12 +810,12 @@ This is a separate internal router table that contains routes to ABRs and ASBRs.
 </div>
 <h6 id="36-why-is-type-2-authentication-preferable-over-type-1-authentication">36) Why is type 2 authentication preferable over type 1 authentication?</h6>
 <div class="expand">
-  <input type="checkbox" id="R-expand-0937b7215170fd6e41cf41e2e41ffca2" aria-controls="R-expandcontent-0937b7215170fd6e41cf41e2e41ffca2">
-  <label class="expand-label" for="R-expand-0937b7215170fd6e41cf41e2e41ffca2">
+  <input type="checkbox" id="R-expand-7fcf48c349aa470090e6f45b138c4c7d" aria-controls="R-expandcontent-7fcf48c349aa470090e6f45b138c4c7d">
+  <label class="expand-label" for="R-expand-7fcf48c349aa470090e6f45b138c4c7d">
     <i class="expander-icon fa-fw fas fa-chevron-down"></i>
     <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
   </label>
-  <div id="R-expandcontent-0937b7215170fd6e41cf41e2e41ffca2" class="expand-content">
+  <div id="R-expandcontent-7fcf48c349aa470090e6f45b138c4c7d" class="expand-content">
 <p>Type 2 authentication uses MD5 encryption, whereas type 1 authentication uses clear-text passwords.</p>
   </div>
 </div>
@@ -890,12 +890,12 @@ This is a separate internal router table that contains routes to ABRs and ASBRs.
         <script>
           var contentLangs=['en'];
         </script>
-        <script src="/js/auto-complete.js?1735154940" defer></script>
-        <script src="/js/lunr/lunr.min.js?1735154940" defer></script>
-        <script src="/js/lunr/lunr.stemmer.support.min.js?1735154940" defer></script>
-        <script src="/js/lunr/lunr.multi.min.js?1735154940" defer></script>
-        <script src="/js/lunr/lunr.en.min.js?1735154940" defer></script>
-        <script src="/js/search.js?1735154940" defer></script>
+        <script src="/js/auto-complete.js?1737141981" defer></script>
+        <script src="/js/lunr/lunr.min.js?1737141981" defer></script>
+        <script src="/js/lunr/lunr.stemmer.support.min.js?1737141981" defer></script>
+        <script src="/js/lunr/lunr.multi.min.js?1737141981" defer></script>
+        <script src="/js/lunr/lunr.en.min.js?1737141981" defer></script>
+        <script src="/js/search.js?1737141981" defer></script>
       </div>
       <div id="R-homelinks" class="default-animation homelinks">
         <ul>
@@ -911,7 +911,8 @@ This is a separate internal router table that contains routes to ABRs and ASBRs.
           <li data-nav-id="/ccnp-enterprise/encor/index.html" class="parent alwaysopen"><input type="checkbox" id="R-section-f491ae95724b75363a0879be5e384807" aria-controls="R-subsections-f491ae95724b75363a0879be5e384807" checked><label for="R-section-f491ae95724b75363a0879be5e384807"><i class="fa-fw fas fa-chevron-down"></i><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu ENCOR</span></label><a class="padding" href="/ccnp-enterprise/encor/index.html">ENCOR<i class="fa-fw fas fa-check read-icon"></i></a><ul id="R-subsections-f491ae95724b75363a0879be5e384807" class="morespace collapsible-menu">
           <li data-nav-id="/ccnp-enterprise/encor/chapter-6/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-6/index.html">Chapter 6<i class="fa-fw fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/ccnp-enterprise/encor/chapter-7/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-7/index.html">Understanding EIGRP<i class="fa-fw fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/ccnp-enterprise/encor/chapter-8/index.html" class="active"><a class="padding" href="/ccnp-enterprise/encor/chapter-8/index.html">Understanding OSPF<i class="fa-fw fas fa-check read-icon"></i></a></li></ul></li></ul></li>
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-8/index.html" class="active"><a class="padding" href="/ccnp-enterprise/encor/chapter-8/index.html">Understanding OSPF<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-14/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-14/index.html">Chapter 14<i class="fa-fw fas fa-check read-icon"></i></a></li></ul></li></ul></li>
           </ul>
         </div>
         <div class="padding footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVariantSwitch showVisitedLinks showFooter"></div>
@@ -976,8 +977,8 @@ This is a separate internal router table that contains routes to ABRs and ASBRs.
         </div>
       </div>
     </aside>
-    <script src="/js/clipboard.min.js?1735154940" defer></script>
-    <script src="/js/perfect-scrollbar.min.js?1735154940" defer></script>
-    <script src="/js/theme.js?1735154940" defer></script>
+    <script src="/js/clipboard.min.js?1737141981" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1737141981" defer></script>
+    <script src="/js/theme.js?1737141981" defer></script>
   </body>
 </html>

@@ -6,29 +6,37 @@
     <meta name="generator" content="Hugo 0.140.1">
     <meta name="generator" content="Relearn 6.4.0+tip">
     <meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
-    <meta name="description" content="Packet Forwarding">
+    <meta name="description" content="Overlay Tunnels 1. What is an Overlay Network? Answer An overlay network is a logical or virtual network built over a physical transport network.
+2. What is an underlay network? Answer an underlay network is the physical network that supports an overlay network.
+3. What are the main problems with the Overlay Network? Answer The two common problems with overlay networks are:">
     <meta name="author" content="Sören Weber">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="http://localhost:1313/images/The_network_engineer.png">
-    <meta name="twitter:title" content="Chapter 1 :: Ping-Square.com">
-    <meta name="twitter:description" content="Packet Forwarding">
-    <meta property="og:url" content="http://localhost:1313/ccnp-enterprise/encor/chapter-1/index.html">
+    <meta name="twitter:title" content="Chapter 16 :: Ping-Square.com">
+    <meta name="twitter:description" content="Overlay Tunnels 1. What is an Overlay Network? Answer An overlay network is a logical or virtual network built over a physical transport network.
+2. What is an underlay network? Answer an underlay network is the physical network that supports an overlay network.
+3. What are the main problems with the Overlay Network? Answer The two common problems with overlay networks are:">
+    <meta property="og:url" content="http://localhost:1313/ccnp-enterprise/encor/chapter-16/index.html">
     <meta property="og:site_name" content="Ping-Square.com">
-    <meta property="og:title" content="Chapter 1 :: Ping-Square.com">
-    <meta property="og:description" content="Packet Forwarding">
+    <meta property="og:title" content="Chapter 16 :: Ping-Square.com">
+    <meta property="og:description" content="Overlay Tunnels 1. What is an Overlay Network? Answer An overlay network is a logical or virtual network built over a physical transport network.
+2. What is an underlay network? Answer an underlay network is the physical network that supports an overlay network.
+3. What are the main problems with the Overlay Network? Answer The two common problems with overlay networks are:">
     <meta property="og:locale" content="en_us">
     <meta property="og:type" content="article">
     <meta property="article:section" content="CCNP Enterprise">
-    <meta property="article:published_time" content="2024-10-02T22:40:27-05:00">
-    <meta property="article:modified_time" content="2024-10-02T22:40:27-05:00">
+    <meta property="article:published_time" content="2024-12-30T11:44:46-06:00">
+    <meta property="article:modified_time" content="2024-12-30T11:44:46-06:00">
     <meta property="og:image" content="http://localhost:1313/images/The_network_engineer.png">
-    <meta itemprop="name" content="Chapter 1 :: Ping-Square.com">
-    <meta itemprop="description" content="Packet Forwarding">
-    <meta itemprop="datePublished" content="2024-10-02T22:40:27-05:00">
-    <meta itemprop="dateModified" content="2024-10-02T22:40:27-05:00">
-    <meta itemprop="wordCount" content="2">
+    <meta itemprop="name" content="Chapter 16 :: Ping-Square.com">
+    <meta itemprop="description" content="Overlay Tunnels 1. What is an Overlay Network? Answer An overlay network is a logical or virtual network built over a physical transport network.
+2. What is an underlay network? Answer an underlay network is the physical network that supports an overlay network.
+3. What are the main problems with the Overlay Network? Answer The two common problems with overlay networks are:">
+    <meta itemprop="datePublished" content="2024-12-30T11:44:46-06:00">
+    <meta itemprop="dateModified" content="2024-12-30T11:44:46-06:00">
+    <meta itemprop="wordCount" content="71">
     <meta itemprop="image" content="http://localhost:1313/images/The_network_engineer.png">
-    <title>Chapter 1 :: Ping-Square.com</title>
+    <title>Chapter 16 :: Ping-Square.com</title>
     <link href="/css/fontawesome-all.min.css?1737141975" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1737141975" rel="stylesheet"></noscript>
     <link href="/css/nucleus.css?1737141975" rel="stylesheet">
     <link href="/css/auto-complete.css?1737141975" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1737141975" rel="stylesheet"></noscript>
@@ -60,7 +68,7 @@
       window.T_N_results_found = `{1} results found for "{0}"`;
     </script>
   </head>
-  <body class="mobile-support html disableInlineCopyToClipboard" data-url="/ccnp-enterprise/encor/chapter-1/index.html">
+  <body class="mobile-support html disableInlineCopyToClipboard" data-url="/ccnp-enterprise/encor/chapter-16/index.html">
     <div id="R-body" class="default-animation">
       <div id="R-body-overlay"></div>
       <nav id="R-topbar">
@@ -79,12 +87,12 @@
           <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
             itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/ccnp-enterprise/index.html"><span itemprop="name">CCNP Enterprise</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
             itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/ccnp-enterprise/encor/index.html"><span itemprop="name">ENCOR</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li
-            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Chapter 1</span><meta itemprop="position" content="3"></li>
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Chapter 16</span><meta itemprop="position" content="3"></li>
           </ol>
           <div class="topbar-area topbar-area-end" data-area="end">
-            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/ccnp-enterprise/encor/index.html" title="ENCOR (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/ccnp-enterprise/encor/chapter-18/index.html" title="Chapter 18 (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
             </div>
-            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/ccnp-enterprise/encor/chapter-2/index.html" title="Chapter 2 (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/ccnp-enterprise/encor/chapter-15/index.html" title="Chapter 15 (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
             </div>
             <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
               <div class="topbar-content">
@@ -104,9 +112,57 @@
             <header class="headline">
             </header>
 
-<h1 id="chapter-1">Chapter 1</h1>
+<h1 id="chapter-16">Chapter 16</h1>
 
-<h1 id="packet-forwarding"><strong>Packet Forwarding</strong></h1>
+<h1 id="overlay-tunnels"><strong>Overlay Tunnels</strong></h1>
+<h6 id="1-what-is-an-overlay-network">1. What is an Overlay Network?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-491eac3d976e5c093a21289142a9942c" aria-controls="R-expandcontent-491eac3d976e5c093a21289142a9942c">
+  <label class="expand-label" for="R-expand-491eac3d976e5c093a21289142a9942c">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-491eac3d976e5c093a21289142a9942c" class="expand-content">
+<p>An overlay network is a logical or virtual network built over a physical transport network.</p>
+  </div>
+</div>
+<h6 id="2-what-is-an-underlay-network">2. What is an underlay network?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-3a28d907c4b5eeb0e9e88094a57fff35" aria-controls="R-expandcontent-3a28d907c4b5eeb0e9e88094a57fff35">
+  <label class="expand-label" for="R-expand-3a28d907c4b5eeb0e9e88094a57fff35">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-3a28d907c4b5eeb0e9e88094a57fff35" class="expand-content">
+<p>an underlay network is the physical network that supports an overlay network.</p>
+  </div>
+</div>
+<h6 id="3-what-are-the-main-problems-with-the-overlay-network">3. What are the main problems with the Overlay Network?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-4dfe91237672b649df6c908fac59977b" aria-controls="R-expandcontent-4dfe91237672b649df6c908fac59977b">
+  <label class="expand-label" for="R-expand-4dfe91237672b649df6c908fac59977b">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-4dfe91237672b649df6c908fac59977b" class="expand-content">
+<p>The two common problems with overlay networks are:</p>
+<ul>
+<li>Recursive routing</li>
+<li>outbound interface</li>
+</ul>
+  </div>
+</div>
+<h6 id="4-what-is">4. What is?</h6>
+<div class="expand">
+  <input type="checkbox" id="R-expand-2728f2140c78a546022f5b4b3409c17a" aria-controls="R-expandcontent-2728f2140c78a546022f5b4b3409c17a">
+  <label class="expand-label" for="R-expand-2728f2140c78a546022f5b4b3409c17a">
+    <i class="expander-icon fa-fw fas fa-chevron-down"></i>
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> Answer
+  </label>
+  <div id="R-expandcontent-2728f2140c78a546022f5b4b3409c17a" class="expand-content">
+<p>next</p>
+  </div>
+</div>
 
             <footer class="footline">
             </footer>
@@ -197,7 +253,7 @@
           <li data-nav-id="/foundation/index.html" class=""><a class="padding" href="/foundation/index.html">Foundation<i class="fa-fw fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/ccnp-enterprise/index.html" class="parent "><input type="checkbox" id="R-section-4f5937f19b0a233464921f353e0ea350" aria-controls="R-subsections-4f5937f19b0a233464921f353e0ea350" checked><label for="R-section-4f5937f19b0a233464921f353e0ea350"><i class="fa-fw fas fa-chevron-down"></i><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu CCNP Enterprise</span></label><a class="padding" href="/ccnp-enterprise/index.html">CCNP Enterprise<i class="fa-fw fas fa-check read-icon"></i></a><ul id="R-subsections-4f5937f19b0a233464921f353e0ea350" class="morespace collapsible-menu">
           <li data-nav-id="/ccnp-enterprise/encor/index.html" class="parent alwaysopen"><input type="checkbox" id="R-section-f491ae95724b75363a0879be5e384807" aria-controls="R-subsections-f491ae95724b75363a0879be5e384807" checked><label for="R-section-f491ae95724b75363a0879be5e384807"><i class="fa-fw fas fa-chevron-down"></i><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu ENCOR</span></label><a class="padding" href="/ccnp-enterprise/encor/index.html">ENCOR<i class="fa-fw fas fa-check read-icon"></i></a><ul id="R-subsections-f491ae95724b75363a0879be5e384807" class="morespace collapsible-menu">
-          <li data-nav-id="/ccnp-enterprise/encor/chapter-1/index.html" class="active"><a class="padding" href="/ccnp-enterprise/encor/chapter-1/index.html">Chapter 1<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-1/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-1/index.html">Chapter 1<i class="fa-fw fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/ccnp-enterprise/encor/chapter-2/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-2/index.html">Chapter 2<i class="fa-fw fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/ccnp-enterprise/encor/chapter-3/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-3/index.html">Chapter 3<i class="fa-fw fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/ccnp-enterprise/encor/chapter-4/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-4/index.html">Chapter 4<i class="fa-fw fas fa-check read-icon"></i></a></li>
@@ -212,7 +268,7 @@
           <li data-nav-id="/ccnp-enterprise/encor/chapter-13/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-13/index.html">Chapter 13<i class="fa-fw fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/ccnp-enterprise/encor/chapter-20/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-20/index.html">Chapter 20<i class="fa-fw fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/ccnp-enterprise/encor/chapter-18/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-18/index.html">Chapter 18<i class="fa-fw fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/ccnp-enterprise/encor/chapter-16/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-16/index.html">Chapter 16<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ccnp-enterprise/encor/chapter-16/index.html" class="active"><a class="padding" href="/ccnp-enterprise/encor/chapter-16/index.html">Chapter 16<i class="fa-fw fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/ccnp-enterprise/encor/chapter-15/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-15/index.html">Chapter 15<i class="fa-fw fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/ccnp-enterprise/encor/chapter-14/index.html" class=""><a class="padding" href="/ccnp-enterprise/encor/chapter-14/index.html">Chapter 14<i class="fa-fw fas fa-check read-icon"></i></a></li></ul></li></ul></li>
           </ul>
@@ -229,7 +285,7 @@
                   <div class="control-style">
                     <label class="a11y-only" for="R-select-language">Language</label>
                     <select id="R-select-language" onchange="location = this.querySelector( this.value ).dataset.url;">
-                      <option id="R-select-language-en" value="#R-select-language-en" data-url="/ccnp-enterprise/encor/chapter-1/index.html" lang="en-us" selected></option>
+                      <option id="R-select-language-en" value="#R-select-language-en" data-url="/ccnp-enterprise/encor/chapter-16/index.html" lang="en-us" selected></option>
                     </select>
                   </div>
                   <div class="clear"></div>
